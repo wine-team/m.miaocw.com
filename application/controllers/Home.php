@@ -10,7 +10,6 @@ class Home extends MW_Controller {
 	 */
 	public function index() {
 		
-		
-		
+		$this->load->view('home/index',$data=array());
 	}
 }
