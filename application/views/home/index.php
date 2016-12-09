@@ -33,7 +33,10 @@
 		<div class="btn alC" id="btn"></div>
 	</div>
 	<div class="bgw pt10">
-		<a href="man/" class="da"><img src="http://s.qw.cc/mobile/ui/b1.png" class="dam"/><p>男用</p></a>
+		<a href="<?php echo site_url('home/man');?>" class="da">
+			<img src="http://s.qw.cc/mobile/ui/b1.png" class="dam"/>
+			<p>男用</p>
+		</a>
 		<a href="woman/" class="da"><img src="http://s.qw.cc/mobile/ui/b2.png" class="dam"/><p>女用</p></a>
 		<a href="baojian/" class="da"><img src="http://s.qw.cc/mobile/ui/b3.png" class="dam"/><p>延时</p></a>
 		<a href="neiyi/" class="da"><img src="http://s.qw.cc/mobile/ui/b4.png" class="dam"/><p>情趣内衣</p></a>
@@ -42,7 +45,7 @@
 		<a href="xingai/" class="da xx"><img src="http://s.qw.cc/mobile/ui/b7.png" class="dam"/><p>SM情趣</p></a>
 		<a href="topic.php?topic_id=687" class="da"><img src="http://s.qw.cc/mobile/ui/b8.png" class="dam"/><p>土豪玩具</p></a>
 		<a href="https://itunes.apple.com/cn/app/qu-wang-qing-qu-shang-cheng/id934737326" class="da"><img src="http://s.qw.cc/mobile/ui/b9.png" class="dam"/><p>APP下载</p></a>
-		<a href="fenlei.html" class="da"><img src="http://s.qw.cc/mobile/ui/b10.png" class="dam"/><p>全部分类</p></a>
+		<a href="<?php echo site_url('home/category');?>" class="da"><img src="http://s.qw.cc/mobile/ui/b10.png" class="dam"/><p>全部分类</p></a>
 		<div class="clear"></div>
 	</div>
 	<div class="bgw mt10">
@@ -243,5 +246,4 @@
 		<a href="app.php" class="red">APP下载</a> | <a href="chat.php">在线客服</a> | <a href="article.php?act=detail&a_id=617">帮助</a> | <a href="faq.php">反馈</a> | <a href="about.php">关于我们</a>
 	</div>
 </div>
-
 <?php $this->load->view('layout/footer');?>
