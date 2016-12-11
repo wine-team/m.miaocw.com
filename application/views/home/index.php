@@ -235,7 +235,9 @@
 		</li>
 		<li>
 			<a href="javascript:;" onClick="goback()" class="na">上一页</a>
-			<a href="login.php" class="na">登录/注册</a><a href="chaxun.php"  class="na">查订单</a><a href="javascript:;" onClick="gotop()" class="na">回顶部</a>
+			<a href="login.php" class="na">登录/注册</a>
+			<a href="chaxun.php"  class="na">查订单</a>
+			<a href="javascript:;" onClick="gotop()" class="na">回顶部</a>
 		</li>
 		<li>
 			<a href="tel:4006600606" class="fbtn">400-660-0606<p class="f12">点击电话订购</p></a>
