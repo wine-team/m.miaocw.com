@@ -14,7 +14,7 @@ class Home extends MW_Controller {
 	}
 	
 	 /**
-	 * 移动端首页幻灯片
+	 * 移动端男性
 	 */
 	public function man() {
 	
@@ -54,10 +54,67 @@ class Home extends MW_Controller {
 	}
 	
 	/**
-	 * 移动端首页幻灯片
+	 * 移动端分类
 	 */
 	public function category() {
 	
 		$this->load->view('home/category',$data=array());
+	}
+	
+	/**
+	 * 产品列表页
+	 */
+	public function goodlist() {
+		
+		$this->load->view('home/list',$data=array());
+	}
+	
+	 /**
+	 * 收藏的商品
+	 */
+	public function collect() {
+		
+		$this->load->view('home/collect',$data=array());
+	}
+	
+	 /**
+	 * 购物车
+	 */
+	public function cart() {
+		
+		$this->load->view('home/cart',$data=array());
+	}
+	
+	 /**
+	 * 购物车的无购物
+	 */
+	public function cartNo() {
+
+		$this->load->view('home/cartno',$data=array());
+	}
+	
+	
+	/** 帮助中心*/
+	/** 关于我们*/
+	public function about() {
+		
+		$this->load->view('home/about',$data=array());
+	}
+	
+	/**帮助中心 */
+	public function help() {
+	
+		$this->load->view('home/help',$data=array());
+	}
+	
+	/** 反馈 */
+	public function message() {
+		
+		$this->load->view('home/message',$data=array());
+	}
+	/**app下载*/
+	public function app(){
+		
+		$this->load->view('home/app',$data=array());
 	}
 }
