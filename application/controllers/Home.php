@@ -70,6 +70,14 @@ class Home extends MW_Controller {
 	}
 	
 	 /**
+	 * 产品详情
+	 */
+	public function goods(){
+		
+		$this->load->view('home/goods',$data=array());
+	}
+	
+	 /**
 	 * 收藏的商品
 	 */
 	public function collect() {
@@ -112,6 +120,16 @@ class Home extends MW_Controller {
 		
 		$this->load->view('home/message',$data=array());
 	}
+	
+	 /**
+	 * 产品需求
+	 */
+	public function need() {
+		
+		$this->load->view('home/need',$data=array());
+	}
+	
+	
 	/**app下载*/
 	public function app(){
 		
