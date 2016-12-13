@@ -58,9 +58,9 @@
 			 <img src="http://s.qw.cc/mobile/css/home/thr1.png" width="100%">
 	    </a>
 		<div class="dhr left">
-			<a href="hot.html" class="lotm2 left"><img src="http://s.qw.cc/mobile/css/home/thr2.png" width="100%"></a>
-			<a href="new.html" class="lotm3 left"><img src="http://s.qw.cc/mobile/css/home/thr31.png" width="100%"></a>
-			<a href="need.php" class="lotm3 left"><img src="http://s.qw.cc/mobile/css/home/thr5.png" width="100%"></a>
+			<a href="<?php echo site_url('home/hot');?>" class="lotm2 left"><img src="http://s.qw.cc/mobile/css/home/thr2.png" width="100%"></a>
+			<a href="<?php echo site_url('home/newgood');?>" class="lotm3 left"><img src="http://s.qw.cc/mobile/css/home/thr31.png" width="100%"></a>
+			<a href="<?php echo site_url('home/need');?>" class="lotm3 left"><img src="http://s.qw.cc/mobile/css/home/thr5.png" width="100%"></a>
 		</div>
 	</div>
 	<div id="lazy">

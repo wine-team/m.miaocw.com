@@ -13,6 +13,29 @@ class Home extends MW_Controller {
 		$this->load->view('home/index',$data=array());
 	}
 	
+	/**
+	 * 新品体验
+	 */
+	public function newgood() {
+		
+		$this->load->view('home/new',$data=array());
+	}
+	
+	/**
+	 * 热销排行
+	 */
+	public function hot() {
+		
+		$this->load->view('home/hot',$data=array());
+	}
+	
+	 /**
+	 * 今日抢购
+	 */
+	public function today(){
+		
+		$this->load->view('home/today',$data=array());
+	}
 	 /**
 	 * 移动端男性
 	 */
@@ -100,6 +123,7 @@ class Home extends MW_Controller {
 
 		$this->load->view('home/cartno',$data=array());
 	}
+	
 	
 	
 	/** 帮助中心*/
