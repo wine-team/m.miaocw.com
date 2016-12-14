@@ -1,9 +1,8 @@
 <?php $this->load->view('layout/header');?>
 <div id="top">
 	<div class="header">
-		<a href="javascript:;" onClick="goback()" class="b_l"></a>
+		<a href="javascript:goback();" class="b_l"></a>
 		<h2>我的收藏</h2>
-		
 	</div>
 </div>
 <div class="pageauto">

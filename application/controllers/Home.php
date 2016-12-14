@@ -117,6 +117,22 @@ class Home extends MW_Controller {
 	}
 	
 	 /**
+	 * 立即购买
+	 */
+	public function buy() {
+		
+		$this->load->view('home/buy',$data=array());
+	}
+	
+	/**
+	 * 
+	 */
+	public function buyok() {
+		
+		$this->load->view('home/buyok',$data=array());
+	}
+	
+	 /**
 	 * 购物车的无购物
 	 */
 	public function cartNo() {
@@ -124,6 +140,53 @@ class Home extends MW_Controller {
 		$this->load->view('home/cartno',$data=array());
 	}
 	
+	/**
+	 * 购物车的无购物
+	 */
+	public function login() {
+	
+		$this->load->view('home/login',$data=array());
+	}
+	
+	/**
+	 * 注册
+	 */
+	public function reg() {
+		
+		$this->load->view('home/reg',$data=array());
+	}
+	
+	 /**
+	 * 注册成功
+	 */
+	public function ucenter() {
+	
+		$this->load->view('home/ucenter',$data=array());
+	}
+	
+	/**
+	 * 购物帮助
+	 */
+	public function shophelp() {
+		
+		$this->load->view('home/shophelp',$data=array());
+	}
+	
+	 /**
+	 * 收藏历史
+	 */
+	public function history() {
+
+		$this->load->view('home/history',$data=array());
+	}
+	
+	/**
+	 * 优惠劵
+	 */
+	public function yhj() {
+		
+		$this->load->view('home/yhj',$data=array());
+	}
 	
 	
 	/** 帮助中心*/

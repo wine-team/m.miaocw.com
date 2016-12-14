@@ -169,7 +169,7 @@
 		
 			<div id="nok" class="lr10">
 				<a href="<?php echo site_url('home/cart')?>" class="lbtn left">加入购物车</a>
-				<a href="<?php echo site_url('home/cart')?>" class="rbtn right" id="buyn">立即购买</a>
+				<a href="<?php echo site_url('home/buy')?>" class="rbtn right" id="buyn">立即购买</a>
 				<div class="clear"></div>
 			</div>
 		</form>
