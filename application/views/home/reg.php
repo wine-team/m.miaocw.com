@@ -6,7 +6,7 @@
 		<a href="<?php echo site_url('home/login')?>" class="b_r">去登陆</a>
 	</div>
 </div>
-<div class="pageauto">
+<div class="pageauto login-reg">
 	<form action="reg.php" method="post" class="regist" id="regist">
 		<input type="hidden" value="35a7313e82753257255b1dff6fee6ccf" id="token" name="token"/>
 		<input type="checkbox" class="hid" name="remember" value="1" checked="checked"/>

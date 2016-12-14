@@ -188,6 +188,22 @@ class Home extends MW_Controller {
 		$this->load->view('home/yhj',$data=array());
 	}
 	
+	 /**
+	 * 订单列表业
+	 */
+	public function order() {
+		
+		$this->load->view('home/order',$data=array());
+	}
+	
+	 /**
+	  * 订单列表业
+	 */
+	public function orderdetail() {
+	
+		$this->load->view('home/orderdetail',$data=array());
+	}
+	
 	
 	/** 帮助中心*/
 	/** 关于我们*/

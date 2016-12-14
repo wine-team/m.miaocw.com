@@ -6,7 +6,7 @@
 		<a href="<?php echo site_url('home/reg')?>" class="b_r">去注册</a>
 	</div>
 </div>
-<div class="pageauto" id="lbefore">
+<div class="pageauto login-reg" id="lbefore">
 	<form action="login.php" method="post" class="login" id="login" onSubmit="return login();">
 		<input type="checkbox" class="hid" name="remember" value="1" checked="checked"/>
 		<input type="text" name="username" class="linput" id="username" value="" placeholder="用户名/邮箱/手机" />

@@ -1,26 +1,31 @@
 <?php $this->load->view('layout/header');?>
+<style type="text/css">
+.bigm{padding:0 6px;}
+#top{position:fixed;left:0;right:0;top:0;z-index:9;}
+</style>
 <div id="top">
-	<div class="header hfix" id="hometop">
-		<a class="logo" href="tel:4006600606"></a>
-		<a href="fenlei.html" class="h_t h_fl">分类</a>
-		<form action="search.php" class="t_se" onSubmit="return se(this)">
-			<input type="search" value="" class="t_sl" id="t_sl" name="keyword" placeholder="搜索商品" />
-			<input class="t_sr" type="submit" value="" />
-		</form>
-		<a href="chaxun.php" class="h_t h_wl">物流</a>
-	</div>
-	<div class="sebg hid" id="sebg">
-		<div class="lr10 lh35 ov">
-			<em class="left">热门搜索</em>
-			<a href="javascript:;" onClick="gx()" class="right">关闭</a>
+	<div class="headers homehd" id="hometop">
+		<div class="homez">
+			<a href="<?php echo site_url('home/category')?>" class="h_t h_fl"></a>
+			<form action="search.php" class="t_se" onSubmit="return se(this)">
+				<input type="search" value="" class="t_sl" id="t_sl" name="keyword" placeholder="搜索商品" />
+				<input class="t_sr" type="submit" value="" />
+			</form>
+			<a href="chaxun.php" class="h_t h_wl">物流</a>
 		</div>
-		<a href="search.php?keyword=仿真阳具" class="hw"><em class="red">仿真阳具</em></a>
-		<a href="search.php?keyword=延时" class="hw">男用延时</a>
-		<a href="search.php?keyword=飞机杯" class="hw">飞机杯</a>
-		<a href="search.php?keyword=双点刺激" class="hw">双点刺激</a>
-		<a href="search.php?keyword=跳蛋" class="hw">跳蛋</a>
-		<a href="search.php?keyword=倒模" class="hw">真人倒模</a>
-		<a href="search.php?keyword=增大" class="hw">增大器</a>
+		<div class="sebg hid" id="sebg">
+			<div class="lr10 ov">
+				<em class="left">热门搜索</em>
+				<a href="javascript:;" onClick="gx()" class="right">关闭</a>
+			</div>
+			<a href="search.php?keyword=仿真阳具" class="hw"><em class="red">仿真阳具</em></a>
+			<a href="search.php?keyword=延时" class="hw">男用延时</a>
+			<a href="search.php?keyword=飞机杯" class="hw">飞机杯</a>
+			<a href="search.php?keyword=双点刺激" class="hw">双点刺激</a>
+			<a href="search.php?keyword=跳蛋" class="hw">跳蛋</a>
+			<a href="search.php?keyword=倒模" class="hw">真人倒模</a>
+			<a href="search.php?keyword=增大" class="hw">增大器</a>
+		</div>
 	</div>
 </div>
 <div class="page load">
@@ -32,7 +37,7 @@
 		</ul>
 		<div class="btn alC" id="btn"></div>
 	</div>
-	<div class="bgw pt10">
+	<div class="hmnv">
 		<a href="<?php echo site_url('home/man');?>" class="da">
 			<img src="http://s.qw.cc/mobile/ui/b1.png" class="dam"/>
 			<p>男用</p>
@@ -75,6 +80,7 @@
 		</a>
 		<div class="clear"></div>
 	</div>
+	<div class="hrd"><img src="http://s.qw.cc/mobile/ui/hbbz.png" width="100%"></div>
 	<div class="bgw mt10">
 		<a href=<?php echo site_url('home/today');?> class="left lotm">
 			<div class="hoot">
@@ -275,4 +281,38 @@
 		<a href="app.php" class="red">APP下载</a> | <a href="chat.php">在线客服</a> | <a href="article.php?act=detail&a_id=617">帮助</a> | <a href="faq.php">反馈</a> | <a href="about.php">关于我们</a>
 	</div>
 </div>
+<script>
+var a_on=true;
+var hometop=$("#hometop");
+//$("#slider").vganswiper({bi:0.484});
+$("#t_sl").focus(function(event){
+var w=$(this).attr("placeholder");
+var v=$(this).val();
+if(v==w){
+$(this).val("");
+}
+$("#sebg").show();
+event.stopPropagation();
+}).blur(function(){
+setTimeout(gx,500);
+});
+function gx(){
+$("#sebg").hide();
+}
+lazyload({defObj:"#lazy"});
+window.onscroll=function(){
+	var sTop=document.documentElement.scrollTop+document.body.scrollTop;
+	if(sTop>100){
+	if(a_on){
+		hometop.removeClass("homehd");
+		a_on=false;
+		}
+	}else{
+		if(!a_on){
+		hometop.addClass("homehd");
+		a_on=true;
+		}
+	}
+}
+</script>
 <?php $this->load->view('layout/footer');?>
