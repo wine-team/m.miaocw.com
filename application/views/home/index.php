@@ -37,19 +37,46 @@
 			<img src="http://s.qw.cc/mobile/ui/b1.png" class="dam"/>
 			<p>男用</p>
 		</a>
-		<a href="woman/" class="da"><img src="http://s.qw.cc/mobile/ui/b2.png" class="dam"/><p>女用</p></a>
-		<a href="baojian/" class="da"><img src="http://s.qw.cc/mobile/ui/b3.png" class="dam"/><p>延时</p></a>
-		<a href="neiyi/" class="da"><img src="http://s.qw.cc/mobile/ui/b4.png" class="dam"/><p>情趣内衣</p></a>
-		<a href="woman/bizhen/" class="da"><img src="http://s.qw.cc/mobile/ui/b51.png" class="dam"/><p>仿真阳具</p></a>
-		<a href="man/feijibei/" class="da xx"><img src="http://s.qw.cc/mobile/ui/b6.png" class="dam"/><p>飞机杯</p></a>
-		<a href="xingai/" class="da xx"><img src="http://s.qw.cc/mobile/ui/b7.png" class="dam"/><p>SM情趣</p></a>
-		<a href="topic.php?topic_id=687" class="da"><img src="http://s.qw.cc/mobile/ui/b8.png" class="dam"/><p>土豪玩具</p></a>
-		<a href="https://itunes.apple.com/cn/app/qu-wang-qing-qu-shang-cheng/id934737326" class="da"><img src="http://s.qw.cc/mobile/ui/b9.png" class="dam"/><p>APP下载</p></a>
-		<a href="<?php echo site_url('home/category');?>" class="da"><img src="http://s.qw.cc/mobile/ui/b10.png" class="dam"/><p>全部分类</p></a>
+		<a href="<?php echo site_url('home/woman');?>" class="da">
+			<img src="http://s.qw.cc/mobile/ui/b2.png" class="dam"/>
+			<p>女用</p>
+		</a>
+		<a href="<?php echo site_url('home/baojian');?>" class="da">
+			<img src="http://s.qw.cc/mobile/ui/b3.png" class="dam"/>
+			<p>延时</p>
+		</a>
+		<a href="<?php echo site_url('home/neiyi');?>" class="da">
+			<img src="http://s.qw.cc/mobile/ui/b4.png" class="dam"/>
+			<p>情趣内衣</p>
+		</a>
+		<a href="<?php echo site_url('home/goodlist');?>" class="da">
+			<img src="http://s.qw.cc/mobile/ui/b51.png" class="dam"/>
+			<p>仿真阳具</p>
+		</a>
+		<a href="<?php echo site_url('home/goodlist');?>" class="da xx">
+			<img src="http://s.qw.cc/mobile/ui/b6.png" class="dam"/>
+			<p>飞机杯</p>
+		</a>
+		<a href="<?php echo site_url('home/xingai');?>" class="da xx">
+			<img src="http://s.qw.cc/mobile/ui/b7.png" class="dam"/>
+			<p>SM情趣</p>
+		</a>
+		<a href="javascript:;" class="da">
+			<img src="http://s.qw.cc/mobile/ui/b8.png" class="dam"/>
+			<p>土豪玩具</p>
+		</a>
+		<a href="javascript:;" class="da">
+			<img src="http://s.qw.cc/mobile/ui/b9.png" class="dam"/>
+			<p>APP下载</p>
+		</a>
+		<a href="<?php echo site_url('home/category');?>" class="da">
+			<img src="http://s.qw.cc/mobile/ui/b10.png" class="dam"/>
+			<p>全部分类</p>
+		</a>
 		<div class="clear"></div>
 	</div>
 	<div class="bgw mt10">
-		<a href="loot.php" class="left lotm">
+		<a href=<?php echo site_url('home/today');?> class="left lotm">
 			<div class="hoot">
 				<p class="alL">玩爆潮品喵星人天使之杖av按摩棒</p>
 				<img src="http://s.qw.cc/images/201410/thumb_img/5474_thumb_P220_1413196593328.jpg" class="limg">
@@ -66,8 +93,8 @@
 	<div id="lazy">
 		<div class="bgw mt10">
 			<h2 class="t">
-				<a href="woman/" class="brl">女性用品</a>
-				<a href="woman/" class="more right"></a>
+				<a href=<?php echo site_url('home/woman');?> class="brl">女性用品</a>
+				<a href="<?php echo site_url('home/woman');?>" class="more right"></a>
 			</h2>
 			<div class="hpre ov" style="background-color:#bd3d5e">
 				<a href="goods-6017.html?mps=index" class="w64 left"><img src="http://s.qw.cc/data/afficheimg/1460015902548090829.jpg" width="100%"/></a>
@@ -88,8 +115,8 @@
 
 		<div class="bgw mt10">
 			<h2 class="t">
-				<a href="man/" class="brl">男性用品</a>
-				<a href="man/" class="more right"></a>
+				<a href="<?php echo site_url('home/man');?>" class="brl">男性用品</a>
+				<a href="<?php echo site_url('home/man');?>" class="more right"></a>
 			</h2>
 			<div class="hpre ov" style="background-color:#fadceb">
 				<a href="goods-7577.html?mps=index" class="w36 left"><img src="http://s.qw.cc/data/afficheimg/1445581303359909308.jpg" width="100%"/></a>

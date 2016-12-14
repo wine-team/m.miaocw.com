@@ -6,7 +6,7 @@
 		<a href="fenlei.html"  class="b_r">分类</a>
 	</div>
 </div>
-<div class="pageauto load" id="lazy">
+<div class="pageauto load home-need" id="lazy">
 
 	<div class="sbar ov" id="sbar">
 		<a href="need.php?catid=2"  class="on">男性</a>

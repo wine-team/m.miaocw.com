@@ -2,7 +2,7 @@
 <div id="top">
 	<div class="header hfix">
 		<a href="javascript:;" onClick="goback()" class="b_l"></a>
-		<h2 class="qg_icon"></h2>
+		<h2 class="qg_icon">今日抢购</h2>
 		<a href="javascript:;" onclick="gtns()" id="gdor" class="b_r">导航</a>
 	</div>
 </div>
@@ -15,7 +15,7 @@
 		<li><a href="chat.php" class="gta">在线客服咨询</a></li>
 	</ul>
 </div>
-<div class="pageauto load" id="lazy">
+<div class="pageauto load home-today" id="lazy">
 	<ul class="tw_tab" id="hbar">
 		<li class="on">本周抢购<p class="l_sbn">抢购中</p></li>
 		<li>惊喜专区<p class="l_sbn">每日不同</p></li>

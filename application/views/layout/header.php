@@ -31,9 +31,8 @@
 <?php js('m', 'jquery.validate.messages_zh');?>
 <?php js('m', 'index',20161205);?>
 <?php js('m', 'app',20161205);?>
-<?php js('m', 'vganswip',20161205);?>
+
 <?php js('m', 'car',20161205);?>
-<?php js('m', 'list',20161205);?>
 <?php js('m', 'qa-min',20161205);?>
 </head>
 <body>

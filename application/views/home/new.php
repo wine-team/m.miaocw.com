@@ -1,5 +1,5 @@
 <?php $this->load->view('layout/header');?>
-<div class="page" id="lazy">
+<div class="page home-new" id="lazy">
 	<div id="top">
 		<div class="header">
 			<a href="javascript:;" onClick="goback()" class="b_l"></a>

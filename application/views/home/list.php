@@ -45,7 +45,7 @@
 	    </div>
 	</div>
 </div>
-<div class="pageauto load" id="lazy">
+<div class="pageauto load home-list" id="lazy">
 	<div class="sxba ov">
 		<a href="man/feijibei/t1-o1.html" class="sxa sxon" >综合<i class="rxl"></i></a>
 		<a href="man/feijibei/t2-o0.html" class="sxa">按销量<i class="rxl"></i></a>
@@ -53,9 +53,9 @@
 		<a href="javascript:mod();" class="sxa vbig" id="mode"></a>
 	</div>
 	<div class="gd load" id="glist">
-		<a href="goods-5503.html" class="ga">
+		<a href="<?php echo site_url('home/goods');?>" class="ga">
 			<div class="pm">
-				<img src2="http://s.qw.cc/t/300x300/images/201602/source_img/5503_P_1456297109268.jpg" class="gm">
+				<img src="http://s.qw.cc/t/300x300/images/201602/source_img/5503_P_1456297109268.jpg" class="gm">
 				<h3 class="gt">琦莎HAPPY两用口阴互换舌震免提飞机杯<em class="i_hot">热销</em>
 					<em class="i_video">视频</em>
 				</h3>
@@ -68,9 +68,9 @@
 				<p class="gb">销售:14509<em class="ea">|</em>评论:304</p>
 			</div>
 		</a>
-		<a href="goods-5503.html" class="ga">
+		<a href="<?php echo site_url('home/goods');?>" class="ga">
 			<div class="pm">
-				<img src2="http://s.qw.cc/t/300x300/images/201602/source_img/5503_P_1456297109268.jpg" class="gm">
+				<img src="http://s.qw.cc/t/300x300/images/201602/source_img/5503_P_1456297109268.jpg" class="gm">
 				<h3 class="gt">琦莎HAPPY两用口阴互换舌震免提飞机杯<em class="i_hot">热销</em>
 					<em class="i_video">视频</em>
 				</h3>
@@ -83,9 +83,9 @@
 				<p class="gb">销售:14509<em class="ea">|</em>评论:304</p>
 			</div>
 		</a>
-		<a href="goods-5503.html" class="ga">
+		<a href="<?php echo site_url('home/goods');?>" class="ga">
 			<div class="pm">
-				<img src2="http://s.qw.cc/t/300x300/images/201602/source_img/5503_P_1456297109268.jpg" class="gm">
+				<img src="http://s.qw.cc/t/300x300/images/201602/source_img/5503_P_1456297109268.jpg" class="gm">
 				<h3 class="gt">琦莎HAPPY两用口阴互换舌震免提飞机杯<em class="i_hot">热销</em>
 					<em class="i_video">视频</em>
 				</h3>
@@ -114,7 +114,9 @@
 		<a href="man/feijibei/t-o-p2.html" id="nxpage" class="right">下一页></a>
 		<div class="clear"></div>
 	</div>
-	<div id="lod" class="bgw alC hid pd10"><b>下一页正在加载中,请骚后...</b></div>
+	<div id="lod" class="bgw alC hid pd10">
+		<b>下一页正在加载中,请骚后...</b>
+	</div>
 	<div class="bfx">
 		<em class="yem" id="yem">1/5</em>
 		<a href="javascript:;" onClick="gotop()" class="ftop"></a>
@@ -143,14 +145,16 @@
 <div class="fot">
 	<ul class="nav">
 		<li>
-			<a href="index.php" class="na">首页</a>
+			<a href="<?php echo site_url('home')?>" class="na">首页</a>
 			<a href="fenlei.html" class="na">分类</a>
 			<a href="car.php" class="na">购物车</a>
 			<a href="hot.html"  class="na">热销</a>
 		</li>
 		<li>
 			<a href="javascript:;" onClick="goback()" class="na">上一页</a>
-			<a href="login.php" class="na">登录/注册</a><a href="chaxun.php"  class="na">查订单</a><a href="javascript:;" onClick="gotop()" class="na">回顶部</a>
+			<a href="login.php" class="na">登录/注册</a>
+			<a href="chaxun.php"  class="na">查订单</a>
+			<a href="javascript:;" onClick="gotop()" class="na">回顶部</a>
 		</li>
 		<li>
 			<a href="tel:4006600606" class="fbtn">400-660-0606<p class="f12">点击电话订购</p></a>
@@ -170,4 +174,5 @@
 	var nurl = "man/feijibei/t-o-p2.html?is_ajax=1&p=";
 	lazyload({defObj:"#glist"});
 </script>
+<?php js('m', 'list',20161205);?>
 <?php $this->load->view('layout/footer');?>

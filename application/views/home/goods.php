@@ -1,5 +1,5 @@
 <?php $this->load->view('layout/header');?>
-<div id="top">
+<div id="top goods-header">
 	<div class="header hfix">
 		<a href="javascript:;" onClick="goback()" class="b_l"></a>
 		<div class="tnav" id="sbar">
@@ -23,7 +23,7 @@
 	</ul>
 </div>
 
-<div class="pageauto" id="pagebox">
+<div class="pageauto home-goods" id="pagebox">
 	<div class="content" id="goods">
 		<div id="gslider" class="alC">
 			<ul class="gfs load">
@@ -168,8 +168,8 @@
 			</div>
 		
 			<div id="nok" class="lr10">
-				<p onClick="addCar(5503,0)" class="lbtn left">加入购物车</p>
-				<p onClick="sbs()" class="rbtn right" id="buyn">立即购买</p>
+				<a href="<?php echo site_url('home/cart')?>" class="lbtn left">加入购物车</a>
+				<a href="<?php echo site_url('home/cart')?>" class="rbtn right" id="buyn">立即购买</a>
 				<div class="clear"></div>
 			</div>
 		</form>
@@ -282,8 +282,6 @@
 	</div>
 </div>
 
-
-
 <div id="nos" class="hid">
 	<a href="chat.php" class="noa">
 		<img src="http://s.qw.cc/mobile/css/kefu.png" width="22" height="22">
@@ -357,6 +355,7 @@
 		<p class="gray f12">渝ICP备14000671号-3</p>
 	</div>
 </div>
+<?php js('m', 'vganswip',20161205);?>
 <script>
 var goods_id="5503";
 var wifi='1';
