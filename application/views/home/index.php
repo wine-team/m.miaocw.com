@@ -3,20 +3,20 @@
 .bigm{padding:0 6px;}
 #top{position:fixed;left:0;right:0;top:0;z-index:9;}
 </style>
-<div id="top">
+<div id="top" class="home-top">
 	<div class="headers homehd" id="hometop">
 		<div class="homez">
 			<a href="<?php echo site_url('home/category')?>" class="h_t h_fl"></a>
 			<form action="search.php" class="t_se" onSubmit="return se(this)">
-				<input type="search" value="" class="t_sl" id="t_sl" name="keyword" placeholder="搜索商品" />
-				<input class="t_sr" type="submit" value="" />
+				<input type="search" class="t_sl" id="t_sl" name="keyword" placeholder="搜索商品" />
+				<input class="t_sr" type="submit" value=""/>
 			</form>
-			<a href="chaxun.php" class="h_t h_wl">物流</a>
+			<a href="<?php echo site_url('home/logistics');?>" class="h_t h_wl">物流</a>
 		</div>
 		<div class="sebg hid" id="sebg">
 			<div class="lr10 ov">
 				<em class="left">热门搜索</em>
-				<a href="javascript:;" onClick="gx()" class="right">关闭</a>
+				<a href="javascript:;" class="right">关闭</a>
 			</div>
 			<a href="search.php?keyword=仿真阳具" class="hw"><em class="red">仿真阳具</em></a>
 			<a href="search.php?keyword=延时" class="hw">男用延时</a>
@@ -28,12 +28,34 @@
 		</div>
 	</div>
 </div>
-<div class="page load">
-	<div class="slider" id="slider">
+<div class="page load home-category">
+	<div class="hslider" id="slider">
 		<ul class="sul">
-			<li><a href="goods-5503.html?mps=focus"><img src="http://s.qw.cc/data/afficheimg/1451545231672443191.jpg" width="100%"/></a></li>
-			<li><a href="goods-5415.html?mps=focus"><img lazy="http://s.qw.cc/data/afficheimg/1460015835743002712.jpg" width="100%"/></a></li>
-			<li><a href="goods-5520.html?mps=focus"><img lazy="http://s.qw.cc/data/afficheimg/1456996975205359985.jpg" width="100%"/></a></li>
+			<li>
+				<a href="javascript:;">
+					<img src="http://s.qw.cc/data/afficheimg/1481681553946746386.jpg" width="100%"/>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<img lazy="http://s.qw.cc/data/afficheimg/1481678723489777281.jpg" width="100%"/>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<img lazy="http://s.qw.cc/data/afficheimg/1481682124832094567.jpg" width="100%"/>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<img lazy="http://s.qw.cc/data/afficheimg/1481682921678982759.jpg" width="100%"/>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<img lazy="http://s.qw.cc/data/afficheimg/1481683366004820137.jpg" width="100%"/>
+				</a>
+			</li>
 		</ul>
 		<div class="btn alC" id="btn"></div>
 	</div>
@@ -80,7 +102,9 @@
 		</a>
 		<div class="clear"></div>
 	</div>
-	<div class="hrd"><img src="http://s.qw.cc/mobile/ui/hbbz.png" width="100%"></div>
+	<div class="hrd">
+		<img src="http://s.qw.cc/mobile/ui/hbbz.png" width="100%">
+	</div>
 	<div class="bgw mt10">
 		<a href=<?php echo site_url('home/today');?> class="left lotm">
 			<div class="hoot">
@@ -88,7 +112,7 @@
 				<img src="http://s.qw.cc/images/201410/thumb_img/5474_thumb_P220_1413196593328.jpg" class="limg">
 			    <p><b class="xj">¥149.00</b><del class="pl10">¥249.00</del></p>
 			 </div>
-			 <img src="http://s.qw.cc/mobile/css/home/thr1.png" width="100%">
+			 <img src="http://s.qw.cc/mobile/css/home/thr1.png" width="100%" />
 	    </a>
 		<div class="dhr left">
 			<a href="<?php echo site_url('home/hot');?>" class="lotm2 left"><img src="http://s.qw.cc/mobile/css/home/thr2.png" width="100%"></a>
@@ -228,16 +252,16 @@
 		<div class="bgw">
 			<h2 class="t"><a href="hot.html" class="brl">精品推荐</a><a href="hot.html" class="more right"></a></h2>
 			<div class="gd bigm">
-				<a href="goods-5415.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201604/goods_img/5415_P_1460455530149.jpg" class="gm"><h3 class="gt">藏帝 高原植物延时喷剂 不麻木无依赖 15ml</h3><p class="lp"><em class="xj">¥198.00</em><em class="s_s">销量:18880</em></p></div></a>
-				<a href="goods-5503.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201602/goods_img/5503_P_1456297109261.jpg" class="gm"><h3 class="gt">琦莎HAPPY两用口阴互换舌震免提飞机杯</h3><p class="lp"><em class="xj">¥199.00</em><em class="s_s">销量:14456</em></p></div></a>
-				<a href="goods-6017.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201602/goods_img/6017_P_1456367705335.jpg" class="gm"><h3 class="gt">香港简爱月亮之上自动抽插多频快感智能加温震动棒</h3><p class="lp"><em class="xj">¥368.00</em><em class="s_s">销量:9292</em></p></div></a>
-				<a href="goods-5520.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201511/goods_img/5520_P_1446535221453.jpg" class="gm"><h3 class="gt">奇乐圆Q-LUV-U无线遥控自动抽插电动仿真阳具</h3><p class="lp"><em class="xj">¥329.00</em><em class="s_s">销量:8425</em></p></div></a>
-				<a href="goods-6002.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201511/goods_img/6002_P_1446719027726.jpg" class="gm"><h3 class="gt">香港简爱定海神针智能恒温高潮冲击棒</h3><p class="lp"><em class="xj">¥338.00</em><em class="s_s">销量:4254</em></p></div></a>
-				<a href="goods-4776.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201510/goods_img/4776_P_1445220267589.jpg" class="gm"><h3 class="gt">漫缈ManMiao国优名器兽兽宝贝私处仿真倒模</h3><p class="lp"><em class="xj">¥199.00</em><em class="s_s">销量:4018</em></p></div></a>
-				<a href="goods-5321.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201602/goods_img/5321_P_1456130168598.jpg" class="gm"><h3 class="gt">香港诺兰自动伸缩抽插硅胶震动转珠棒</h3><p class="lp"><em class="xj">¥999.00</em><em class="s_s">销量:3823</em></p></div></a>
-				<a href="goods-5315.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201512/goods_img/5315_P_1450668595407.jpg" class="gm"><h3 class="gt">香港VNA清纯女神莎拉宝贝臀部倒模</h3><p class="lp"><em class="xj">¥299.00</em><em class="s_s">销量:3649</em></p></div></a>
-				<a href="goods-6007.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201504/goods_img/6007_P_1429775691608.jpg" class="gm"><h3 class="gt">UZ诱芷 催欲高潮提升精油  10ml</h3><p class="lp"><em class="xj">¥268.00</em><em class="s_s">销量:2462</em></p></div></a>
-				<a href="goods-5702.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201603/goods_img/5702_P_1459148850504.jpg" class="gm"><h3 class="gt">JJ增大长效治疗组合 送水晶套</h3><p class="lp"><em class="xj">¥497.00</em><em class="s_s">销量:1269</em></p></div></a>
+				<a href="goods-5503.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5503_P_1481678457379.jpg" class="gm"><h3 class="gt">琦莎 口阴互换舌震免提HAPPY飞机杯</h3><p class="lp"><em class="xj">¥195.02</em><em class="s_s">销量:31242</em></p></div></a>
+				<a href="goods-8806.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201611/goods_img/8806_P_1478659582837.jpg" class="gm"><h3 class="gt">COC罗马大帝加长多频仿真阳具</h3><p class="lp"><em class="xj">¥194.04</em><em class="s_s">销量:29587</em></p></div></a>
+				<a href="goods-6017.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201612/goods_img/6017_P_1481683152533.jpg" class="gm"><h3 class="gt">香港简爱月亮之上自动抽插多频快感智能加温震动棒</h3><p class="lp"><em class="xj">¥360.64</em><em class="s_s">销量:17246</em></p></div></a>
+				<a href="goods-10201.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201611/goods_img/10201_P_1480383461258.jpg" class="gm"><h3 class="gt">【藏帝升级版】久皇 高原珍稀植物男性延时喷剂 持久不麻木15ml</h3><p class="lp"><em class="xj">¥194.04</em><em class="s_s">销量:15330</em></p></div></a>
+				<a href="goods-7577.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201601/goods_img/7577_P_1453100833956.jpg" class="gm"><h3 class="gt">UNIMAT 电动夹吸飞机杯式阴茎增大器</h3><p class="lp"><em class="xj">¥449.82</em><em class="s_s">销量:10650</em></p></div></a>
+				<a href="goods-7207.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201608/goods_img/7207_P_1471487304674.jpg" class="gm"><h3 class="gt">Angel&coco 情欲提升强效凝露 原装进口 30ml</h3><p class="lp"><em class="xj">¥489.02</em><em class="s_s">销量:9349</em></p></div></a>
+				<a href="goods-4776.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201510/goods_img/4776_P_1445220267589.jpg" class="gm"><h3 class="gt">ManMiao 兽兽宝贝缩阴震动仿真名器</h3><p class="lp"><em class="xj">¥195.02</em><em class="s_s">销量:7967</em></p></div></a>
+				<a href="goods-5315.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5315_P_1481264366297.jpg" class="gm"><h3 class="gt">VINA 莎拉宝贝真人发声臀部倒模</h3><p class="lp"><em class="xj">¥293.02</em><em class="s_s">销量:6614</em></p></div></a>
+				<a href="goods-5321.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201610/goods_img/5321_P_1476698375082.jpg" class="gm"><h3 class="gt">香港诺兰自动伸缩抽插硅胶震动转珠棒</h3><p class="lp"><em class="xj">¥979.02</em><em class="s_s">销量:5678</em></p></div></a>
+				<a href="goods-9556.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201610/goods_img/9556_P_1477877821018.jpg" class="gm"><h3 class="gt">COC 俏浪子恒温加热强力抽插震动棒</h3><p class="lp"><em class="xj">¥360.64</em><em class="s_s">销量:3725</em></p></div></a>
 			</div>
 		</div>
 		
@@ -278,41 +302,7 @@
 		</li>
 	</ul>
 	<div class="lh25 mt10">
-		<a href="app.php" class="red">APP下载</a> | <a href="chat.php">在线客服</a> | <a href="article.php?act=detail&a_id=617">帮助</a> | <a href="faq.php">反馈</a> | <a href="about.php">关于我们</a>
+		<a href="article.php?act=detail&a_id=617">帮助</a> | <a href="faq.php">反馈</a> | <a href="about.php">关于我们</a>
 	</div>
 </div>
-<script>
-var a_on=true;
-var hometop=$("#hometop");
-//$("#slider").vganswiper({bi:0.484});
-$("#t_sl").focus(function(event){
-var w=$(this).attr("placeholder");
-var v=$(this).val();
-if(v==w){
-$(this).val("");
-}
-$("#sebg").show();
-event.stopPropagation();
-}).blur(function(){
-setTimeout(gx,500);
-});
-function gx(){
-$("#sebg").hide();
-}
-lazyload({defObj:"#lazy"});
-window.onscroll=function(){
-	var sTop=document.documentElement.scrollTop+document.body.scrollTop;
-	if(sTop>100){
-	if(a_on){
-		hometop.removeClass("homehd");
-		a_on=false;
-		}
-	}else{
-		if(!a_on){
-		hometop.addClass("homehd");
-		a_on=true;
-		}
-	}
-}
-</script>
 <?php $this->load->view('layout/footer');?>
