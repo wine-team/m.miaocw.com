@@ -1,9 +1,9 @@
 <?php $this->load->view('layout/header');?>
 <div id="top">
 	<div class="header hfix">
-		<a href="javascript:;" onClick="goback()" class="b_l"></a>
+		<a href="javascript:goback();" class="b_l"></a>
 		<h2>会员中心</h2>
-		<a href="javascript:;" onclick="gtns()" id="gdor" class="b_r">导航</a>
+		<a href="javascript:gtns();" id="gdor" class="b_r">导航</a>
 	</div>
 </div>
 <div class="gtn" id="gtn">

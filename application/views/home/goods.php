@@ -1,31 +1,35 @@
 <?php $this->load->view('layout/header');?>
 <div id="top goods-header">
 	<div class="header hfix">
-		<a href="javascript:;" onClick="goback()" class="b_l"></a>
+		<a href="javascript:goback();" class="b_l"></a>
 		<div class="tnav" id="sbar">
 			<p class="ta on" data-id="0">商品</p>
 			<p class="ta"  data-id="1">看图文</p>
 			<p class="ta" data-id="2">评论</p>
 		</div>
 		<a href="car.php" class="b_r dcar"></a>
-		<a href="javascript:;" onClick="gtns()" id="gdor" class="b_r dor"></a>
+		<a href="javascript:gtns();" id="gdor" class="b_r dor"></a>
 	</div>
 </div>
-<div class="gtn" id="gtn">
+<div class="gtn goods-gtn" id="gtn">
 	<ul class="gt_a">
-		<li><a href="chat.php" class="gta">在线客服咨询</a></li>
+		<li><a href="javascript:;" class="gta">在线客服咨询</a></li>
 		<li><a href="tel:4006600606" class="gta">订购热线：400-660-0606</a></li>
 		<li><a href="sms:13883873375" class="gta">点击短信订购</a></li>
-		<li><a href="javascript:;" onClick="alert('请先登录')" class="gta" id="fav"><em id="scx">收藏商品</em></a></li>
-		<li><a href="history.php" class="gta">浏览历史</a></li>
-		<li><a href="fenlei.html" class="gta">所有商品分类</a></li>
-		<li><a href="index.php" class="gta">返回首页</a></li>
+		<li>
+			<a href="javascript:;" onClick="alert('请先登录')" class="gta" id="fav">
+				<em id="scx">收藏商品</em>
+			</a>
+		</li>
+		<li><a href="javascript:;" class="gta">浏览历史</a></li>
+		<li><a href="javascript:;" class="gta">所有商品分类</a></li>
+		<li><a href="javascript:;" class="gta">返回首页</a></li>
 	</ul>
 </div>
 
 <div class="pageauto home-goods" id="pagebox">
 	<div class="content" id="goods">
-		<div id="gslider" class="alC">
+		<div id="gslider" class="alC gslider">
 			<ul class="gfs load">
 				<li><img src="http://s.qw.cc/t/640x640/images/201602/source_img/5503_P_1456297109268.jpg" height="320" height="320" class="jdt"/></li>
 				<li><img src="http://s.qw.cc/mobile/css/blank.png" lazy="http://s.qw.cc/t/640x640/images/201509/source_img/5503_P_1443492105665.jpg" height="320" height="320" class="jdt"/></li>
@@ -160,7 +164,7 @@
 					<p class="zja" onclick="jia(1)"><em class="f20">+</em></p>
 				</div>
 			</div>
-			<div id="cok" class="lh30 alC bgw hid">
+			<div id="cok" class="lh30 alC bgw hid cok">
 			    <h3 class="f18 c3">加入购物车成功！</h3>
 			    <p>购物车现有<b id="rnum" class="red">0</b>件商品,共计<b id="rsum" class="red"></b></p>
 			    <a href="javascript:gclose()" class="lbtn left">继续购物</a><a href="buy1.php" class="rbtn right">去结算</a>
@@ -282,7 +286,7 @@
 	</div>
 </div>
 
-<div id="nos" class="hid">
+<div id="nos" class="hid home-goods-nos">
 	<a href="chat.php" class="noa">
 		<img src="http://s.qw.cc/mobile/css/kefu.png" width="22" height="22">
 		<p>客服</p>
@@ -291,10 +295,10 @@
 		<img src="http://s.qw.cc/mobile/css/g_car.png" width="22" height="22">
 		<p>购物车</p>
 	</a>
-	<a href="javascript:;" onClick="addCar(5503,1)" class="nol nor" id="adcar">
+	<a href="javascript:addCar(5503,1);" class="nol nor" id="adcar">
 		加入购物车
 	</a>
-	<a href="javascript:;" onClick="sbs()" class="nol">立即订购</a>
+	<a href="javascript:sbs();" class="nol">立即订购</a>
 	<div class="nosf hid" id="nosf">
 		<div class="pd10">
 			<h3 class="f18 c3">加入购物车成功！</h3>
@@ -318,11 +322,11 @@
 
 <div class="pd10 bgw mt10">
 	<p>当前位置：
-		<a href=".">首页</a>
+		<a href="javascript:;">首页</a>
 		<code class="lr3">></code>
-		<a href="man/">男性用品</a>
+		<a href="javascript:;">男性用品</a>
 		<code class="lr3">></code>
-		<a href="man/feijibei/">自慰飞机杯</a>
+		<a href="javascript:;">自慰飞机杯</a>
 	</p>
 	<div class="mt10">
 		<form action="search.php" class="search ov" onsubmit="return se(this)">
@@ -331,38 +335,6 @@
 		</form>
 	</div>
 </div>
-
-<div class="fot">
-	<ul class="nav">
-		<li>
-			<a href="index.php" class="na">首页</a>
-			<a href="fenlei.html" class="na">分类</a>
-			<a href="car.php" class="na">购物车</a>
-			<a href="hot.html"  class="na">热销</a>
-		</li>
-		<li>
-			<a href="javascript:;" onClick="goback()" class="na">上一页</a>
-			<a href="login.php" class="na">登录/注册</a><a href="chaxun.php"  class="na">查订单</a><a href="javascript:;" onClick="gotop()" class="na">回顶部</a>
-		</li>
-		<li>
-			<a href="tel:4006600606" class="fbtn">400-660-0606<p class="f12">点击电话订购</p></a>
-			<a href="sms:13883873375" class="fbtn">点击短信订购<p class="f12">姓名+货号+数量+地址</p></a>
-		</li>
-	</ul>
-	<div class="lh25 mt10">
-		<!--<a href="http://www.qu.cn?shouji=1">电脑版</a> | --><a href="app.php" class="red">APP下载</a> | <a href="chat.php">在线客服</a> | <a href="article.php?act=detail&a_id=617">帮助</a> | <a href="faq.php">反馈</a> | <a href="about.php">关于我们</a>
-		<p class="gray f12"></p>
-		<p class="gray f12">渝ICP备14000671号-3</p>
-	</div>
-</div>
-<?php js('m', 'vganswip',20161205);?>
-<script>
-var goods_id="5503";
-var wifi='1';
-var vtotal="304";
-var rmin="2";
-var time="";
-var gis_pro = "0";
-</script>
 <?php js('m', 'goods',20161205);?>
+<?php $this->load->view('layout/smallfooter');?>
 <?php $this->load->view('layout/footer');?>

@@ -93,6 +93,14 @@ class Home extends MW_Controller {
 	}
 	
 	 /**
+	 * 搜索无结果
+	 */
+	public function noresult() {
+		
+		$this->load->view('home/noresult',$data=array());
+	}
+	
+	 /**
 	 * 产品详情
 	 */
 	public function goods(){

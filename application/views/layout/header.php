@@ -20,10 +20,8 @@
 <title><?php echo isset($headTittle) ? $headTittle.',妙处网,妙处,妙,处,性用品,性保健品,正品成人用品网站' : '妙处网,妙处,妙,处,性用品,性保健品,正品成人用品网站';?></title> 
 <base href="<?php echo $this->config->skins_url;?>"/>
 <link type="image/x-icon" rel="shortcut icon" href="m/images/logo.png"/>
-
 <?php css('m', 'reset', 20161205);?>
 <?php css('m', 'style', 20161205);?>
-
 
 <?php js('m', 'jquery-1.10.2');?>
 <?php js('m', 'vganswips',20161205);?>
@@ -31,11 +29,7 @@
 <?php js('m', 'jquery.lazyload.min');?>
 <?php js('m', 'jquery.validate.min');?>
 <?php js('m', 'jquery.validate.messages_zh');?>
-<?php js('m', 'index',20161205);?>
 <?php js('m', 'app',20161205);?>
 <?php js('m', 'car',20161205);?>
-<?php js('m', 'qa-min',20161205);?>
 </head>
 <body>
-
-

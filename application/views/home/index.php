@@ -1,13 +1,9 @@
 <?php $this->load->view('layout/header');?>
-<style type="text/css">
-.bigm{padding:0 6px;}
-#top{position:fixed;left:0;right:0;top:0;z-index:9;}
-</style>
-<div id="top" class="home-top">
+<div id="top" class="home-top tophome">
 	<div class="headers homehd" id="hometop">
 		<div class="homez">
 			<a href="<?php echo site_url('home/category')?>" class="h_t h_fl"></a>
-			<form action="search.php" class="t_se" onSubmit="return se(this)">
+			<form action="<?php echo site_url('home/goodlist');?>" class="t_se home-search">
 				<input type="search" class="t_sl" id="t_sl" name="keyword" placeholder="搜索商品" />
 				<input class="t_sr" type="submit" value=""/>
 			</form>
@@ -18,7 +14,9 @@
 				<em class="left">热门搜索</em>
 				<a href="javascript:;" class="right">关闭</a>
 			</div>
-			<a href="search.php?keyword=仿真阳具" class="hw"><em class="red">仿真阳具</em></a>
+			<a href="search.php?keyword=仿真阳具" class="hw">
+				<em class="red">仿真阳具</em>
+			</a>
 			<a href="search.php?keyword=延时" class="hw">男用延时</a>
 			<a href="search.php?keyword=飞机杯" class="hw">飞机杯</a>
 			<a href="search.php?keyword=双点刺激" class="hw">双点刺激</a>
@@ -61,43 +59,43 @@
 	</div>
 	<div class="hmnv">
 		<a href="<?php echo site_url('home/man');?>" class="da">
-			<img src="http://s.qw.cc/mobile/ui/b1.png" class="dam"/>
+			<img src="m/images/b1.png" class="dam"/>
 			<p>男用</p>
 		</a>
 		<a href="<?php echo site_url('home/woman');?>" class="da">
-			<img src="http://s.qw.cc/mobile/ui/b2.png" class="dam"/>
+			<img src="m/images/b2.png" class="dam"/>
 			<p>女用</p>
 		</a>
 		<a href="<?php echo site_url('home/baojian');?>" class="da">
-			<img src="http://s.qw.cc/mobile/ui/b3.png" class="dam"/>
+			<img src="m/images/b3.png" class="dam"/>
 			<p>延时</p>
 		</a>
 		<a href="<?php echo site_url('home/neiyi');?>" class="da">
-			<img src="http://s.qw.cc/mobile/ui/b4.png" class="dam"/>
+			<img src="m/images/b4.png" class="dam"/>
 			<p>情趣内衣</p>
 		</a>
 		<a href="<?php echo site_url('home/goodlist');?>" class="da">
-			<img src="http://s.qw.cc/mobile/ui/b51.png" class="dam"/>
+			<img src="m/images/b5.png" class="dam"/>
 			<p>仿真阳具</p>
 		</a>
 		<a href="<?php echo site_url('home/goodlist');?>" class="da xx">
-			<img src="http://s.qw.cc/mobile/ui/b6.png" class="dam"/>
+			<img src="m/images/b6.png" class="dam"/>
 			<p>飞机杯</p>
 		</a>
 		<a href="<?php echo site_url('home/xingai');?>" class="da xx">
-			<img src="http://s.qw.cc/mobile/ui/b7.png" class="dam"/>
+			<img src="m/images/b7.png" class="dam"/>
 			<p>SM情趣</p>
 		</a>
 		<a href="javascript:;" class="da">
-			<img src="http://s.qw.cc/mobile/ui/b8.png" class="dam"/>
+			<img src="m/images/b8.png" class="dam"/>
 			<p>土豪玩具</p>
 		</a>
 		<a href="javascript:;" class="da">
-			<img src="http://s.qw.cc/mobile/ui/b9.png" class="dam"/>
+			<img src="m/images/b9.png" class="dam"/>
 			<p>APP下载</p>
 		</a>
 		<a href="<?php echo site_url('home/category');?>" class="da">
-			<img src="http://s.qw.cc/mobile/ui/b10.png" class="dam"/>
+			<img src="m/images/b10.png" class="dam"/>
 			<p>全部分类</p>
 		</a>
 		<div class="clear"></div>
@@ -115,9 +113,15 @@
 			 <img src="http://s.qw.cc/mobile/css/home/thr1.png" width="100%" />
 	    </a>
 		<div class="dhr left">
-			<a href="<?php echo site_url('home/hot');?>" class="lotm2 left"><img src="http://s.qw.cc/mobile/css/home/thr2.png" width="100%"></a>
-			<a href="<?php echo site_url('home/newgood');?>" class="lotm3 left"><img src="http://s.qw.cc/mobile/css/home/thr31.png" width="100%"></a>
-			<a href="<?php echo site_url('home/need');?>" class="lotm3 left"><img src="http://s.qw.cc/mobile/css/home/thr5.png" width="100%"></a>
+			<a href="<?php echo site_url('home/hot');?>" class="lotm2 left">
+				<img src="http://s.qw.cc/mobile/css/home/thr2.png" width="100%">
+			</a>
+			<a href="<?php echo site_url('home/newgood');?>" class="lotm3 left">
+				<img src="http://s.qw.cc/mobile/css/home/thr31.png" width="100%">
+			</a>
+			<a href="<?php echo site_url('home/need');?>" class="lotm3 left">
+				<img src="http://s.qw.cc/mobile/css/home/thr5.png" width="100%">
+			</a>
 		</div>
 	</div>
 	<div id="lazy">
@@ -127,8 +131,12 @@
 				<a href="<?php echo site_url('home/woman');?>" class="more right"></a>
 			</h2>
 			<div class="hpre ov" style="background-color:#bd3d5e">
-				<a href="goods-6017.html?mps=index" class="w64 left"><img src="http://s.qw.cc/data/afficheimg/1460015902548090829.jpg" width="100%"/></a>
-				<a href="goods-8806.html?mps=index" class="w36 left"><img src="http://s.qw.cc/data/afficheimg/1460015949105508640.jpg" width="100%"/></a>
+				<a href="goods-6017.html?mps=index" class="w64 left">
+					<img src="http://s.qw.cc/data/afficheimg/1460015902548090829.jpg" width="100%"/>
+				</a>
+				<a href="goods-8806.html?mps=index" class="w36 left">
+					<img src="http://s.qw.cc/data/afficheimg/1460015949105508640.jpg" width="100%"/>
+				</a>
 			</div>
 		</div>
 		<div class="m_z ov">
@@ -177,8 +185,12 @@
 				<a href="baojian/" class="more right"></a>
 			</h2>
 			<div class="hpre ov" style="background-color:#fc588d">
-				<a href="goods-5415.html?mps=index" class="w64 left"><img src="http://s.qw.cc/data/afficheimg/1441012813280750922.jpg" width="100%"/></a>
-				<a href="goods-6007.html?mps=index" class="w36 left"><img src="http://s.qw.cc/data/afficheimg/1441012359509261528.jpg" width="100%"/></a>
+				<a href="goods-5415.html?mps=index" class="w64 left">
+					<img src="http://s.qw.cc/data/afficheimg/1441012813280750922.jpg" width="100%"/>
+				</a>
+				<a href="goods-6007.html?mps=index" class="w36 left">
+					<img src="http://s.qw.cc/data/afficheimg/1441012359509261528.jpg" width="100%"/>
+				</a>
 			</div>
 		</div>
 
@@ -252,57 +264,166 @@
 		<div class="bgw">
 			<h2 class="t"><a href="hot.html" class="brl">精品推荐</a><a href="hot.html" class="more right"></a></h2>
 			<div class="gd bigm">
-				<a href="goods-5503.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5503_P_1481678457379.jpg" class="gm"><h3 class="gt">琦莎 口阴互换舌震免提HAPPY飞机杯</h3><p class="lp"><em class="xj">¥195.02</em><em class="s_s">销量:31242</em></p></div></a>
-				<a href="goods-8806.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201611/goods_img/8806_P_1478659582837.jpg" class="gm"><h3 class="gt">COC罗马大帝加长多频仿真阳具</h3><p class="lp"><em class="xj">¥194.04</em><em class="s_s">销量:29587</em></p></div></a>
-				<a href="goods-6017.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201612/goods_img/6017_P_1481683152533.jpg" class="gm"><h3 class="gt">香港简爱月亮之上自动抽插多频快感智能加温震动棒</h3><p class="lp"><em class="xj">¥360.64</em><em class="s_s">销量:17246</em></p></div></a>
-				<a href="goods-10201.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201611/goods_img/10201_P_1480383461258.jpg" class="gm"><h3 class="gt">【藏帝升级版】久皇 高原珍稀植物男性延时喷剂 持久不麻木15ml</h3><p class="lp"><em class="xj">¥194.04</em><em class="s_s">销量:15330</em></p></div></a>
-				<a href="goods-7577.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201601/goods_img/7577_P_1453100833956.jpg" class="gm"><h3 class="gt">UNIMAT 电动夹吸飞机杯式阴茎增大器</h3><p class="lp"><em class="xj">¥449.82</em><em class="s_s">销量:10650</em></p></div></a>
-				<a href="goods-7207.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201608/goods_img/7207_P_1471487304674.jpg" class="gm"><h3 class="gt">Angel&coco 情欲提升强效凝露 原装进口 30ml</h3><p class="lp"><em class="xj">¥489.02</em><em class="s_s">销量:9349</em></p></div></a>
-				<a href="goods-4776.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201510/goods_img/4776_P_1445220267589.jpg" class="gm"><h3 class="gt">ManMiao 兽兽宝贝缩阴震动仿真名器</h3><p class="lp"><em class="xj">¥195.02</em><em class="s_s">销量:7967</em></p></div></a>
-				<a href="goods-5315.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5315_P_1481264366297.jpg" class="gm"><h3 class="gt">VINA 莎拉宝贝真人发声臀部倒模</h3><p class="lp"><em class="xj">¥293.02</em><em class="s_s">销量:6614</em></p></div></a>
-				<a href="goods-5321.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201610/goods_img/5321_P_1476698375082.jpg" class="gm"><h3 class="gt">香港诺兰自动伸缩抽插硅胶震动转珠棒</h3><p class="lp"><em class="xj">¥979.02</em><em class="s_s">销量:5678</em></p></div></a>
-				<a href="goods-9556.html" class="ga"><div class="pm"><img src="http://s.qw.cc/t/300x300/images/201610/goods_img/9556_P_1477877821018.jpg" class="gm"><h3 class="gt">COC 俏浪子恒温加热强力抽插震动棒</h3><p class="lp"><em class="xj">¥360.64</em><em class="s_s">销量:3725</em></p></div></a>
+				<a href="goods-5503.html" class="ga">
+					<div class="pm">
+						<img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5503_P_1481678457379.jpg" class="gm">
+						<h3 class="gt">琦莎 口阴互换舌震免提HAPPY飞机杯</h3>
+						<p class="lp">
+							<em class="xj">¥195.02</em>
+							<em class="s_s">销量:31242</em>
+						</p>
+					</div>
+				</a>
+				<a href="goods-5503.html" class="ga">
+					<div class="pm">
+						<img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5503_P_1481678457379.jpg" class="gm">
+						<h3 class="gt">琦莎 口阴互换舌震免提HAPPY飞机杯</h3>
+						<p class="lp">
+							<em class="xj">¥195.02</em>
+							<em class="s_s">销量:31242</em>
+						</p>
+					</div>
+				</a>
+				<a href="goods-5503.html" class="ga">
+					<div class="pm">
+						<img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5503_P_1481678457379.jpg" class="gm">
+						<h3 class="gt">琦莎 口阴互换舌震免提HAPPY飞机杯</h3>
+						<p class="lp">
+							<em class="xj">¥195.02</em>
+							<em class="s_s">销量:31242</em>
+						</p>
+					</div>
+				</a>
+				<a href="goods-5503.html" class="ga">
+					<div class="pm">
+						<img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5503_P_1481678457379.jpg" class="gm">
+						<h3 class="gt">琦莎 口阴互换舌震免提HAPPY飞机杯</h3>
+						<p class="lp">
+							<em class="xj">¥195.02</em>
+							<em class="s_s">销量:31242</em>
+						</p>
+					</div>
+				</a>
+				<a href="goods-5503.html" class="ga">
+					<div class="pm">
+						<img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5503_P_1481678457379.jpg" class="gm">
+						<h3 class="gt">琦莎 口阴互换舌震免提HAPPY飞机杯</h3>
+						<p class="lp">
+							<em class="xj">¥195.02</em>
+							<em class="s_s">销量:31242</em>
+						</p>
+					</div>
+				</a>
+				<a href="goods-5503.html" class="ga">
+					<div class="pm">
+						<img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5503_P_1481678457379.jpg" class="gm">
+						<h3 class="gt">琦莎 口阴互换舌震免提HAPPY飞机杯</h3>
+						<p class="lp">
+							<em class="xj">¥195.02</em>
+							<em class="s_s">销量:31242</em>
+						</p>
+					</div>
+				</a>
+				<a href="goods-5503.html" class="ga">
+					<div class="pm">
+						<img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5503_P_1481678457379.jpg" class="gm">
+						<h3 class="gt">琦莎 口阴互换舌震免提HAPPY飞机杯</h3>
+						<p class="lp">
+							<em class="xj">¥195.02</em>
+							<em class="s_s">销量:31242</em>
+						</p>
+					</div>
+				</a>
+				<a href="goods-5503.html" class="ga">
+					<div class="pm">
+						<img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5503_P_1481678457379.jpg" class="gm">
+						<h3 class="gt">琦莎 口阴互换舌震免提HAPPY飞机杯</h3>
+						<p class="lp">
+							<em class="xj">¥195.02</em>
+							<em class="s_s">销量:31242</em>
+						</p>
+					</div>
+				</a>
+				<a href="goods-5503.html" class="ga">
+					<div class="pm">
+						<img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5503_P_1481678457379.jpg" class="gm">
+						<h3 class="gt">琦莎 口阴互换舌震免提HAPPY飞机杯</h3>
+						<p class="lp">
+							<em class="xj">¥195.02</em>
+							<em class="s_s">销量:31242</em>
+						</p>
+					</div>
+				</a>
+				<a href="goods-5503.html" class="ga">
+					<div class="pm">
+						<img src="http://s.qw.cc/t/300x300/images/201612/goods_img/5503_P_1481678457379.jpg" class="gm">
+						<h3 class="gt">琦莎 口阴互换舌震免提HAPPY飞机杯</h3>
+						<p class="lp">
+							<em class="xj">¥195.02</em>
+							<em class="s_s">销量:31242</em>
+						</p>
+					</div>
+				</a>
 			</div>
 		</div>
 		
 		<div class="bgw ov mt10">
 			<h2 class="t"><a href="fenlei.html" class="brl">商品分类</a><a href="fenlei.html" class="more right"></a></h2>
 			<div class="ov" id="fcat">
-				<a href="man/" class="b_ca"><h3 class="c3">男性用品</h3><p class="c9">飞机杯\真人倒模</p><img src="http://s.qw.cc/mobile/ui/h1.jpg" class="w_ct"/></a>
-				<a href="woman/" class="b_ca"><h3 class="c3">女性用品</h3><p class="c9">跳蛋\男根\转珠棒</p><img src="http://s.qw.cc/mobile/ui/h2.jpg" class="w_ct"/></a>
-				<a href="neiyi/" class="b_xa"><h3 class="c3">情趣内衣</h3><p class="c9">三点/制服/丝袜</p><img src="http://s.qw.cc/mobile/ui/h4.jpg" class="w_cb"/></a>
-				<a href="xingai/" class="b_xa"><h3 class="c3">双人情趣</h3><p class="c9">夫妻玩具\SM</p><img src="http://s.qw.cc/mobile/ui/h5.jpg" class="w_cb"/></a>
-				<a href="runhuaye/" class="b_xa"><h3 class="c3">润滑液</h3><p class="c9">让爱水多多</p><img src="http://s.qw.cc/mobile/ui/h6.jpg" class="w_cb"/></a>
-				<a href="baojian/" class="b_xa"><h3 class="c3">延时助情</h3><p class="c9">延长<i class="h">性爱时间</i></p><img src="http://s.qw.cc/mobile/ui/h3.jpg" class="w_cb"/></a>
-				<a href="biyuntao/" class="b_xa"><h3 class="c3">避孕套</h3><p class="c9">超薄\螺纹刺激</p><img src="http://s.qw.cc/mobile/ui/h7.jpg" class="w_cb"/></a>
-				<a href="fengqing/" class="b_xa"><h3 class="c3">丰胸缩阴</h3><p class="c9">恢复少女紧致</p><img src="http://s.qw.cc/mobile/ui/h8.jpg" class="w_cb"/></a>
-				<a href="woman/bizhen/" class="b_xa"><h3 class="c3">逼真男根</h3><p class="c9">超真实体验</p><img src="http://s.qw.cc/mobile/ui/h9.jpg" class="w_cb"/></a>
-				<a href="man/feijibei/" class="b_xa"><h3 class="c3">飞机杯</h3><p class="c9">女神陪你一起打</p><img src="http://s.qw.cc/mobile/ui/h10.jpg" class="w_cb"/></a>
+				<a href="man/" class="b_ca">
+					<h3 class="c3">男性用品</h3>
+					<p class="c9">飞机杯\真人倒模</p>
+					<img src="http://s.qw.cc/mobile/ui/h1.jpg" class="w_ct"/>
+				</a>
+				<a href="woman/" class="b_ca">
+					<h3 class="c3">女性用品</h3>
+					<p class="c9">跳蛋\男根\转珠棒</p>
+					<img src="http://s.qw.cc/mobile/ui/h2.jpg" class="w_ct"/>
+				</a>
+				<a href="neiyi/" class="b_xa">
+					<h3 class="c3">情趣内衣</h3>
+					<p class="c9">三点/制服/丝袜</p>
+					<img src="http://s.qw.cc/mobile/ui/h4.jpg" class="w_cb"/>
+				</a>
+				<a href="xingai/" class="b_xa">
+					<h3 class="c3">双人情趣</h3>
+					<p class="c9">夫妻玩具\SM</p>
+					<img src="http://s.qw.cc/mobile/ui/h5.jpg" class="w_cb"/>
+				</a>
+				<a href="runhuaye/" class="b_xa">
+					<h3 class="c3">润滑液</h3>
+					<p class="c9">让爱水多多</p>
+					<img src="http://s.qw.cc/mobile/ui/h6.jpg" class="w_cb"/>
+				</a>
+				<a href="baojian/" class="b_xa">
+					<h3 class="c3">延时助情</h3>
+					<p class="c9">延长<i class="h">性爱时间</i></p>
+					<img src="http://s.qw.cc/mobile/ui/h3.jpg" class="w_cb"/>
+				</a>
+				<a href="biyuntao/" class="b_xa">
+					<h3 class="c3">避孕套</h3>
+					<p class="c9">超薄\螺纹刺激</p>
+					<img src="http://s.qw.cc/mobile/ui/h7.jpg" class="w_cb"/>
+				</a>
+				<a href="fengqing/" class="b_xa">
+					<h3 class="c3">丰胸缩阴</h3>
+					<p class="c9">恢复少女紧致</p>
+					<img src="http://s.qw.cc/mobile/ui/h8.jpg" class="w_cb"/>
+				</a>
+				<a href="woman/bizhen/" class="b_xa">
+					<h3 class="c3">逼真男根</h3>
+					<p class="c9">超真实体验</p>
+					<img src="http://s.qw.cc/mobile/ui/h9.jpg" class="w_cb"/>
+				</a>
+				<a href="man/feijibei/" class="b_xa">
+					<h3 class="c3">飞机杯</h3>
+					<p class="c9">女神陪你一起打</p>
+					<img src="http://s.qw.cc/mobile/ui/h10.jpg" class="w_cb"/>
+				</a>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="fot">
-	<ul class="nav">
-		<li>
-			<a href="index.php" class="na">首页</a>
-			<a href="fenlei.html" class="na">分类</a>
-			<a href="car.php" class="na">购物车</a>
-			<a href="hot.html"  class="na">热销</a>
-		</li>
-		<li>
-			<a href="javascript:;" onClick="goback()" class="na">上一页</a>
-			<a href="login.php" class="na">登录/注册</a>
-			<a href="chaxun.php"  class="na">查订单</a>
-			<a href="javascript:;" onClick="gotop()" class="na">回顶部</a>
-		</li>
-		<li>
-			<a href="tel:4006600606" class="fbtn">400-660-0606<p class="f12">点击电话订购</p></a>
-			<a href="sms:13883873375" class="fbtn">点击短信订购<p class="f12">姓名+货号+数量+地址</p></a>
-		</li>
-	</ul>
-	<div class="lh25 mt10">
-		<a href="article.php?act=detail&a_id=617">帮助</a> | <a href="faq.php">反馈</a> | <a href="about.php">关于我们</a>
-	</div>
-</div>
+<?php js('m', 'index',20161205);?>
+<?php $this->load->view('layout/smallfooter');?>
 <?php $this->load->view('layout/footer');?>
