@@ -1,9 +1,9 @@
 <?php $this->load->view('layout/header');?>
 <div id="top">
 	<div class="header">
-		<a href="javascript:;" onClick="goback()" class="b_l"></a>
+		<a href="javascript:goback();" class="b_l"></a>
 		<h2>订单结算</h2>
-		<a href="javascript:;" class="b_r">继续购物</a>
+		<a href="<?php echo site_url('home/index');?>" class="b_r">继续购物</a>
 	</div>
 </div>
 <div class="pageauto">
@@ -27,11 +27,11 @@
 					<em class="f10">X</em>
 					<input type="number" id="5503" class="gnum" min="1" max="1" value="1"/>
 				</p>
-				<a href="javascript:;" onClick="delGoods(22805738)" class="right gray">删除</a>
+				<a href="javascript:delGoods(22805738);" class="right gray">删除</a>
 			</dd>
 		</dl>
 	</div>
-    <form action="buy.php" method="POST" id="car" class="se_p" onSubmit="return carb()">
+    <form action="<?php echo site_url('home/buyok');?>" method="POST" id="car" class="se_p" onSubmit="return carb()">
 		<div class="bgw pd10">
 			<table width="100%" border="0" class="ftable">
 				  <tr>
@@ -117,21 +117,13 @@
 			 </tbody>
 			</table>
 		</div>
-		<div class="bgw lr10 mt10">
-			<table width="100%" border="0" class="ftable">
-			  <tr>
-			    <td width="20%"><b>付款方式</b></td>
-			    <td>
-			        <div id="fukuan">
-			    	  <div class="pmz left pmon" onClick="fee(3)">货到付款<p>满198包邮</p></div>
-			          <div class="pmz left " onClick="fee(4)">支付宝<p>满99包邮</p></div>
-			          <!--<div class="pmz left" onClick="fee(7)">银行卡<p>满99包邮</p></div>-->
-			    	</div>
-			    	<input name="payment" id="payment" class="hid" checked type="radio" value="3"/>
-			     </td>
-			  </tr>
-			</table>
-		</div>
+		
+		<ul id="fukuan">
+			<li class="pmz" onclick="fee(4)">
+				<p><img src="m/images/i_zfb.png"><b>支付宝</b><i>满99包邮,免客服确认</i></p>
+			</li>
+		</ul>
+		<input name="payment" id="payment" class="hid" checked type="radio" value="3"/>
 		<div id="favourable">
 	    </div>
 		<div class="bgw pd10 mt10">
@@ -160,17 +152,19 @@
 			  </tr>
 			</table>
 		</div>
-		<input type="hidden" name="shipping" id="shipping" value="13">
-		<div class="mt10 "><input type="submit" value="提交订单" id="tijiao" class="bbt vbt"></div>
+		<input type="hidden" name="shipping" id="shipping" value="13"/>
+		<div class="mt10 ">
+			<input type="submit" value="提交订单" id="tijiao" class="bbt vbt">
+		</div>
 	</form>
 </div>
 <p class="lh55">&nbsp;</p>
 <p class="lh25 alC">
-	<a href="index.php">首页</a> | 
-	<a class="red" href="app.php">APP下载</a> | 
-	<a href="chat.php">在线客服</a> | 
-	<a href="article.php?act=detail&amp;a_id=617">帮助</a> | 
-	<a href="faq.php">反馈</a>
+	<a href="javascript:;">首页</a> | 
+	<a class="red" href="javascript:;">APP下载</a> | 
+	<a href="javascript:;">在线客服</a> | 
+	<a href="javascript:;">帮助</a> | 
+	<a href="javascript:;">反馈</a>
 </p>
 <p>&nbsp;</p>
 <?php $this->load->view('layout/footer');?>

@@ -7,7 +7,7 @@
 			<p class="ta"  data-id="1">看图文</p>
 			<p class="ta" data-id="2">评论</p>
 		</div>
-		<a href="car.php" class="b_r dcar"></a>
+		<a href="<?php echo site_url('home/cart');?>" class="b_r dcar"></a>
 		<a href="javascript:gtns();" id="gdor" class="b_r dor"></a>
 	</div>
 </div>
@@ -72,7 +72,8 @@
 			<li class="hid">
 				<a href="javascript:" onClick="pes()" class="ah_r c9">
 					<span class="i_hot mr5">配送</span>
-					<em id="pes_id">温州市</em>,<em class="pl5">预计<b id="yuji">5月11日(周三)</b>送达</em>
+					<em id="pes_id">温州市</em>,
+					<em class="pl5">预计<b id="yuji">5月11日(周三)</b>送达</em>
 				</a>
 		    </li>
 		</ul>

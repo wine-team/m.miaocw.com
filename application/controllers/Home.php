@@ -133,12 +133,29 @@ class Home extends MW_Controller {
 	}
 	
 	/**
-	 * 
+	 * 生成订单成功
 	 */
 	public function buyok() {
 		
 		$this->load->view('home/buyok',$data=array());
 	}
+	
+	/**
+	 * 支付成功
+	 */
+	public function pay() {
+		
+		$this->load->view('home/pay',$data=array());
+	}
+	
+	/**
+	 * 404
+	 */
+	public function show404() {
+	
+		$this->load->view('home/show404',$data=array());
+	}
+	
 	
 	 /**
 	 * 购物车的无购物
