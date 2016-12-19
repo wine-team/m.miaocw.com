@@ -13,7 +13,7 @@ class Home extends MW_Controller {
 		$this->load->view('home/index',$data=array());
 	}
 	
-	/**
+	 /**
 	 * 新品体验
 	 */
 	public function newgood() {
@@ -180,6 +180,12 @@ class Home extends MW_Controller {
 		
 		$this->load->view('home/reg',$data=array());
 	}
+	
+	public function forget() {
+		
+		echo '建设中';
+	}
+		
 	
 	 /**
 	 * 注册成功

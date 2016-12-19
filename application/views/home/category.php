@@ -2,12 +2,12 @@
 <div class="pageauto load" id="page">
 	<div id="top">
 		<div class="header">
-			<a href="javascript:;" onClick="goback()" class="b_l"></a>
+			<a href="javascript:goback();" class="b_l"></a>
 			<form action="search.php" class="t_se" onSubmit="return se(this)">
 				<input type="search" value="" class="t_sl" id="t_sl" name="keyword" placeholder="按摩棒" />
 				<input class="t_sr" type="submit" value="" />
 			</form>
-			<a href="" class="b_r">首页</a>
+			<a href="javascript:;" class="b_r">首页</a>
 		</div>
 	</div>
 	<div class="c_l left" id="c_l">
@@ -131,36 +131,39 @@ var c_r = $("#c_r");
 var cbox = $("#cbox");
 var cr = cbox.children();
 var clp = $("#c_lul").children();
-function inits(){
-	var wh=$(window).height();
-	var th=$("#top").height();
-	c_l.css("height",wh-th);
-	c_r.css("height",wh-th);
-	$("#page").css("height",wh)
+
+function inits() {
+    var wh = $(window).height();
+    var th = $("#top").height();
+    c_l.css("height", wh - th);
+    c_r.css("height", wh - th);
+    $("#page").css("height", wh)
 }
-clp.click(function(e){
-	var i=$(this).attr("data-id");
-	$(this).addClass("on").siblings().removeClass("on");
-	var m=cr.eq(i);
-	var mg=m.find("img[src2]");
-	if(mg.length>0){
-		mg.each(function(index, element) {
-			var u=$(this).attr("src2");
-			$(this).attr("src",u).removeAttr("src2");
-		});
-	}
-	chongzhi=true;
-	m.show().siblings().hide();
-	cbox[0].style.MozTransform=cbox[0].style.webkitTransform ="translate3d(0,0,0)";
-	cbox[0].style.msTransform=cbox[0].style.OTransform="translateY(0)";
-	e.preventDefault();
-	e.stopPropagation();
+clp.click(function (e) {
+    var i = $(this).attr("data-id");
+    $(this).addClass("on").siblings().removeClass("on");
+    var m = cr.eq(i);
+    var mg = m.find("img[src2]");
+    if (mg.length > 0) {
+        mg.each(function (index, element) {
+            var u = $(this).attr("src2");
+            $(this).attr("src", u).removeAttr("src2");
+        });
+    }
+    chongzhi = true;
+    m.show().siblings().hide();
+    cbox[0].style.MozTransform = cbox[0].style.webkitTransform = "translate3d(0,0,0)";
+    cbox[0].style.msTransform = cbox[0].style.OTransform = "translateY(0)";
+    e.preventDefault();
+    e.stopPropagation();
 });
-$(window).resize(function(){
-	inits();
+$(window).resize(function () {
+    inits();
 });
 inits();
 c_l.vganvswiper();
-c_r.vganvswiper({"cool":1});
+c_r.vganvswiper({
+    "cool": 1
+});
 </script>
 <?php $this->load->view('layout/footer');?>
