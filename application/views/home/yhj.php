@@ -1,9 +1,19 @@
 <?php $this->load->view('layout/header');?>
 <div id="top">
 	<div class="header">
-		<a href="javascript:;" onClick="goback()" class="b_l"></a>
+		<a href="javascript:goback();" onClick="" class="b_l"></a>
 		<h2>我的优惠卷</h2>
+		<a href="javascript:gtns();" id="gdor" class="b_r">导航</a>
 	</div>
+</div>
+<div class="gtn" id="gtn">
+	<ul class="gt_a">
+		<li><a href="javascript:;" class="gta">所有商品分类</a></li>
+		<li><a href="javascript:;" class="gta">购物车</a></li>
+		<li><a href="javascript:;" class="gta">浏览历史</a></li>
+		<li><a href="javascript:;" class="gta">回首页</a></li>
+		<li><a href="javascript:;" class="gta">在线客服咨询</a></li>
+	</ul>
 </div>
 <div class="pageauto">
 	<div class="lh25 gbgw">
@@ -16,7 +26,7 @@
 			    <td>
 			    	<p>新注册送10元优惠券</p><p>有效期：2015-05-26 至 2027-07-09 </p>
 			    	<p>
-			        	<a href="index.php" class="bun">立即使用</a>
+			        	<a href="<?php echo site_url('home/goods');?>" class="bun">立即使用</a>
 			    	</p>
 			    </td>
 			  </tr>
@@ -46,37 +56,14 @@
 	<p class="lh20">&nbsp;</p>
 	<div class="pd10 gbgw">
 		<div class="lh25">
-			<p>优惠劵是趣网为回馈老客户推出的优惠，可抵等额现金使用。</p>
+			<p>优惠劵是妙处网为回馈老客户推出的优惠，可抵等额现金使用。</p>
 			<p>优惠劵有什么用？</p>
-			<p>1. 订单满一定金额，可使用一定额度的优惠劵。如“满100元可使用10元优惠券”</p>
+			<p>1. 订单满一定金额，可使用一定额度的优惠劵。如“满100元可使用8元优惠券”</p>
 			<p>2. 活动中使用，按照活动的具体说明使用。</p>
 			<p>如何获得优惠劵？</p>
-			<p>1. 网站注册新用户可送10元优惠劵</p>
-			<p>2.满赠优惠劵，确认收货交易完成后生效。如“订单满100元，可送10元优惠劵”</p>
+			<p>1. 网站注册新用户可送8元优惠劵</p>
+			<p>2.满赠优惠劵，确认收货交易完成后生效。如“订单满100元，可送8元优惠劵”</p>
 		</div>
-	</div>
-</div>
-<div class="fot">
-	<ul class="nav">
-		<li>
-			<a href="index.php" class="na">首页</a>
-			<a href="fenlei.html" class="na">分类</a>
-			<a href="car.php" class="na">购物车</a>
-			<a href="hot.html"  class="na">热销</a>
-		</li>
-		<li>
-			<a href="javascript:;" onClick="goback()" class="na">上一页</a>
-			<a href="login.php" class="na">登录/注册</a>
-			<a href="chaxun.php"  class="na">查订单</a>
-			<a href="javascript:;" onClick="gotop()" class="na">回顶部</a>
-		</li>
-		<li>
-			<a href="tel:4006600606" class="fbtn">400-660-0606<p class="f12">点击电话订购</p></a>
-			<a href="sms:13883873375" class="fbtn">点击短信订购<p class="f12">姓名+货号+数量+地址</p></a>
-		</li>
-	</ul>
-	<div class="lh25 mt10">
-		<a href="app.php" class="red">APP下载</a> | <a href="chat.php">在线客服</a> | <a href="article.php?act=detail&a_id=617">帮助</a> | <a href="faq.php">反馈</a> | <a href="about.php">关于我们</a>
 	</div>
 </div>
 <script>
@@ -96,5 +83,14 @@ function addBonus(){
   }
   return true;
 }
+
+function gtns(){
+	$("#gtn").toggle();
+}
+
+$("#gtn").bind("click",function(){
+	$(this).hide();
+});
 </script>
+<?php $this->load->view('layout/smallfooter');?>
 <?php $this->load->view('layout/footer');?>

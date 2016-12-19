@@ -1,9 +1,9 @@
 <?php $this->load->view('layout/header');?>
 <div id="top">
 	<div class="header hfix">
-		<a href="javascript:;" onClick="goback()" class="b_l"></a>
+		<a href="javascript:goback();" class="b_l"></a>
 		<h2>文章详情</h2>
-		<a href="javascript:;" onclick="gtns()" id="gdor" class="b_r">导航</a>
+		<a href="javascript:gtns();" id="gdor" class="b_r">导航</a>
 	</div>
 </div>
 <div class="gtn" id="gtn">
@@ -18,7 +18,7 @@
 <div class="pageauto">
 	<div class="de_pds">
 		<h1 class="at_h1">购物帮助</h1>
-		<p class="sub_tt">微信搜索关注:<em class="h">趣网VIP</em></p>
+		<p class="sub_tt">微信搜索关注：<em class="h">妙处网</em></p>
 		<div class="desa ov">
 			<p><strong>400电话订购：</strong></p><p>&nbsp; &nbsp;
 			1.拨打400电话 400-660-0606。</p><p>&nbsp; &nbsp;
@@ -37,7 +37,7 @@
 	</div>
 	<div id="weix" class="wxfix mt10">
 		<div class="page ov">
-			<img src="http://s.qw.cc/mobile/m/quba96.jpg" class="wx_av">
+			<img src="m/images/quba96.jpg" class="wx_av">
 			<p>查询物流、售后服务、学习新姿势请关注</p>
 			<p>微信公众号：<em class="wx_txt">妙处网</em> ←长按可以复制</p>
 		</div>
@@ -49,29 +49,6 @@
 		<input class="sr left" type="submit" value="" />
 	</form>
 </div>
-<div class="fot">
-	<ul class="nav">
-		<li>
-			<a href="index.php" class="na">首页</a>
-			<a href="fenlei.html" class="na">分类</a>
-			<a href="car.php" class="na">购物车</a>
-			<a href="hot.html"  class="na">热销</a>
-		</li>
-		<li>
-			<a href="javascript:;" onClick="goback()" class="na">上一页</a>
-			<a href="login.php" class="na">登录/注册</a>
-			<a href="chaxun.php"  class="na">查订单</a>
-			<a href="javascript:;" onClick="gotop()" class="na">回顶部</a>
-		</li>
-		<li>
-			<a href="tel:4006600606" class="fbtn">400-660-0606<p class="f12">点击电话订购</p></a>
-			<a href="sms:13883873375" class="fbtn">点击短信订购<p class="f12">姓名+货号+数量+地址</p></a>
-		</li>
-	</ul>
-	<div class="lh25 mt10">
-		<a href="app.php" class="red">APP下载</a> | <a href="chat.php">在线客服</a> | <a href="article.php?act=detail&a_id=617">帮助</a> | <a href="faq.php">反馈</a> | <a href="about.php">关于我们</a>
-	</div>
-</div>
 <script>
 function gtns(){
 	$("#gtn").toggle();
@@ -80,4 +57,5 @@ $("#gtn").bind("click",function(){
 	$(this).hide();
 });
 </script>
+<?php $this->load->view('layout/smallfooter');?>
 <?php $this->load->view('layout/footer');?>

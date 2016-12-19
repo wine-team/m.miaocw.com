@@ -2,9 +2,9 @@
 <div class="page home-hot" id="lazy">
 	<div id="top">
 		<div class="header">
-			<a href="javascript:;" onClick="goback()" class="b_l"></a>
+			<a href="javascript:goback();"  class="b_l"></a>
 			<h2>热门排行</h2>
-			<a href="javascript:;" onclick="gtns()" id="gdor" class="b_r">导航</a>
+			<a href="javascript:gtns();"  id="gdor" class="b_r">导航</a>
 		</div>
 	</div>
 	<div class="gtn" id="gtn">
@@ -227,21 +227,6 @@
 			</ul>
 		</div>
 	</div>
-	<div class="bgw ov mt10">
-		<h2 class="t"><a href="fenlei.html" class="brl">商品分类</a><a href="fenlei.html" class="more right"></a></h2>
-		<div class="ov" id="fcat">
-			<a href="man/" class="b_ca"><h3 class="c3">男性用品</h3><p class="c9">飞机杯\真人倒模</p><img src="http://s.qw.cc/mobile/ui/h1.jpg" class="w_ct"/></a>
-			<a href="woman/" class="b_ca"><h3 class="c3">女性用品</h3><p class="c9">跳蛋\男根\转珠棒</p><img src="http://s.qw.cc/mobile/ui/h2.jpg" class="w_ct"/></a>
-			<a href="neiyi/" class="b_xa"><h3 class="c3">情趣内衣</h3><p class="c9">三点/制服/丝袜</p><img src="http://s.qw.cc/mobile/ui/h4.jpg" class="w_cb"/></a>
-			<a href="xingai/" class="b_xa"><h3 class="c3">双人情趣</h3><p class="c9">夫妻玩具\SM</p><img src="http://s.qw.cc/mobile/ui/h5.jpg" class="w_cb"/></a>
-			<a href="runhuaye/" class="b_xa"><h3 class="c3">润滑液</h3><p class="c9">让爱水多多</p><img src="http://s.qw.cc/mobile/ui/h6.jpg" class="w_cb"/></a>
-			<a href="baojian/" class="b_xa"><h3 class="c3">延时助情</h3><p class="c9">延长<i class="h">性爱时间</i></p><img src="http://s.qw.cc/mobile/ui/h3.jpg" class="w_cb"/></a>
-			<a href="biyuntao/" class="b_xa"><h3 class="c3">避孕套</h3><p class="c9">超薄\螺纹刺激</p><img src="http://s.qw.cc/mobile/ui/h7.jpg" class="w_cb"/></a>
-			<a href="fengqing/" class="b_xa"><h3 class="c3">丰胸缩阴</h3><p class="c9">恢复少女紧致</p><img src="http://s.qw.cc/mobile/ui/h8.jpg" class="w_cb"/></a>
-			<a href="woman/bizhen/" class="b_xa"><h3 class="c3">逼真男根</h3><p class="c9">超真实体验</p><img src="http://s.qw.cc/mobile/ui/h9.jpg" class="w_cb"/></a>
-			<a href="man/feijibei/" class="b_xa"><h3 class="c3">飞机杯</h3><p class="c9">女神陪你一起打</p><img src="http://s.qw.cc/mobile/ui/h10.jpg" class="w_cb"/></a>
-		</div>
-	</div>
 	<div class="bgw mt10">
 		<h2 class="t"><a href="fenlei.html" class="brl">热门推荐</a><a href="topiclist.php" class="more right"></a></h2>
 		<div class="lrb10 ov" id="ftpc">
@@ -250,29 +235,6 @@
 			<a href="topic.php?topic_id=628" class="ftpc"><img src="http://s.qw.cc/data/afficheimg/1452162012311575591.jpg" width="100%"/></a>
 			<a href="topic.php?topic_id=502" class="ftpc"><img src="http://s.qw.cc/data/afficheimg/1434012215380153561.jpg" width="100%"/></a>
 		</div>
-	</div>
-</div>
-<div class="fot">
-	<ul class="nav">
-		<li>
-			<a href="index.php" class="na">首页</a>
-			<a href="fenlei.html" class="na">分类</a>
-			<a href="car.php" class="na">购物车</a>
-			<a href="hot.html"  class="na">热销</a>
-		</li>
-		<li>
-			<a href="javascript:;" onClick="goback()" class="na">上一页</a>
-			<a href="login.php" class="na">登录/注册</a>
-			<a href="chaxun.php"  class="na">查订单</a>
-			<a href="javascript:;" onClick="gotop()" class="na">回顶部</a>
-		</li>
-		<li>
-			<a href="tel:4006600606" class="fbtn">400-660-0606<p class="f12">点击电话订购</p></a>
-			<a href="sms:13883873375" class="fbtn">点击短信订购<p class="f12">姓名+货号+数量+地址</p></a>
-		</li>
-	</ul>
-	<div class="lh25 mt10">
-		<a href="app.php" class="red">APP下载</a> | <a href="chat.php">在线客服</a> | <a href="article.php?act=detail&a_id=617">帮助</a> | <a href="faq.php">反馈</a> | <a href="about.php">关于我们</a>
 	</div>
 </div>
 <?php js('m', 'HSlide',20161205);?>
@@ -287,52 +249,51 @@ var huan_index=0,huan_len=2;
 var word_lk=$("#word_lk").children();
 
 $("#slider").vganswiper({bi:0.39});
- var hslider= SlideVganChou();
- hslider.init({
+var hslider= SlideVganChou();
+hslider.init({
         startIndex:0,
         autoScroll:false,
         swipendfn:null,
         callback:function(f){
 			cgnav(f.index);
         }
-    });
+});
 function cgnav(id){
-var im=$bx.eq(id);
-im.show().siblings().hide();
-if(dian[id]==1){
-lazynav(id);
-window.scrollTo(0,vtop);
-dian[id]=0;
-}
+	var im=$bx.eq(id);
+	im.show().siblings().hide();
+	if(dian[id]==1){
+	lazynav(id);
+	window.scrollTo(0,vtop);
+	dian[id]=0;
+	}
 }
 function lazynav(id){
-var imgs=$bx.eq(id).find("img");
-console.log(imgs);
-imgs.each(function(){
-var a=$(this).attr("src3");
-$(this).attr("src",a).removeAttr("src3");	
-});
-	
+	var imgs=$bx.eq(id).find("img");
+	console.log(imgs);
+	imgs.each(function(){
+	var a=$(this).attr("src3");
+	$(this).attr("src",a).removeAttr("src3");	
+	});
 }
 window.onscroll=function(){
-var sTop=document.documentElement.scrollTop+document.body.scrollTop;
-if(sTop>=vtop){
-if(isf==0){
-hbar.addClass("fix");
-isf=1;
+	var sTop=document.documentElement.scrollTop+document.body.scrollTop;
+	if(sTop>=vtop){
+	if(isf==0){
+	hbar.addClass("fix");
+	isf=1;
+		}
+	}else{
+		if(isf==1){
+	hbar.removeClass("fix");	
+		isf=0;
+		}
 	}
-}else{
-	if(isf==1){
-hbar.removeClass("fix");	
-	isf=0;
-	}
-}
 }
 function gtns(){
-$("#gtn").toggle();
+	$("#gtn").toggle();
 }
 $("#gtn").bind("click",function(){
-$(this).hide();
+	$(this).hide();
 });
 function huany(){
 	huan_index++;
@@ -343,4 +304,5 @@ function huany(){
 }
 lazyload({defObj:"#lazy"});
 </script>
+<?php $this->load->view('layout/smallfooter');?>
 <?php $this->load->view('layout/footer');?>

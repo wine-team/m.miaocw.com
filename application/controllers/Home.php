@@ -263,8 +263,9 @@ class Home extends MW_Controller {
 		$this->load->view('home/need',$data=array());
 	}
 	
-	
-	/**app下载*/
+	 /**
+	 * app下载
+	 */
 	public function app(){
 		
 		$this->load->view('home/app',$data=array());

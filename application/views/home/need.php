@@ -1,7 +1,7 @@
 <?php $this->load->view('layout/header');?>
 <div id="top">
 	<div class="header">
-		<a href="javascript:;" onClick="goback()" class="b_l"></a>
+		<a href="javascript:goback();" onClick="" class="b_l"></a>
 		<h2>性爱需求</h2>
 		<a href="fenlei.html"  class="b_r">分类</a>
 	</div>
@@ -60,7 +60,7 @@
 		</div>
 	</div>
 
-	<a href="javascript:;" id="xqbutn" onClick="xuq()" class="ajc mt10"><em class="f16">我要提交需求</em></a>
+	<a href="javascript:xuq();" id="xqbutn" class="ajc mt10"><em class="f16">我要提交需求</em></a>
 
 	<div class="bgw ov hid" id="xqbox">
 		<div class="lr10 lh35">
@@ -82,34 +82,38 @@
 	</div>
 </div>
 <script>
-var bx=$("#needlist").children();
-function faq(obj){
-var msg=obj.msg.value;
-var mob=obj.mobile.value;
-if(msg.length<5||msg.length>100){
-alert("亲，留言内容5-100之间哟~");
-return false;
-}
-if(!Validator.isMobile(mob)){
-alert("请填写正确的手机号码");
-return false;
-}
-}
-function xuq(){
-$("#xqbutn").hide();
-$("#xqbox").show();	
+var bx = $("#needlist").children();
+
+function faq(obj) {
+    var msg = obj.msg.value;
+    var mob = obj.mobile.value;
+    if (msg.length < 5 || msg.length > 100) {
+        alert("亲，留言内容5-100之间哟~");
+        return false;
+    }
+    if (!Validator.isMobile(mob)) {
+        alert("请填写正确的手机号码");
+        return false;
+    }
 }
 
-$("#sbar").delegate("a","click",function(event){
-var hs=$(this).hasClass("on");
-if(!hs){
-var i=$(this).index();
-$(this).addClass("on").siblings().removeClass("on");
-bx.eq(i).show().siblings().hide();
+function xuq() {
+    $("#xqbutn").hide();
+    $("#xqbox").show();
 }
-event.preventDefault();
-event.stopPropagation();
-	});
-lazyload({defObj:"#lazy"});
+
+$("#sbar").delegate("a", "click", function (event) {
+    var hs = $(this).hasClass("on");
+    if (!hs) {
+        var i = $(this).index();
+        $(this).addClass("on").siblings().removeClass("on");
+        bx.eq(i).show().siblings().hide();
+    }
+    event.preventDefault();
+    event.stopPropagation();
+});
+lazyload({
+    defObj: "#lazy"
+});
 </script>
 <?php $this->load->view('layout/footer');?>

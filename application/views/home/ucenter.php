@@ -8,10 +8,10 @@
 </div>
 <div class="gtn" id="gtn">
 	<ul class="gt_a">
-		<li><a href="fenlei.html" class="gta">所有商品分类</a></li>
-		<li><a href="car.php" class="gta">购物车</a></li>
-		<li><a href="history.php" class="gta">浏览历史</a></li>
-		<li><a href="" class="gta">回首页</a></li>
+		<li><a href=<?php echo site_url('home/category');?> class="gta">所有商品分类</a></li>
+		<li><a href="<?php echo site_url('home/cart');?>" class="gta">购物车</a></li>
+		<li><a href="<?php echo site_url('home/history');?>" class="gta">浏览历史</a></li>
+		<li><a href="<?php echo site_url('home/index');?>" class="gta">回首页</a></li>
 		<li><a href="chat.php" class="gta">在线客服咨询</a></li>
 	</ul>
 </div>
@@ -32,40 +32,52 @@
 	<ul class="bul mt10">
 		<li>
 			<a href="<?php echo site_url('home/order');?>">
-				<img src="http://s.qw.cc/mobile/ui/u1.png" class="uiu">全部订单(0)
+				<img src="m/images/u1.png" class="uiu">全部订单(0)
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('home/yhj');?>">
-				<img src="http://s.qw.cc/mobile/ui/u2.png" class="uiu">优惠券</a>
+				<img src="m/images/u2.png" class="uiu">优惠券</a>
 			</li>
 		<!--<li><a href="yao.php">摇一摇</a></li>-->
 	</ul>
 	<ul class="bul mt10">
 		<li>
 			<a href="<?php echo site_url('home/collect')?>">
-				<img src="http://s.qw.cc/mobile/ui/u3.png" class="uiu">我的收藏(0)
+				<img src="m/images/u3.png" class="uiu">我的收藏(0)
 			</a>
 		</li>
 		<li>
 			<a href="<?php echo site_url('home/history')?>">
-				<img src="http://s.qw.cc/mobile/ui/u4.png" class="uiu">浏览历史
+				<img src="m/images/u4.png" class="uiu">浏览历史
 			</a>
 		</li>
 	</ul>
 	<ul class="bul mt10">
 		<li>
 			<a href="<?php echo site_url('home/shophelp')?>">
-				<img src="http://s.qw.cc/mobile/ui/u5.png" class="uiu">购物帮助
+				<img src="m/images/u5.png" class="uiu">购物帮助
 			</a>
 		</li>
-		<li><a href="chat.php"><img src="http://s.qw.cc/mobile/ui/u6.png" class="uiu">在线客服</a></li>
-		<li><a href="http://s.qw.cc/app/mobile.apk?v=318"><img src="http://s.qw.cc/mobile/ui/u7.png" class="uiu">APP下载(送好礼)</a></li>
-		<li><a href="logout.php"><img src="http://s.qw.cc/mobile/ui/u8.png" class="uiu">注销登录</a></li>
+		<li>
+			<a href="javascript:;">
+				<img src="m/images/u6.png" class="uiu">在线客服
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo site_url('home/app');?>">
+				<img src="m/images/u7.png" class="uiu">APP下载(送好礼)
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo site_url('home/index');?>">
+				<img src="m/images/u8.png" class="uiu">注销登录
+			</a>
+		</li>
 	</ul>
 	<div id="weix" class="wxfix mt10">
 		<div class="page ov">
-			<img src="http://s.qw.cc/mobile/m/quba96.jpg" class="wx_av">
+			<img src="m/images/quba96.jpg" class="wx_av">
 			<p>查询物流、售后服务、学习新姿势请关注</p>
 			<p>微信公众号：<em class="wx_txt">妙处网</em> ←长按可以复制</p>
 		</div>
@@ -77,29 +89,6 @@
 		<input class="sr left" type="submit" value="" />
 	</form>
 </div>
-<div class="fot">
-	<ul class="nav">
-		<li>
-			<a href="index.php" class="na">首页</a>
-			<a href="fenlei.html" class="na">分类</a>
-			<a href="car.php" class="na">购物车</a>
-			<a href="hot.html"  class="na">热销</a>
-		</li>
-		<li>
-			<a href="javascript:;" onClick="goback()" class="na">上一页</a>
-			<a href="login.php" class="na">登录/注册</a>
-			<a href="chaxun.php"  class="na">查订单</a>
-			<a href="javascript:;" onClick="gotop()" class="na">回顶部</a>
-		</li>
-		<li>
-			<a href="tel:4006600606" class="fbtn">400-660-0606<p class="f12">点击电话订购</p></a>
-			<a href="sms:13883873375" class="fbtn">点击短信订购<p class="f12">姓名+货号+数量+地址</p></a>
-		</li>
-	</ul>
-	<div class="lh25 mt10">
-		<a href="app.php" class="red">APP下载</a> | <a href="chat.php">在线客服</a> | <a href="article.php?act=detail&a_id=617">帮助</a> | <a href="faq.php">反馈</a> | <a href="about.php">关于我们</a>
-	</div>
-</div>
 <script>
 function gtns(){
 	$("#gtn").toggle();
@@ -108,4 +97,5 @@ $("#gtn").bind("click",function(){
 	$(this).hide();
 });
 </script>
+<?php $this->load->view('layout/smallfooter');?>
 <?php $this->load->view('layout/footer');?>
