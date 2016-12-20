@@ -21,7 +21,7 @@
 	</div>
 
 	<div class="bgw pd10 mt10">
-		<a href="setting.php" class="av_a">
+		<a href="<?php echo site_url('home/setting');?>" class="av_a">
 			<img src="http://s.qw.cc/" class="uava left"/>
 			<h3 class="f16 c3">15988173723<em class="vip">V1</em></h3>
 			<p class="gray">享受全场<b class="c3">9.8</b>折优惠</p>

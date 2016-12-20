@@ -196,6 +196,47 @@ class Home extends MW_Controller {
 	}
 	
 	/**
+	 * 设置
+	 */
+	public function setting() {
+		
+		$this->load->view('home/setting',$data=array());
+	}
+	
+	/**
+	 * 个人资料
+	 */
+	public function address() {
+	
+		$this->load->view('home/address',$data=array());
+	}
+	
+	/**
+	 * 个人资料
+	 */
+	public function add_address() {
+	
+		$this->load->view('home/add_address',$data=array());
+	}
+	
+	/**
+	 * 修改密码
+	 */
+	public function password() {
+		
+		$this->load->view('home/password',$data=array());
+	}
+	
+	/**
+	 * 个人资料
+	 */
+	public function profile() {
+	
+		$this->load->view('home/profile',$data=array());
+	}
+	
+	
+	/**
 	 * 购物帮助
 	 */
 	public function shophelp() {
