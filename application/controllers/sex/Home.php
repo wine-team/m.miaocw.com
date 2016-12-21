@@ -10,7 +10,15 @@ class Home extends MW_Controller {
 	 */
 	public function index() {
 		
-		$this->load->view('sex/home/index',$data=array());
+		if (!$this->cache->memcached->get('wapHomePageCache')) {
+			$data = array(
+				'advert' => $this->fn_get_contents($this->config->main_base_url.'m/home/advert','','post'),
+			);
+			$this->cache->memcached->save('wapHomePageCache',$data,365*24*3600);
+		} else {
+			$data = $this->cache->memcached->get('wapHomePageCache');
+		}
+		$this->load->view('sex/home/index',$data);
 	}
 	
 	 /**
