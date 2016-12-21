@@ -1,9 +1,9 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header hfix">
-		<a href="javascript:;" onClick="goback()" class="b_l"></a>
+		<a href="javascript:goback();" class="b_l"></a>
 		<h1 class="ldt" onClick="gtns()">情趣服饰</h1>
-		<a href="javascript:;" onclick="gtns()" id="gdor" class="b_r">更多</a>
+		<a href="javascript:gtns();"  id="gdor" class="b_r">更多</a>
 	</div>
 </div>
 <div class="gtn" id="gtn">
@@ -187,4 +187,4 @@ $("#gtn").bind("click",function(){
 	$(this).hide();
 });
 </script>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/footer');?>

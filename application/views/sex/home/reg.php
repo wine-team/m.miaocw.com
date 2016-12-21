@@ -1,9 +1,9 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header">
 		<a href="javascript:goback();" class="b_l"></a>
 		<h2>注册</h2>
-		<a href="<?php echo site_url('qingqu/home/login')?>" class="b_r">去登陆</a>
+		<a href="<?php echo site_url('sex/home/login')?>" class="b_r">去登陆</a>
 	</div>
 </div>
 <div class="pageauto login-reg">
@@ -27,4 +27,4 @@
 		<p class="lh16">&nbsp;</p><a href="javascript:goback();" class="red U pr10">返回继续购物</a><a href="user.php" class="U red pl10">进入会员中心</a>
 	</div>
 </div>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/footer');?>

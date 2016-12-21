@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header">
 		<a href="javascript:goback();" class="b_l"></a>
@@ -52,5 +52,5 @@
 		<a href="javascript:" class="right">下一页></a>
 	</div>
 </div>
-<?php $this->load->view('qingqu/layout/smallfooter');?>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/smallfooter');?>
+<?php $this->load->view('sex/layout/footer');?>

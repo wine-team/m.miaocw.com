@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header">
 		<a href="javascript:;" class="b_l">
@@ -16,7 +16,7 @@
 	<div class="cuo_info">
 		<p>错误代码：404</p>
 		<p>原因：访问页面未找到</p>
-		<a href="<?php echo site_url('qingqu/home/index')?>" class="gbtn">返回首页</a>
+		<a href="<?php echo site_url('sex/home/index')?>" class="gbtn">返回首页</a>
 	</div>
 </div>
 <div class="hmnv">
@@ -52,5 +52,5 @@
 	</a>
 	<div class="clear"></div>
 </div>
-<?php $this->load->view('qingqu/layout/smallfooter');?>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/smallfooter');?>
+<?php $this->load->view('sex/layout/footer');?>

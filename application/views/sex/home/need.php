@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header">
 		<a href="javascript:goback();" onClick="" class="b_l"></a>
@@ -116,4 +116,4 @@ lazyload({
     defObj: "#lazy"
 });
 </script>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/footer');?>

@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header hfix">
 		<a href="javascript:goback();" class="b_l"></a>
@@ -75,5 +75,5 @@ $("#gtn").bind("click",function(){
 	$(this).hide();
 });
 </script>
-<?php $this->load->view('qingqu/layout/smallfooter');?>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/smallfooter');?>
+<?php $this->load->view('sex/layout/footer');?>

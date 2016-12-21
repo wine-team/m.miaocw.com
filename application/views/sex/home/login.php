@@ -1,18 +1,18 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header">
 		<a href="javascript:goback();" onClick="" class="b_l"></a>
 		<h2>登录</h2>
-		<a href="<?php echo site_url('qingqu/home/reg')?>" class="b_r">去注册</a>
+		<a href="<?php echo site_url('sex/home/reg')?>" class="b_r">去注册</a>
 	</div>
 </div>
 <div class="pageauto login-reg" id="lbefore">
-	<form action="<?php echo site_url('qingqu/home/login')?>" method="post" class="login" id="login" onSubmit="return login();">
+	<form action="<?php echo site_url('sex/home/login')?>" method="post" class="login" id="login" onSubmit="return login();">
 		<input type="checkbox" class="hid" name="remember" value="1" checked="checked"/>
 		<input type="text" name="username" class="linput" id="username" value="" placeholder="用户名/邮箱/手机" />
 		<input type="password" name="password" id="password" class="linput lpass" value=""  placeholder="登陆密码"/>
-		<a href="<?php echo site_url('qingqu/home/reg')?>" class="h left">免费注册（送10元优惠券）</a>
-		<a href="<?php echo site_url('qingqu/home/forget')?>" style="color:#09F" class="right">忘记密码?</a>
+		<a href="<?php echo site_url('sex/home/reg')?>" class="h left">免费注册（送10元优惠券）</a>
+		<a href="<?php echo site_url('sex/home/forget')?>" style="color:#09F" class="right">忘记密码?</a>
 		<div class="clear"></div>
 		<input type="submit" value="登 录" class="gbtn">
 		<p>&nbsp;</p>
@@ -39,4 +39,4 @@
 		</div>
 	</div>
 </div>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/footer');?>

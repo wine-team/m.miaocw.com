@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header">
 		<a href="javascript:goback();" class="b_l"></a>
@@ -51,4 +51,4 @@
 	<p class="lh35"> </p>
 	<p class="lh35"> </p>
 </div>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/footer');?>

@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header hfix">
 		<a href="javascript:goback();" class="b_l"></a>
@@ -22,7 +22,7 @@
 	</ul>
 	<div class="mt10" id="goods_content">
 		<div class="lgoods ov">
-			<a href="<?php echo site_url('qingqu/home/goods');?>" class="loota">
+			<a href="<?php echo site_url('sex/home/goods');?>" class="loota">
 				<div class="pm">
 					<img src="http://s.qw.cc/t/300x300/images/201511/goods_img/5772_P_1446630318786.jpg" class="loimg">
 					<h3 class="f14 c3">香港简爱大海之恋恒温震动棒</h3>
@@ -198,5 +198,5 @@ lazyload({
 	defObj: "#lazy"
 });
 </script>
-<?php $this->load->view('qingqu/layout/smallfooter');?>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/smallfooter');?>
+<?php $this->load->view('sex/layout/footer');?>

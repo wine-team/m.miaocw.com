@@ -1,13 +1,13 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top" class="home-top tophome">
 	<div class="headers homehd" id="hometop">
 		<div class="homez">
-			<a href="<?php echo site_url('qingqu/home/category')?>" class="h_t h_fl"></a>
-			<form action="<?php echo site_url('qingqu/home/goodlist');?>" class="t_se home-search">
+			<a href="<?php echo site_url('sex/home/category')?>" class="h_t h_fl"></a>
+			<form action="<?php echo site_url('sex/home/goodlist');?>" class="t_se home-search">
 				<input type="search" class="t_sl" id="t_sl" name="keyword" placeholder="搜索商品" />
 				<input class="t_sr" type="submit" value=""/>
 			</form>
-			<a href="<?php echo site_url('qingqu/home/logistics');?>" class="h_t h_wl">物流</a>
+			<a href="<?php echo site_url('sex/home/logistics');?>" class="h_t h_wl">物流</a>
 		</div>
 		<div class="sebg hid" id="sebg">
 			<div class="lr10 ov">
@@ -58,31 +58,31 @@
 		<div class="btn alC" id="btn"></div>
 	</div>
 	<div class="hmnv">
-		<a href="<?php echo site_url('qingqu/home/man');?>" class="da">
+		<a href="<?php echo site_url('sex/home/man');?>" class="da">
 			<img src="m/images/b1.png" class="dam"/>
 			<p>男用</p>
 		</a>
-		<a href="<?php echo site_url('qingqu/home/woman');?>" class="da">
+		<a href="<?php echo site_url('sex/home/woman');?>" class="da">
 			<img src="m/images/b2.png" class="dam"/>
 			<p>女用</p>
 		</a>
-		<a href="<?php echo site_url('qingqu/home/baojian');?>" class="da">
+		<a href="<?php echo site_url('sex/home/baojian');?>" class="da">
 			<img src="m/images/b3.png" class="dam"/>
 			<p>延时</p>
 		</a>
-		<a href="<?php echo site_url('qingqu/home/neiyi');?>" class="da">
+		<a href="<?php echo site_url('sex/home/neiyi');?>" class="da">
 			<img src="m/images/b4.png" class="dam"/>
 			<p>情趣内衣</p>
 		</a>
-		<a href="<?php echo site_url('qingqu/home/goodlist');?>" class="da">
+		<a href="<?php echo site_url('sex/home/goodlist');?>" class="da">
 			<img src="m/images/b5.png" class="dam"/>
 			<p>仿真阳具</p>
 		</a>
-		<a href="<?php echo site_url('qingqu/home/goodlist');?>" class="da xx">
+		<a href="<?php echo site_url('sex/home/goodlist');?>" class="da xx">
 			<img src="m/images/b6.png" class="dam"/>
 			<p>飞机杯</p>
 		</a>
-		<a href="<?php echo site_url('qingqu/home/xingai');?>" class="da xx">
+		<a href="<?php echo site_url('sex/home/xingai');?>" class="da xx">
 			<img src="m/images/b7.png" class="dam"/>
 			<p>SM情趣</p>
 		</a>
@@ -94,7 +94,7 @@
 			<img src="m/images/b9.png" class="dam"/>
 			<p>APP下载</p>
 		</a>
-		<a href="<?php echo site_url('qingqu/home/category');?>" class="da">
+		<a href="<?php echo site_url('sex/home/category');?>" class="da">
 			<img src="m/images/b10.png" class="dam"/>
 			<p>全部分类</p>
 		</a>
@@ -104,7 +104,7 @@
 		<img src="http://s.qw.cc/mobile/ui/hbbz.png" width="100%">
 	</div>
 	<div class="bgw mt10">
-		<a href=<?php echo site_url('qingqu/home/today');?> class="left lotm">
+		<a href=<?php echo site_url('sex/home/today');?> class="left lotm">
 			<div class="hoot">
 				<p class="alL">玩爆潮品喵星人天使之杖av按摩棒</p>
 				<img src="http://s.qw.cc/images/201410/thumb_img/5474_thumb_P220_1413196593328.jpg" class="limg">
@@ -113,13 +113,13 @@
 			 <img src="http://s.qw.cc/mobile/css/home/thr1.png" width="100%" />
 	    </a>
 		<div class="dhr left">
-			<a href="<?php echo site_url('qingqu/home/hot');?>" class="lotm2 left">
+			<a href="<?php echo site_url('sex/home/hot');?>" class="lotm2 left">
 				<img src="http://s.qw.cc/mobile/css/home/thr2.png" width="100%">
 			</a>
-			<a href="<?php echo site_url('qingqu/home/newgood');?>" class="lotm3 left">
+			<a href="<?php echo site_url('sex/home/newgood');?>" class="lotm3 left">
 				<img src="http://s.qw.cc/mobile/css/home/thr31.png" width="100%">
 			</a>
-			<a href="<?php echo site_url('qingqu/home/need');?>" class="lotm3 left">
+			<a href="<?php echo site_url('sex/home/need');?>" class="lotm3 left">
 				<img src="http://s.qw.cc/mobile/css/home/thr5.png" width="100%">
 			</a>
 		</div>
@@ -127,8 +127,8 @@
 	<div id="lazy">
 		<div class="bgw mt10">
 			<h2 class="t">
-				<a href=<?php echo site_url('qingqu/home/woman');?> class="brl">女性用品</a>
-				<a href="<?php echo site_url('qingqu/home/woman');?>" class="more right"></a>
+				<a href=<?php echo site_url('sex/home/woman');?> class="brl">女性用品</a>
+				<a href="<?php echo site_url('sex/home/woman');?>" class="more right"></a>
 			</h2>
 			<div class="hpre ov" style="background-color:#bd3d5e">
 				<a href="goods-6017.html?mps=index" class="w64 left">
@@ -153,8 +153,8 @@
 
 		<div class="bgw mt10">
 			<h2 class="t">
-				<a href="<?php echo site_url('qingqu/home/man');?>" class="brl">男性用品</a>
-				<a href="<?php echo site_url('qingqu/home/man');?>" class="more right"></a>
+				<a href="<?php echo site_url('sex/home/man');?>" class="brl">男性用品</a>
+				<a href="<?php echo site_url('sex/home/man');?>" class="more right"></a>
 			</h2>
 			<div class="hpre ov" style="background-color:#fadceb">
 				<a href="goods-7577.html?mps=index" class="w36 left"><img src="http://s.qw.cc/data/afficheimg/1445581303359909308.jpg" width="100%"/></a>
@@ -425,5 +425,5 @@
 	</div>
 </div>
 <?php js('m', 'index',20161205);?>
-<?php $this->load->view('qingqu/layout/smallfooter');?>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/smallfooter');?>
+<?php $this->load->view('sex/layout/footer');?>

@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header hfix">
 		<a href="javascript:goback();"  class="b_l"></a>
@@ -18,7 +18,7 @@
 <div class="pageauto">
 	<ul class="uorder mt10">
 		<li>
-			<a href="<?php echo site_url('qingqu/home/orderdetail');?>"  class="arr">
+			<a href="<?php echo site_url('sex/home/orderdetail');?>"  class="arr">
 				<img src="http://s.qw.cc/images/201604/thumb_img/5415_thumb_P220_1460455530090.jpg" class="omg"/>
 				<p><em class="gray">订单号: </em><em class="red">2016050523200156755</em></p>
 				<p>价格:<em class="red">¥392.04</em></p>
@@ -26,18 +26,18 @@
 				<p><em class="gray">订单状态:</em>待发货</p>
 			</a>
 			<p class="btline">
-				<a href="<?php echo site_url('qingqu/home/orderdetail');?>" class="bun">详情</a>
+				<a href="<?php echo site_url('sex/home/orderdetail');?>" class="bun">详情</a>
 			</p>
 		</li>
 		<li>
-			<a href="<?php echo site_url('qingqu/home/orderdetail');?>"  class="arr"><img src="http://s.qw.cc/images/201604/thumb_img/5415_thumb_P220_1460455530090.jpg" class="omg"/>
+			<a href="<?php echo site_url('sex/home/orderdetail');?>"  class="arr"><img src="http://s.qw.cc/images/201604/thumb_img/5415_thumb_P220_1460455530090.jpg" class="omg"/>
 				<p><em class="gray">订单号: </em><em class="red">2016050523025332453</em></p>
 				<p>价格:<em class="red">¥392.04</em></p>
 				<p><em class="gray">下单时间:</em> 2016-05-06 07:02:06</p>
 				<p><em class="gray">订单状态:</em>待发货</p>
 			</a>
 			<p class="btline">
-			<a href="<?php echo site_url('qingqu/home/orderdetail');?>" class="bun">详情</a>
+			<a href="<?php echo site_url('sex/home/orderdetail');?>" class="bun">详情</a>
 			</p>
 		</li>
 		<li>
@@ -84,5 +84,5 @@ $("#gtn").bind("click",function(){
 	$(this).hide();
 });
 </script>
-<?php $this->load->view('qingqu/layout/smallfooter');?>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/smallfooter');?>
+<?php $this->load->view('sex/layout/footer');?>

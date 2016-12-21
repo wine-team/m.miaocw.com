@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div class="pageauto load" id="page">
 	<div id="top">
 		<div class="header">
@@ -166,4 +166,4 @@ c_r.vganvswiper({
     "cool": 1
 });
 </script>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/footer');?>

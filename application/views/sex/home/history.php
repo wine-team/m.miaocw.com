@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header hfix">
 		<a href="javascript:goback();" class="b_l"></a>
@@ -17,14 +17,14 @@
 </div>
 <div class="pageauto">
 	<div class="gd load" id="lazy">
-		<a href="<?php echo site_url('qingqu/home/goods');?>" class="ga">
+		<a href="<?php echo site_url('sex/home/goods');?>" class="ga">
 			<div class="pm">
 				<img src="http://s.qw.cc/images/201510/thumb_img/5842_thumb_P220_1445821592809.jpg" class="gm">
 				<h3 class="gt">COC斯巴达之矛高端震动仿真阳具</h3>
 				<p class="lp"><em class="xj">1380.00</em><del>2799.00</del></p>
 			</div>
 		</a>
-		<a href="<?php echo site_url('qingqu/home/goods');?>" class="ga">
+		<a href="<?php echo site_url('sex/home/goods');?>" class="ga">
 			<div class="pm">
 				<img src="http://s.qw.cc/images/201611/thumb_img/8806_thumb_P220_1478659582447.jpg" class="gm">
 				<h3 class="gt">COC罗马大帝加长多频仿真阳具</h3>
@@ -34,31 +34,31 @@
 	</div>
 </div>
 <div class="hmnv mt10">
-	<a href="<?php echo site_url('qingqu/home/man');?>" class="da">
+	<a href="<?php echo site_url('sex/home/man');?>" class="da">
 		<img src="m/images/b1.png" class="dam"/>
 		<p>男用</p>
 	</a>
-	<a href="<?php echo site_url('qingqu/home/woman');?>" class="da">
+	<a href="<?php echo site_url('sex/home/woman');?>" class="da">
 		<img src="m/images/b2.png" class="dam"/>
 		<p>女用</p>
 	</a>
-	<a href="<?php echo site_url('qingqu/home/baojian');?>" class="da">
+	<a href="<?php echo site_url('sex/home/baojian');?>" class="da">
 		<img src="m/images/b3.png" class="dam"/>
 		<p>延时</p>
 	</a>
-	<a href="<?php echo site_url('qingqu/home/neiyi');?>" class="da">
+	<a href="<?php echo site_url('sex/home/neiyi');?>" class="da">
 		<img src="m/images/b4.png" class="dam"/>
 		<p>情趣内衣</p>
 	</a>
-	<a href="<?php echo site_url('qingqu/home/goodlist');?>" class="da">
+	<a href="<?php echo site_url('sex/home/goodlist');?>" class="da">
 		<img src="m/images/b5.png" class="dam"/>
 		<p>仿真阳具</p>
 	</a>
-	<a href="<?php echo site_url('qingqu/home/goodlist');?>" class="da xx">
+	<a href="<?php echo site_url('sex/home/goodlist');?>" class="da xx">
 		<img src="m/images/b6.png" class="dam"/>
 		<p>飞机杯</p>
 	</a>
-	<a href="<?php echo site_url('qingqu/home/xingai');?>" class="da xx">
+	<a href="<?php echo site_url('sex/home/xingai');?>" class="da xx">
 		<img src="m/images/b7.png" class="dam"/>
 		<p>SM情趣</p>
 	</a>
@@ -70,7 +70,7 @@
 		<img src="m/images/b9.png" class="dam"/>
 		<p>APP下载</p>
 	</a>
-	<a href="<?php echo site_url('qingqu/home/category');?>" class="da">
+	<a href="<?php echo site_url('sex/home/category');?>" class="da">
 		<img src="m/images/b10.png" class="dam"/>
 		<p>全部分类</p>
 	</a>
@@ -84,5 +84,5 @@ $("#gtn").bind("click",function(){
 	$(this).hide();
 });
 </script>
-<?php $this->load->view('qingqu/layout/smallfooter');?>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/smallfooter');?>
+<?php $this->load->view('sex/layout/footer');?>

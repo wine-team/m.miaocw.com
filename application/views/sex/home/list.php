@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header hfix" id="listpage">
 		<a href="javascript:goback();" class="b_l"></a>
@@ -48,7 +48,7 @@
 		<a href="javascript:mod();" class="sxa vbig" id="mode"></a>
 	</div>
 	<div class="gd load" id="glist">
-		<a href="<?php echo site_url('qingqu/home/goods');?>" class="ga">
+		<a href="<?php echo site_url('sex/home/goods');?>" class="ga">
 			<div class="pm">
 				<img src="http://s.qw.cc/t/300x300/images/201602/source_img/5503_P_1456297109268.jpg" class="gm">
 				<h3 class="gt">琦莎HAPPY两用口阴互换舌震免提飞机杯<em class="i_hot">热销</em>
@@ -63,7 +63,7 @@
 				<p class="gb">销售:14509<em class="ea">|</em>评论:304</p>
 			</div>
 		</a>
-		<a href="<?php echo site_url('qingqu/home/goods');?>" class="ga">
+		<a href="<?php echo site_url('sex/home/goods');?>" class="ga">
 			<div class="pm">
 				<img src="http://s.qw.cc/t/300x300/images/201602/source_img/5503_P_1456297109268.jpg" class="gm">
 				<h3 class="gt">琦莎HAPPY两用口阴互换舌震免提飞机杯<em class="i_hot">热销</em>
@@ -78,7 +78,7 @@
 				<p class="gb">销售:14509<em class="ea">|</em>评论:304</p>
 			</div>
 		</a>
-		<a href="<?php echo site_url('qingqu/home/goods');?>" class="ga">
+		<a href="<?php echo site_url('sex/home/goods');?>" class="ga">
 			<div class="pm">
 				<img src="http://s.qw.cc/t/300x300/images/201602/source_img/5503_P_1456297109268.jpg" class="gm">
 				<h3 class="gt">琦莎HAPPY两用口阴互换舌震免提飞机杯<em class="i_hot">热销</em>
@@ -121,5 +121,5 @@
 	</div>
 </div>
 <?php js('m', 'list',20161205);?>
-<?php $this->load->view('qingqu/layout/smallfooter');?>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/smallfooter');?>
+<?php $this->load->view('sex/layout/footer');?>

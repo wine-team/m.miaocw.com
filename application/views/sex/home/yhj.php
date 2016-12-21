@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header">
 		<a href="javascript:goback();" onClick="" class="b_l"></a>
@@ -26,7 +26,7 @@
 			    <td>
 			    	<p>新注册送10元优惠券</p><p>有效期：2015-05-26 至 2027-07-09 </p>
 			    	<p>
-			        	<a href="<?php echo site_url('qingqu/home/goods');?>" class="bun">立即使用</a>
+			        	<a href="<?php echo site_url('sex/home/goods');?>" class="bun">立即使用</a>
 			    	</p>
 			    </td>
 			  </tr>
@@ -92,5 +92,5 @@ $("#gtn").bind("click",function(){
 	$(this).hide();
 });
 </script>
-<?php $this->load->view('qingqu/layout/smallfooter');?>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/smallfooter');?>
+<?php $this->load->view('sex/layout/footer');?>

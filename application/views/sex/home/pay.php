@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header">
 		<a href="javascript:;" class="b_l"></a>
@@ -16,5 +16,5 @@
 	<p class="pd10 help">咨询售后问题、跟踪您的宝贝，关注微信公众号:<em class="red">妙处网</em>，查询物流微信发送 <em class="red">#</em>加手机号，如(<em class="h">#13800138000</em>)即可。</p>
 	<div class="pd10"><a href="javascript:;" class="gbtn">继续逛</a></div>	
 </div>
-<?php $this->load->view('qingqu/layout/smallfooter');?>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/smallfooter');?>
+<?php $this->load->view('sex/layout/footer');?>

@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header hfix">
 		<a href="javascript:goback();" class="b_l"></a>
@@ -8,10 +8,10 @@
 </div>
 <div class="gtn" id="gtn">
 	<ul class="gt_a">
-		<li><a href=<?php echo site_url('qingqu/home/category');?> class="gta">所有商品分类</a></li>
-		<li><a href="<?php echo site_url('qingqu/home/cart');?>" class="gta">购物车</a></li>
-		<li><a href="<?php echo site_url('qingqu/home/history');?>" class="gta">浏览历史</a></li>
-		<li><a href="<?php echo site_url('qingqu/home/index');?>" class="gta">回首页</a></li>
+		<li><a href=<?php echo site_url('sex/home/category');?> class="gta">所有商品分类</a></li>
+		<li><a href="<?php echo site_url('sex/home/cart');?>" class="gta">购物车</a></li>
+		<li><a href="<?php echo site_url('sex/home/history');?>" class="gta">浏览历史</a></li>
+		<li><a href="<?php echo site_url('sex/home/index');?>" class="gta">回首页</a></li>
 		<li><a href="chat.php" class="gta">在线客服咨询</a></li>
 	</ul>
 </div>
@@ -21,7 +21,7 @@
 	</div>
 
 	<div class="bgw pd10 mt10">
-		<a href="<?php echo site_url('qingqu/home/setting');?>" class="av_a">
+		<a href="<?php echo site_url('sex/home/setting');?>" class="av_a">
 			<img src="http://s.qw.cc/" class="uava left"/>
 			<h3 class="f16 c3">15988173723<em class="vip">V1</em></h3>
 			<p class="gray">享受全场<b class="c3">9.8</b>折优惠</p>
@@ -31,31 +31,31 @@
 
 	<ul class="bul mt10">
 		<li>
-			<a href="<?php echo site_url('qingqu/home/order');?>">
+			<a href="<?php echo site_url('sex/home/order');?>">
 				<img src="m/images/u1.png" class="uiu">全部订单(0)
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('qingqu/home/yhj');?>">
+			<a href="<?php echo site_url('sex/home/yhj');?>">
 				<img src="m/images/u2.png" class="uiu">优惠券</a>
 			</li>
 		<!--<li><a href="yao.php">摇一摇</a></li>-->
 	</ul>
 	<ul class="bul mt10">
 		<li>
-			<a href="<?php echo site_url('qingqu/home/collect')?>">
+			<a href="<?php echo site_url('sex/home/collect')?>">
 				<img src="m/images/u3.png" class="uiu">我的收藏(0)
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('qingqu/home/history')?>">
+			<a href="<?php echo site_url('sex/home/history')?>">
 				<img src="m/images/u4.png" class="uiu">浏览历史
 			</a>
 		</li>
 	</ul>
 	<ul class="bul mt10">
 		<li>
-			<a href="<?php echo site_url('qingqu/home/shophelp')?>">
+			<a href="<?php echo site_url('sex/home/shophelp')?>">
 				<img src="m/images/u5.png" class="uiu">购物帮助
 			</a>
 		</li>
@@ -65,12 +65,12 @@
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('qingqu/home/app');?>">
+			<a href="<?php echo site_url('sex/home/app');?>">
 				<img src="m/images/u7.png" class="uiu">APP下载(送好礼)
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('qingqu/home/index');?>">
+			<a href="<?php echo site_url('sex/home/index');?>">
 				<img src="m/images/u8.png" class="uiu">注销登录
 			</a>
 		</li>
@@ -97,5 +97,5 @@ $("#gtn").bind("click",function(){
 	$(this).hide();
 });
 </script>
-<?php $this->load->view('qingqu/layout/smallfooter');?>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/smallfooter');?>
+<?php $this->load->view('sex/layout/footer');?>

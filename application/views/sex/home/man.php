@@ -1,10 +1,7 @@
-<?php $this->load->view('qingqu/layout/header');?>
-<style type="text/css">
-
-</style>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header hfix">
-		<a href="javascript:goback();" onClick="" class="b_l"></a>
+		<a href="javascript:goback();" class="b_l"></a>
 		<h1 class="ldt" onClick="gtns()">男性用品</h1>
 		<a href="javascript:gtns();" id="gdor" class="b_r">更多</a>
 	</div>
@@ -174,5 +171,5 @@ $("#gtn").bind("click",function(){
 	$(this).hide();
 });
 </script>
-<?php $this->load->view('qingqu/layout/smallfooter');?>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/smallfooter');?>
+<?php $this->load->view('sex/layout/footer');?>

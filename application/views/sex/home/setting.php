@@ -1,4 +1,4 @@
-<?php $this->load->view('qingqu/layout/header');?>
+<?php $this->load->view('sex/layout/header');?>
 <div id="top">
 	<div class="header">
 		<a href="javascript:goback();" class="b_l"></a>
@@ -18,11 +18,11 @@
 <div class="pageauto">
 	<div style="min-height:400px;">
 		<ul class="bul mb10">
-			<li><a href="<?php echo site_url('qingqu/home/address');?>">收货地址</a></li>
-			<li><a href="<?php echo site_url('qingqu/home/profile');?>">个人资料</a></li>
-			<li><a href="<?php echo site_url('qingqu/home/password');?>">修改密码</a></li>
+			<li><a href="<?php echo site_url('sex/home/address');?>">收货地址</a></li>
+			<li><a href="<?php echo site_url('sex/home/profile');?>">个人资料</a></li>
+			<li><a href="<?php echo site_url('sex/home/password');?>">修改密码</a></li>
 		</ul>
 	</div>
 </div>
-<?php $this->load->view('qingqu/layout/smallfooter');?>
-<?php $this->load->view('qingqu/layout/footer');?>
+<?php $this->load->view('sex/layout/smallfooter');?>
+<?php $this->load->view('sex/layout/footer');?>
