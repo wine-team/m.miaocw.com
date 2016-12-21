@@ -11,8 +11,9 @@ class Home extends MW_Controller {
 	public function index() {
 		
 		if (!$this->cache->memcached->get('wapHomePageCache')) {
+			$advert = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/advert','','post'));
 			$data = array(
-				'advert' => $this->fn_get_contents($this->config->main_base_url.'m/home/advert','','post'),
+				'advert' =>$advert->messages,
 			);
 			$this->cache->memcached->save('wapHomePageCache',$data,365*24*3600);
 		} else {

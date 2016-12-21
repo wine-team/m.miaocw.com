@@ -28,34 +28,18 @@
 </div>
 <div class="page load home-category">
 	<div class="hslider" id="slider">
+	   	<?php if(!empty($advert)):?>
 		<ul class="sul">
+		    <?php foreach ($advert as $item):?>
 			<li>
-				<a href="javascript:;">
-					<img src="http://s.qw.cc/data/afficheimg/1481681553946746386.jpg" width="100%"/>
+				<a href="<?php echo $item->url;?>">
+					<img src="<?php echo $this->config->show_image_url('advert',$item->picture);?>" width="100%"/>
 				</a>
 			</li>
-			<li>
-				<a href="javascript:;">
-					<img lazy="http://s.qw.cc/data/afficheimg/1481678723489777281.jpg" width="100%"/>
-				</a>
-			</li>
-			<li>
-				<a href="javascript:;">
-					<img lazy="http://s.qw.cc/data/afficheimg/1481682124832094567.jpg" width="100%"/>
-				</a>
-			</li>
-			<li>
-				<a href="javascript:;">
-					<img lazy="http://s.qw.cc/data/afficheimg/1481682921678982759.jpg" width="100%"/>
-				</a>
-			</li>
-			<li>
-				<a href="javascript:;">
-					<img lazy="http://s.qw.cc/data/afficheimg/1481683366004820137.jpg" width="100%"/>
-				</a>
-			</li>
+			<?php endforeach;?>
 		</ul>
 		<div class="btn alC" id="btn"></div>
+		<?php endif;?>
 	</div>
 	<div class="hmnv">
 		<a href="<?php echo site_url('sex/home/man');?>" class="da">
