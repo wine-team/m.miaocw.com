@@ -179,7 +179,7 @@ class Home extends MW_Controller {
 	 */
 	public function login() {
 	
-		$this->load->view('sex/home/login',$data=array());
+		$this->load->view('sex/passport/login',$data=array());
 	}
 	
 	/**
