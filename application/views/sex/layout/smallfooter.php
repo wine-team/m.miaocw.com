@@ -8,7 +8,7 @@
 		</li>
 		<li>
 			<a href="<?php echo site_url('sex/home/ucenter');?>"  class="na">个人中心</a>
-			<a href="<?php echo site_url('sex/home/login')?>" class="na">登录/注册</a>
+			<a href="<?php echo site_url('sex/passport/login')?>" class="na">登录/注册</a>
 			<a href="<?php echo site_url('sex/home/query');?>"  class="na">查订单</a>
 			<a href="javascript:gotop();" class="na">回顶部</a>
 		</li>
