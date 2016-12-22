@@ -175,7 +175,7 @@ class Home extends MW_Controller {
 	}
 	
 	/**
-	 * 购物车的无购物
+	 * 登陆
 	 */
 	public function login() {
 	
