@@ -86,3 +86,22 @@ function send_email($recipient, $subject = 'Test email', $message = 'Hello World
 	return mail($recipient, $subject, $message);
 }
 
+/**
+ * 默认头像
+ * */
+function user_photo()
+{
+    return array(
+        '0' => '0.jpg',
+        '1' => '1.jpg',
+        '2' => '2.jpg',
+        '3' => '3.jpg',
+        '4' => '4.jpg',
+        '5' => '5.jpg',
+        '6' => '6.jpg',
+        '7' => '7.jpg',
+        '8' => '8.jpg',
+        '9' => '9.jpg',
+    );
+}
+
