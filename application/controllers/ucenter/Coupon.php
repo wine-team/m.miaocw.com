@@ -8,11 +8,34 @@ class Coupon extends MW_Controller {
     }
     
     /**
-	 * 优惠劵
+	 * 我的优惠劵
 	 */
 	public function index() {
 		
-		$this->load->view('ucenter/coupon',$data=array());
+	    $param['uid'] = 12;
+	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/userCoupn', $param, 'post'));
+		$data['res'] = $res->messages;
+	    if ($res->status) {
+	        $this->load->view('ucenter/coupon', $data);
+	    } else {
+	        $this->redirect('ucenter/Address/show404');
+	    }
+	}
+	
+	/**
+	 * @添加优惠券
+	 * */
+	public function addPost() {
+	    
+	    $postData = $this->input->post();
+	    $param['uid'] = 12;
+	    $param['userCoupnNumber'] = $postData['userCoupnNumber'];
+	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/userCoupn', $param, 'post'));
+	    if ($res->status) {
+	        $this->redirect('ucenter/Coupon/index');
+	    } else {
+	        $this->redirect('ucenter/Address/show404');
+	    }
 	}
 	
 }

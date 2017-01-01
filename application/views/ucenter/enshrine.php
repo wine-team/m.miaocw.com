@@ -18,30 +18,17 @@
 <div class="pageauto">
 	<div class="load bgw mt10">
 		<ul class="col">
+		    <?php foreach ($res as $r) :?>
 			<li>
-				<a href="goods-5531.html">
-					<img src="http://s.qw.cc/images/201501/thumb_img/5531_thumb_P220_1421914422872.jpg"  width="80" height="80"/>
-					<h3>omysky 欲望都市遥控跳蛋</h3>
-					<p><span class="xj">¥233.24</span></p>
+				<a href="<?php echo $r->goods_id;?>">
+				    <?php $img_arr = array_filter(explode('|', $r->goods_img));?>
+					<img src="<?php echo $this->config->images_url.$img_arr[0]?>"  width="80" height="80"/>
+					<h3><?php echo $r->goods_name;?></h3>
+					<p><span class="xj">¥<?php echo $r->shop_price;?></span></p>
 				</a>
-				<p onClick="javascript:if (confirm('确定删除？')) location.href='collect.php?act=del&rec_id=31641'" class="c_del">删除</p>
+				<p onClick="layer.confirm('是否确认删除？',function(){location.href='<?php echo site_url('ucenter/Enshrine/delete/'.$r->enshrine_id);?>';})" class="c_del">删除</p>
 			</li>
-			<li>
-				<a href="goods-5531.html">
-					<img src="http://s.qw.cc/images/201501/thumb_img/5531_thumb_P220_1421914422872.jpg"  width="80" height="80"/>
-					<h3>omysky 欲望都市遥控跳蛋</h3>
-					<p><span class="xj">¥233.24</span></p>
-				</a>
-				<p onClick="javascript:if (confirm('确定删除？')) location.href='collect.php?act=del&rec_id=31641'" class="c_del">删除</p>
-			</li>
-			<li>
-				<a href="goods-5531.html">
-					<img src="http://s.qw.cc/images/201501/thumb_img/5531_thumb_P220_1421914422872.jpg"  width="80" height="80"/>
-					<h3>omysky 欲望都市遥控跳蛋</h3>
-					<p><span class="xj">¥233.24</span></p>
-				</a>
-				<p onClick="javascript:if (confirm('确定删除？')) location.href='collect.php?act=del&rec_id=31641'" class="c_del">删除</p>
-			</li>
+			<?php endforeach;?>
 		</ul>
 	</div>
 	<div class="pages ov mt10">

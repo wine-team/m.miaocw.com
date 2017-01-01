@@ -19,17 +19,19 @@
 	<div class="lh25 gbgw">
 		<div class="lr10 y_hj">
 			<table width="100%" border="0">
+			  <?php foreach ($res as $r) :?>
 			  <tr>
 			    <td width="100">
-			    	<p class="hbo">¥10.00元</p>
+			    	<p class="hbo">¥<?php echo $r->amount;?>元</p>
 			    </td>
 			    <td>
-			    	<p>新注册送10元优惠券</p><p>有效期：2015-05-26 至 2027-07-09 </p>
+			    	<p><?php echo $r->coupon_name;?></p><p>有效期：<?php echo $r->start_time;?> 至 <?php echo $r->end_time;?></p>
 			    	<p>
 			        	<a href="<?php echo site_url('sex/home/goods');?>" class="bun">立即使用</a>
 			    	</p>
 			    </td>
 			  </tr>
+			  <?php endforeach;?>
 			</table>
 		</div>
 	</div>
@@ -38,16 +40,15 @@
 			<h2 class="t"><em class="brl">添加优惠券</em></h2>
 			<p class="line"></p>
 			<p class="lh18">&nbsp;</p>
-			<form onSubmit="return addBonus()" method="post" action="" name="addBouns">
+			<form onSubmit="return addBonus()" method="post" action="<?php echo site_url('ucenter/Coupon/addPost')?>" name="addBouns">
 				<table width="100%" border="0">
 				  <tr>
 				    <td width="90">优惠券序列号:</td></tr>
 				    <tr>
-				    <td><input type="text" class="pt" size="30" name="bonus_sn"/></td>
+				    <td><input type="text" class="pt" size="30" name="userCoupnNumber"/></td>
 				  </tr>
 				</table>
 				<p class="lh18">&nbsp;</p>
-				<input type="hidden" class="inputTx" value="act_add_bonus" name="act"/>
 				<input type="submit" value="添加优惠券" class="bbt"/>
 				<p class="lh18">&nbsp;</p>
 			</form>

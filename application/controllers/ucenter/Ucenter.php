@@ -37,7 +37,7 @@ class Ucenter extends MW_Controller {
 	}
 	
 	public function update_user_info()
-	{$photo='';
+	{
 	    $postData = $this->input->post();
 	    $old_photo = in_array($photo, user_photo()) ? '' : $photo;
 	    if (!empty($_FILES['photo']['name'])) { 
@@ -47,7 +47,7 @@ class Ucenter extends MW_Controller {
 	    if (isset($imageData['file_name'])) $param['photo'] = $imageData['file_name'];
 	    if (isset($postData['sex'])) $param['sex'] = $postData['sex'];
 	    if (isset($postData['email'])) $param['email'] = $postData['email'];
-	    if (isset($postData['phone'])) $param['phone'] = $postData['phone'];var_dump($param);die;
+	    if (isset($postData['phone'])) $param['phone'] = $postData['phone']; 
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/updateUserInfor', $param, 'post'));
 	   
 	    if ($res->status) {
@@ -55,6 +55,11 @@ class Ucenter extends MW_Controller {
 	    } else {
 	        $this->jsonMessage('操作失败', 'ucenter/Ucenter/profile');
 	    }
+	}
+	
+	public function sendYzm()
+	{
+	    
 	}
     
 	/**
@@ -76,6 +81,21 @@ class Ucenter extends MW_Controller {
 	     
 	    if ($res->status) {
 	        $this->redirect('ucenter/Ucenter/index');
+	    } else {
+	        $this->redirect('ucenter/Address/show404');
+	    }
+	}
+	
+	/**
+	 * @获取浏览历史
+	 * */
+	public function get_history()
+	{
+	    $param = array();
+	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/getHistory', $param, 'post'));
+	    $data['res'] = $res->messages;
+	    if ($res->status) {
+	        $this->load->view('ucenter/history', $data);
 	    } else {
 	        $this->redirect('ucenter/Address/show404');
 	    }

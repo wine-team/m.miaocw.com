@@ -48,7 +48,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('m/history')?>">
+			<a href="<?php echo site_url('ucenter/Ucenter/get_history')?>">
 				<img src="m/images/u4.png" class="uiu">浏览历史
 			</a>
 		</li>
