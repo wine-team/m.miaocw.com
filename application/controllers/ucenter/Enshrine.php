@@ -1,5 +1,5 @@
 <?php
-class Enshrine extends MW_Controller {
+class Enshrine extends CS_Controller {
     
     public function _init()
     {
@@ -12,7 +12,7 @@ class Enshrine extends MW_Controller {
 	 */
 	public function index() {
 		
-	    $param['uid'] = 12;
+	    $param['uid'] = $this->uid;
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/enshrineList', $param, 'post'));
 	    $data['res'] = $res->messages;
 	    if ($res->status) {
@@ -27,7 +27,7 @@ class Enshrine extends MW_Controller {
 	 * */
 	public function addPost($goods_id = 0)
 	{
-	    $param['uid'] = 12;
+	    $param['uid'] = $this->uid;
 	    $param['goods_id'] = $goods_id;
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/insertMallEnshrine', $param, 'post'));
 	    
@@ -43,7 +43,7 @@ class Enshrine extends MW_Controller {
 	 * */
 	public function delete($enshrine_id = 0) {
 	    
-	    $param['uid'] = 12;
+	    $param['uid'] = $this->uid;
 	    $param['enshrine_id'] = $enshrine_id; 
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/deleteMallEnshrine', $param, 'post'));
 	  

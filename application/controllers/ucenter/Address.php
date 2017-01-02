@@ -1,5 +1,5 @@
 <?php
-class Address extends MW_Controller {
+class Address extends CS_Controller {
     
     public function _init()
     {
@@ -13,7 +13,7 @@ class Address extends MW_Controller {
 	 */
 	public function grid() {  
 	    
-	    $param['uid'] = 12;
+	    $param['uid'] = $this->uid;
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/getAddress', $param, 'post')); 
 		
 	    if ($res->status) {
@@ -43,7 +43,7 @@ class Address extends MW_Controller {
 	        'province_name' => $region[0]->region_name,
 	        'city_name'     => $region[1]->region_name,
 	        'district_name' => $region[2]->region_name,
-	        'uid'           => 12,
+	        'uid'           => $this->uid,
 	        'receiver_name' => $postData['receiver_name'],
 	        'detailed'      => $postData['detailed'],
 	        'tel'           => $postData['tel'],
@@ -65,7 +65,7 @@ class Address extends MW_Controller {
 	}
 	
 	public function edit($address_id=0) {
-	    $this->uid=12;
+
 	    $address = $this->mall_address->findById($address_id);
 	    if ($address->num_rows() > 0) {
 	        $data['res'] = $address->row();
@@ -87,7 +87,7 @@ class Address extends MW_Controller {
             'province_name' => $region[0]->region_name,
             'city_name'     => $region[1]->region_name,
             'district_name' => $region[2]->region_name,
-            'uid'           => 12,
+            'uid'           => $this->uid,
             'address_id'    => $postData['address_id'],
             'receiver_name' => $postData['receiver_name'],
             'detailed'      => $postData['detailed'],
@@ -114,7 +114,7 @@ class Address extends MW_Controller {
 	 */
 	public function delete($address_id) {
 	    
-	    $param['uid'] = 12;
+	    $param['uid'] = $this->uid;
 	    $param['address_id'] = $address_id;
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/deleteAddress', $param, 'post'));
 	    if ($res->status) {

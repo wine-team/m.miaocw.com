@@ -1,5 +1,5 @@
 <?php
-class Ucenter extends MW_Controller {
+class Ucenter extends CS_Controller {
     
     public function _init()
     {
@@ -39,7 +39,8 @@ class Ucenter extends MW_Controller {
 	public function update_user_info()
 	{
 	    $postData = $this->input->post();
-	    $old_photo = in_array($photo, user_photo()) ? '' : $photo;
+	    $user_info = $this->get_user_info();
+	    $old_photo = in_array($user_info->photo, user_photo()) ? '' : $user_info->photo;
 	    if (!empty($_FILES['photo']['name'])) { 
 	        $imageData = $this->dealWithImages('photo', $old_photo,'common/touxiang');
 	    }
@@ -57,6 +58,9 @@ class Ucenter extends MW_Controller {
 	    }
 	}
 	
+	/**
+	 * @发送验证码
+	 * */
 	public function sendYzm()
 	{
 	    
@@ -73,7 +77,7 @@ class Ucenter extends MW_Controller {
 	public function reset_pwd()
 	{
 	    $postData = $this->input->post();
-	    $param['uid'] = 12;
+	    $param['uid'] = $this->uid;
 	    $param['oldPw'] = $postData['oldPw'];
 	    $param['newPw'] = $postData['newPw'];
 	    $param['newConfirmPw'] = $postData['newConfirmPw']; 

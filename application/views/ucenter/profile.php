@@ -25,6 +25,7 @@
 		<li onClick="fmx(2)"><b>性别</b><i></i><?php echo empty($sex) ? '点击选择性别' : $sex;?></li>
 		<li onClick="fmx(3)"><b>邮箱</b><i><?php echo empty($email) ? '点击填写邮箱' : $email;?></i></li>
 		<li onClick="fmx(4)"><b>手机</b><i><?php echo empty($phone) ? '点击填写手机号' : $phone;?></i></li>
+		<li onClick="fmx(5)"><b>手机</b><i><?php echo empty($phone) ? '点击填写手机号' : $phone;?></i></li>
 	</ul>
 </div>
 
@@ -78,7 +79,7 @@
 				</div>
 			</form>
 		
-			<!--  <form action="" method="POST" id="mobile_form">
+			  <form action="" method="POST" id="mobile_form">
 				<h2 class="t"><b class="brl"><em class="f14">绑定手机号码</em></b></h2>
 				<p>绑定号码：15988173722</p>
 				<input type="button" value="点击发送短信验证码" id="dx" class="dx"/>
@@ -90,7 +91,7 @@
 				<a href="javascript:" onclick="xpx(0)" class="lbtn left">取消</a>
 				<input type="button" value="绑定" onClick="yz()" class="rbtn right"/>
 				<div class="clear"></div>
-			</form>-->
+			</form>
 		</div>
 	</div>
 </div>

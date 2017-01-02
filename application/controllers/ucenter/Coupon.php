@@ -1,5 +1,5 @@
 <?php
-class Coupon extends MW_Controller {
+class Coupon extends CS_Controller {
     
     public function _init()
     {
@@ -12,7 +12,7 @@ class Coupon extends MW_Controller {
 	 */
 	public function index() {
 		
-	    $param['uid'] = 12;
+	    $param['uid'] = $this->uid;
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/userCoupn', $param, 'post'));
 		$data['res'] = $res->messages;
 	    if ($res->status) {
@@ -28,7 +28,7 @@ class Coupon extends MW_Controller {
 	public function addPost() {
 	    
 	    $postData = $this->input->post();
-	    $param['uid'] = 12;
+	    $param['uid'] = $this->uid;
 	    $param['userCoupnNumber'] = $postData['userCoupnNumber'];
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/userCoupn', $param, 'post'));
 	    if ($res->status) {
