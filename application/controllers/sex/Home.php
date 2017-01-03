@@ -134,6 +134,14 @@ class Home extends MW_Controller {
 	}
 	
 	 /**
+	 * 购物车的无购物
+	 */
+	public function cartNo() {
+	
+		$this->load->view('sex/home/cartno',$data=array());
+	}
+	
+	 /**
 	 * 立即购买
 	 */
 	public function buy() {
@@ -166,13 +174,7 @@ class Home extends MW_Controller {
 	}
 	
 	
-	 /**
-	 * 购物车的无购物
-	 */
-	public function cartNo() {
-
-		$this->load->view('sex/home/cartno',$data=array());
-	}
+	
 	
 	/**
 	 * 登陆
