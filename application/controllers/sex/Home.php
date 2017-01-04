@@ -173,31 +173,6 @@ class Home extends MW_Controller {
 		$this->load->view('sex/home/show404',$data=array());
 	}
 	
-	
-	
-	
-	/**
-	 * 登陆
-	 */
-	public function login() {
-	
-		$this->load->view('sex/passport/login',$data=array());
-	}
-	
-	/**
-	 * 注册
-	 */
-	public function reg() {
-		
-		$this->load->view('sex/home/reg',$data=array());
-	}
-	
-	public function forget() {
-		
-		echo '建设中';
-	}
-		
-	
 	 /**
 	 * 注册成功
 	 */
