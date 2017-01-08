@@ -125,6 +125,13 @@
 		</ul>
 		<input name="payment" id="payment" class="hid" checked type="radio" value="3"/>
 		<div id="favourable">
+			<div class="bgw mt10 lr10">
+			    <select name="bonus" onchange="changeBonus(this.value)" id="bonus_sn" class="select">
+					<option value="0">请选择优惠券 (1张可用)</option>
+					<option value="0">取消使用红包</option>
+			        <option value="1331926">新注册送10元优惠券(¥10.00)</option>
+			    </select>
+			</div>
 	    </div>
 		<div class="bgw pd10 mt10">
 			<table width="100%" border="0" class="ftable lh25">
