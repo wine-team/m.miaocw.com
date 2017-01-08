@@ -61,9 +61,15 @@ class Ucenter extends CS_Controller {
 	/**
 	 * @发送验证码
 	 * */
-	public function sendYzm()
-	{
+	public function sendYzm() {
 	    
+	    $param['mobile'] = $this->input->post('mobile');
+	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/updateUserInfor', $param, 'post'));
+	    if ($res->status) {
+	        $this->jsonMessage('', 'ucenter/Ucenter/index');
+	    } else {
+	        $this->jsonMessage('操作失败');
+	    }
 	}
     
 	/**

@@ -87,7 +87,6 @@
 					<p>验证码:</p>
 					<input type="text" name="code" id="code" value=""  onChange="yz()" maxlength="6" class="pt" placeholder="请输入短信中的验证码(纯数字)"/>
 				</div>
-				<input type="hidden" name="act" value="update" />
 				<a href="javascript:" onclick="xpx(0)" class="lbtn left">取消</a>
 				<input type="button" value="绑定" onClick="yz()" class="rbtn right"/>
 				<div class="clear"></div>
@@ -211,9 +210,7 @@ function ckf4() {
     $.ajax({
         type: "POST",
         url: m_url+"ucenter/Ucenter/update_user_info",
-        data: {
-            phone: phone,
-        },
+        data: {phone: phone,},
         datatype: "text",
         success: function (data) {
             if (data.status) {
@@ -280,11 +277,11 @@ dx.bind("click", function () {
         $(this).prop("disabled", "true");
         tm();
         $("#sms_box").removeClass("hid");
-        $.getJSON('profile.php?act=send&t=' + new Date().valueOf(), {
-            mobile_phone: mbv
+        $.getJSON('<?php echo $this->config->m_base_url.'ucenter/Ucenter/sendYzm';?>', {
+            mobile: mbv
         }, function (data) {
-            if (data.code) {
-                layer.msg(data.msg);
+            if (data.status == false) {
+                layer.msg("发送失败");
             }
         });
     } else {

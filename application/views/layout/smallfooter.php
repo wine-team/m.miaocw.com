@@ -13,7 +13,7 @@
 			<?php else :?>
 			<a href="<?php echo site_url('passport/Login/index')?>" class="na">登录/注册</a>
 			<?php endif;?>
-			<a href="<?php echo site_url('qingqu/home/query');?>"  class="na">查订单</a>
+			<a href="<?php echo site_url('ucenter/Order/grid');?>"  class="na">查订单</a>
 			<a href="javascript:gotop();" class="na">回顶部</a>
 		</li>
 		<li>

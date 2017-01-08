@@ -17,13 +17,13 @@
 </div>
 <div class="pageauto">
 	<div class="o_t">
-		<table width="100%" border="0">
+		<table width="100%" border="0"><?php $delivery = json_decode($res->delivery_address);?>
 		  <tr>
-		    <td>收货人：蒋主席<b class="hid">，15988173722</b></td>
+		    <td>收货人：<?php echo $delivery->receiver_name;?><b class="hid">，<?php echo $delivery->tel;?></b></td>
 		    <td rowspan="2" width="70"></td>
 		  </tr>
 		  <tr>
-		    <td>台湾省高雄市</td>
+		    <td><?php echo $delivery->detailed;?></td>
 		    </tr>
 		</table>
 	</div>
@@ -31,25 +31,26 @@
 	</ul>
 	<ul class="od">
 		<li>
-			<a href="goods-5415.html">
+			<a href="<?php echo $res->goods_id;?>">
 				<div class="lr10">
-					<img src="http://s.qw.cc/images/201604/thumb_img/5415_thumb_P220_1460455530090.jpg" width="60"  height="60" class="left"/>藏帝 高原植物延时喷剂 不麻木无依赖 15ml套餐:买二送一,加赠藏帝延时湿巾10片[198] 
-					<p><span class="red">392.04</span> X 1</p>
+				    <?php $img_arr = array_filter(explode('|', $r->goods_img));?>
+					<img src="<?php echo $this->config->images_url.$img_arr[0]?>" width="60"  height="60" class="left"/> <?php echo $res->goods_name;?>
+					<p><span class="red"><?php echo $res->pay_amount?></span> X <?php echo $res->number?></p>
 				</div>
 			</a>
 		</li>
 		<li>
 			<p class="lr10">
 				<b>订单号：</b>
-				<em class="red">2016050523200156755</em>
+				<em class="red"><?php echo $res->pay_id?></em>
 			</p>
 		</li>
 		<li>
-			<p class="lr10"><b>状  态：</b>(	待付款            )
+			<p class="lr10"><b>状  态：</b>(<?php echo $status_arr[$res->order_status]?>)
 			</p>
 		</li>
 		<li>
-			<p class="lr10">订单金额: <b class="red f16 mr5">¥392.04</b>(邮费:<b class="red">¥0.00</b>)</p>
+			<p class="lr10">订单金额: <b class="red f16 mr5">¥<?php echo $res->actual_price?></b>(邮费:<b class="red">¥<?php echo $res->deliver_price;?></b>)</p>
 		</li>
 	</ul>
 	<div class="lr10 mt10">
@@ -57,7 +58,7 @@
 			<input type="hidden" name="_input_charset" value="utf-8"/>
 			<input type="hidden" name="format" value="xml"/>
 			<input type="hidden" name="partner" value="2088211707337241"/>
-			<input type="hidden" name="req_data" value="<auth_and_execute_req><request_token>201605075aa94ca47e935777c9520cdf9fe5a17f</request_token></auth_and_execute_req>" />
+			<input type="hidden" name="req_data" value="" />
 			<input type="hidden" name="req_id" value="1462579025"/>
 			<input type="hidden" name="sec_id" value="MD5"/>
 			<input type="hidden" name="service" value="alipay.wap.auth.authAndExecute"/>

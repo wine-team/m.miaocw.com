@@ -20,7 +20,8 @@
 	    <?php foreach ($res as $r) :?>
 		<li>
 			<a href="<?php echo site_url('ucenter/Order/detail/'.$r->order_id);?>"  class="arr">
-				<img src="http://s.qw.cc/images/201604/thumb_img/5415_thumb_P220_1460455530090.jpg" class="omg"/>
+				<?php $img_arr = array_filter(explode('|', $r->goods_img));?>
+				<img src="<?php echo $this->config->images_url.$img_arr[0]?>" class="omg"/>
 				<p><em class="gray">订单号: </em><em class="red"><?php echo $r->pay_id;?></em></p>
 				<p>价格:<em class="red">¥<?php echo $r->actual_price?></em></p>
 				<p><em class="gray">下单时间:</em> 2016-05-06 07:20:06</p>
