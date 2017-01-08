@@ -19,7 +19,7 @@
 	<ul class="xul mt10">
 		<li onClick="fmx(0)">
 			<b class="mt10">头像</b>
-			<img src="<?php echo $this->config->main_base_url.$photo;?>" width="40" height="40"/>
+			<img src="<?php echo $this->config->show_image_url('common/touxiang',$photo);?>" width="40" height="40"/>
 		</li>
 		<li onClick="fmx(1)"><b>用户名</b><i class="c9"><?php echo empty($alias_name) ? '点击填写用户名' : $alias_name;?></i></li>
 		<li onClick="fmx(2)"><b>性别</b><i></i><?php echo empty($sex) ? '点击选择性别' : $sex;?></li>

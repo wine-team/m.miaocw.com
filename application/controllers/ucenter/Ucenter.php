@@ -12,7 +12,8 @@ class Ucenter extends CS_Controller {
 	*/
 	public function index() {
 	    
-		$this->load->view('ucenter/ucenter',$data=array()); 
+	    $data['user_info'] = $this->get_user_info(); 
+		$this->load->view('ucenter/ucenter',$data); 
 	}
 	
 	/**
@@ -28,11 +29,13 @@ class Ucenter extends CS_Controller {
 	 */
 	public function profile() {
 	
-	    $data['alias_name'] = '';
-	    $data['photo'] = '';
-	    $data['sex'] = '';
-	    $data['email'] = '';
-	    $data['phone'] = '';
+	    $sex_arr = array('0'=>'保密', '1'=>'男', '2'=>'女');
+	    $user_info = $this->get_user_info();
+	    $data['alias_name'] = $user_info->alias_name;
+	    $data['photo'] = $user_info->photo;
+	    $data['sex'] = $sex_arr[$user_info->sex];
+	    $data['email'] = $user_info->email;
+	    $data['phone'] = $user_info->phone;
 	    $this->load->view('ucenter/profile', $data);
 	}
 	

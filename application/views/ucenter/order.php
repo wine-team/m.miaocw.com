@@ -21,7 +21,7 @@
 		<li>
 			<a href="<?php echo site_url('ucenter/Order/detail/'.$r->order_id);?>"  class="arr">
 				<?php $img_arr = array_filter(explode('|', $r->goods_img));?>
-				<img src="<?php echo $this->config->images_url.$img_arr[0]?>" class="omg"/>
+				<img src="<?php echo $this->config->show_image_url('mall',$img_arr[0])?>" class="omg"/>
 				<p><em class="gray">订单号: </em><em class="red"><?php echo $r->pay_id;?></em></p>
 				<p>价格:<em class="red">¥<?php echo $r->actual_price?></em></p>
 				<p><em class="gray">下单时间:</em> 2016-05-06 07:20:06</p>
@@ -33,7 +33,7 @@
 		</li>
 		<?php endforeach;?>
 	</ul>
-	<div class="bgw ye pd10 alC"><p>3 条记录 1/1 页</p></div>
+	<div class="bgw ye pd10 alC"><p><?php echo count($res);?>条记录</p></div>
 </div>
 <script>
 function gtns(){

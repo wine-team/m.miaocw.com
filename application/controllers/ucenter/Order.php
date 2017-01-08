@@ -28,7 +28,16 @@ class Order extends CS_Controller {
      */
     public function detail($order_id = 0) {
     
-        $this->load->view('ucenter/detail',$data=array());
+        $param['uid'] = $this->uid;
+        $param['order_id'] = $order_id;
+        $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/getOrderDetail', $param, 'post'));
+        $data = $res->messages;
+        if ($res->status) {
+            $data->status_arr = array('1'=>'取消订单', '2'=>'未付款', '3'=>'已付款', '4'=>'已发货', '5'=>'已收货', '6'=>'已评价');
+            $this->load->view('ucenter/detail', $data);
+        } else {
+            $this->redirect('ucenter/Address/show404');
+        }
     }
     
     /**
@@ -37,10 +46,10 @@ class Order extends CS_Controller {
     public function cancel($order_id = 0) {
        
         $param['uid'] = $this->uid;
-        $param['order_id'] = $order_id;
+        $param['order_id'] = $order_id; 
         $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/cancelOrder', $param, 'post'));
         if ($res->status) {
-            $this->redirect('ucenter/Order/grid');
+            $this->redirect('ucenter/Order/detail/'.$order_id);
         } else {
             $this->redirect('ucenter/Address/show404');
         }

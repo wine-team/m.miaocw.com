@@ -22,8 +22,8 @@
 
 	<div class="bgw pd10 mt10">
 		<a href="<?php echo site_url('ucenter/Ucenter/setting');?>" class="av_a">
-			<img src="http://s.qw.cc/" class="uava left"/>
-			<h3 class="f16 c3"><?php echo $this->aliasName;?><em class="vip">V1</em></h3>
+			<img src="<?php echo $this->config->show_image_url('common/touxiang',$user_info->photo);?>" class="uava left"/>
+			<h3 class="f16 c3"><?php echo $user_info->alias_name;?><em class="vip">V1</em></h3>
 			<p class="gray">享受全场<b class="c3">9.8</b>折优惠</p>
 			<p class="gray f10">0积分</p>
 		</a>

@@ -12,7 +12,7 @@ $(document).ready(function() {
     var district_selected = <?php echo $district_selected;?>;
     var change_city = function(){
         $.ajax({
-            url: '<?php echo base_url();?>Region/select_children/'+$('#province_id').val(),
+            url: '<?php echo base_url();?>ucenter/Region/select_children/'+$('#province_id').val(),
             type: 'GET',
             dataType: 'json',
             success: function(city_json){
@@ -39,7 +39,7 @@ $(document).ready(function() {
 
     var change_district = function(){
         $.ajax({
-            url: '<?php echo base_url()?>Region/select_children/'+$('#city_id').val(),
+            url: '<?php echo base_url()?>ucenter/Region/select_children/'+$('#city_id').val(),
             type: 'GET',
             dataType: 'json',
             success: function(district_json){

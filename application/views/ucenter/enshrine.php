@@ -22,7 +22,7 @@
 			<li>
 				<a href="<?php echo $r->goods_id;?>">
 				    <?php $img_arr = array_filter(explode('|', $r->goods_img));?>
-					<img src="<?php echo $this->config->images_url.$img_arr[0]?>"  width="80" height="80"/>
+					<img src="<?php echo $this->config->show_image_url('mall',$img_arr[0])?>"  width="80" height="80"/>
 					<h3><?php echo $r->goods_name;?></h3>
 					<p><span class="xj">¥<?php echo $r->shop_price;?></span></p>
 				</a>
@@ -32,11 +32,11 @@
 		</ul>
 	</div>
 	<div class="pages ov mt10">
-		<a href="javascript:" class="left">上一页</a>
-		<div id="bpage" class="alC left" style="line-height:38px;">
-			<b>1/1</b>
+		<!--  <a href="javascript:" class="left">上一页</a>-->
+		<div id="bpage" class="alC left" style="line-height:38px;width: 100%;">
+			<b>共<?php echo count($res);?>条</b>
 		</div>
-		<a href="javascript:" class="right">下一页></a>
+		<!--<a href="javascript:" class="right">下一页></a>-->
 	</div>
 </div>
 <?php $this->load->view('layout/smallfooter');?>
