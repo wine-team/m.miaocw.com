@@ -33,7 +33,7 @@ class Ucenter extends CS_Controller {
 	    $user_info = $this->get_user_info();
 	    $data['alias_name'] = $user_info->alias_name;
 	    $data['photo'] = $user_info->photo;
-	    $data['sex'] = $sex_arr[$user_info->sex];
+	    $data['sex']   = $sex_arr[$user_info->sex];
 	    $data['email'] = $user_info->email;
 	    $data['phone'] = $user_info->phone;
 	    $this->load->view('ucenter/profile', $data);
@@ -44,14 +44,21 @@ class Ucenter extends CS_Controller {
 	    $postData = $this->input->post();
 	    $user_info = $this->get_user_info();
 	    $old_photo = in_array($user_info->photo, user_photo()) ? '' : $user_info->photo;
+	    $param = array();
 	    if (!empty($_FILES['photo']['name'])) { 
 	        $imageData = $this->dealWithImages('photo', $old_photo,'common/touxiang');
 	    }
 	    if (isset($postData['alias_name'])) $param['alias_name'] = $postData['alias_name'];
 	    if (isset($imageData['file_name'])) $param['photo'] = $imageData['file_name'];
 	    if (isset($postData['sex'])) $param['sex'] = $postData['sex'];
-	    if (isset($postData['email'])) $param['email'] = $postData['email'];
-	    if (isset($postData['phone'])) $param['phone'] = $postData['phone']; 
+	    if (isset($postData['email']) && !$this->is_exist['email']) {
+	        $param['email'] = $postData['email'];
+	    }
+	    if (isset($postData['phone']) && !$this->is_exist['phone']) {
+	        if ($postData['code']) {
+	            $param['phone'] = $postData['phone'];
+	        }
+	    } 
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/updateUserInfor', $param, 'post'));
 	   
 	    if ($res->status) {
@@ -61,12 +68,23 @@ class Ucenter extends CS_Controller {
 	    }
 	}
 	
+	public function is_exist($data) {
+	    
+	    if(valid_mobile($data)) {
+	        $param['phone'] = $data;
+	    } else {
+	        $param['email'] = $data;
+	    }
+	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/isExist', $param, 'post'));
+	    return $res->status;
+	}
+	
 	/**
 	 * @发送验证码
 	 * */
 	public function sendYzm() {
 	    
-	    $param['mobile'] = $this->input->post('mobile');
+	    $param['mobile'] = $this->input->get('mobile');
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/updateUserInfor', $param, 'post'));
 	    if ($res->status) {
 	        $this->jsonMessage('', 'ucenter/Ucenter/index');

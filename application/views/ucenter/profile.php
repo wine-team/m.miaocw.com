@@ -25,7 +25,6 @@
 		<li onClick="fmx(2)"><b>性别</b><i></i><?php echo empty($sex) ? '点击选择性别' : $sex;?></li>
 		<li onClick="fmx(3)"><b>邮箱</b><i><?php echo empty($email) ? '点击填写邮箱' : $email;?></i></li>
 		<li onClick="fmx(4)"><b>手机</b><i><?php echo empty($phone) ? '点击填写手机号' : $phone;?></i></li>
-		<li onClick="fmx(5)"><b>手机</b><i><?php echo empty($phone) ? '点击填写手机号' : $phone;?></i></li>
 	</ul>
 </div>
 
@@ -74,32 +73,28 @@
 			<form action="" method="POST" id="mobile_form">
 				<h2 class="t"><b class="brl"><em class="f14">手机号码</em></b></h2>
 				<input type="text" name="mobile_phone" id="mobile_phone" value="<?php echo $phone;?>" maxlength="11" class="pt" placeholder="请输入你的手机号码" />
-				<div class="ov mt10"><a href="javascript:" onclick="xpx(0)" class="lbtn left">取消</a>
-				<input type="button" value="修改" class="rbtn right" onClick="ckf4()" id="xgmob" />
-				</div>
-			</form>
-		
-			  <form action="" method="POST" id="mobile_form">
-				<h2 class="t"><b class="brl"><em class="f14">绑定手机号码</em></b></h2>
-				<p>绑定号码：15988173722</p>
-				<input type="button" value="点击发送短信验证码" id="dx" class="dx"/>
-				<div class="hid" id="sms_box" class="sms_box">
-					<p>验证码:</p>
-					<input type="text" name="code" id="code" value=""  onChange="yz()" maxlength="6" class="pt" placeholder="请输入短信中的验证码(纯数字)"/>
+				
+				<div id="sms_box" class="sms_box">
+					<p>验证码:
+    					<input type="button" value="发送验证码" id="dx" class="dx" style="float: right;line-height: 3.3rem;width: 38%;margin: 0.5rem 0;"/>
+    				    <input type="text" style="float: right;" name="code" id="code" value=""  onChange="yz()" maxlength="6" class="pt" placeholder="验证码"/>
+    				</p>
+				
 				</div>
 				<a href="javascript:" onclick="xpx(0)" class="lbtn left">取消</a>
-				<input type="button" value="绑定" onClick="yz()" class="rbtn right"/>
+				<input type="button" value="修改" onClick="yz()" class="rbtn right"/>
 				<div class="clear"></div>
 			</form>
+		
 		</div>
 	</div>
 </div>
 <script>
 var m_url = "<?php echo $this->config->m_base_url;?>";
 var forms = $("#forms").children();
-var o_sex = "1";
-var o_email = "";
-var o_mobile = "15988173722";
+var o_sex = "<?php echo $sex;?>";
+var o_email = "<?php echo $email;?>";
+var o_mobile = "<?php echo $phone;?>";
 var va = "0";
 
 function ckav() {
@@ -133,7 +128,7 @@ function ckf1() {
         data: {
         	alias_name: alias_name
         },
-        datatype: "text",
+        dataType: "json",
         success: function (data) {
             if (data.status) {
                 layer.msg("更新成功");
@@ -157,7 +152,7 @@ function ckf2() {
             data: {
                 sex: sex
             },
-            datatype: "text",
+            dataType: "json",
             success: function (data) {
                 if (data.status) {
                     layer.msg("更新成功");
@@ -185,7 +180,7 @@ function ckf3() {
         data: {
             email: email,
         },
-        datatype: "text",
+        dataType: "json",
         success: function (data) {
             if (data.status) {
                 layer.msg("更新成功");
@@ -211,7 +206,7 @@ function ckf4() {
         type: "POST",
         url: m_url+"ucenter/Ucenter/update_user_info",
         data: {phone: phone,},
-        datatype: "text",
+        dataType: "json",
         success: function (data) {
             if (data.status) {
                 layer.msg("更新成功");
@@ -223,29 +218,6 @@ function ckf4() {
     });
 }
 
-//手机解绑
-function jiebang(id) {
-    $.ajax({
-        type: "POST",
-        url: m_url+"ucenter/Ucenter/update_user_info",
-        data: {
-            act: "jiebang"
-        },
-        datatype: "text",
-        success: function (data) {
-            if (data == 1) {
-                $("#mobile_phone").removeAttr("readonly").removeAttr("style");
-                $("#jbb").remove();
-                $("#xgmob").removeAttr("disabled");
-                layer.msg("解绑成功");
-            } else if (data == 2) {
-                layer.msg("手机没有绑定哦");
-            } else {
-                layer.msg("解绑失败");
-            }
-        }
-    });
-}
 
 var tmo;
 var lm = 180;
@@ -273,15 +245,21 @@ dx.bind("click", function () {
         layer.msg("请输入正确的手机号码");
         return false;
     }
+    var phone = $("#mobile_phone").val();
+    if (phone == o_mobile) {
+    	layer.msg("请输入新手机号码");
+        return false;
+    }
     if (!il) {
         $(this).prop("disabled", "true");
-        tm();
         $("#sms_box").removeClass("hid");
-        $.getJSON('<?php echo $this->config->m_base_url.'ucenter/Ucenter/sendYzm';?>', {
+        $.getJSON(m_url+"ucenter/Ucenter/sendYzm", {
             mobile: mbv
         }, function (data) {
             if (data.status == false) {
                 layer.msg("发送失败");
+            } else {
+            	tm();
             }
         });
     } else {
@@ -292,28 +270,28 @@ dx.bind("click", function () {
 function yz() {
     var c = $('#code').val();
     if (c.length < 4) {
-        layer.msg("请填写完成的验证码");
+        layer.msg("请填写验证码");
         return false;
     }
     if (fa == 1) {
         return false;
     }
     fa = 1;
-    $.getJSON('profile.php?act=check&t=' + new Date().valueOf(), {
-            code: c
-        },
-        function (data) {
-            if (data.code == 1) {
-                layer.msg(data.msg);
-            } else if (data.code == 0) {
-                layer.msg(data.msg);
-                window.location.reload();
+    $.ajax({
+        type: "POST",
+        url: m_url+"ucenter/Ucenter/update_user_info",
+        data: {code: c,phone:$("#mobile_phone").val()},
+        dataType: "JSON",
+        success: function (data) { 
+        	if (data.status == false) {
+                layer.msg(data.messages);
             } else {
                 $('#mobile_phone').attr('readonly', true).css('background-color', '#ccc');
                 $("#sms_box").addClass("hid");
                 $('#dj').remove();
             }
-        });
+        }
+    });
 }
 </script>
 <?php $this->load->view('layout/smallfooter');?>
