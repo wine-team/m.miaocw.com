@@ -27,6 +27,23 @@ class Home extends MW_Controller {
 	}
 	
 	 /**
+	 * 移动端分类
+	 * memcache 缓存
+	 */
+	public function category() {
+	
+		if (!$this->cache->memcached->get('wapCategoryCache')) {
+			$category = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/category','','post'));
+			$data['category'] = $category->messages;
+			$this->cache->memcached->save('wapCategoryCache',$data,365*24*3600);
+		} else {
+			$data = $this->cache->memcached->get('wapCategoryCache');
+		}
+		$this->load->view('sex/home/category',$data);
+	}
+	
+	
+	 /**
 	 * 新品体验
 	 */
 	public function newgood() {
@@ -89,13 +106,7 @@ class Home extends MW_Controller {
 		$this->load->view('sex/home/xingai',$data=array());
 	}
 	
-	/**
-	 * 移动端分类
-	 */
-	public function category() {
 	
-		$this->load->view('sex/home/category',$data=array());
-	}
 	
 	/**
 	 * 产品列表页
