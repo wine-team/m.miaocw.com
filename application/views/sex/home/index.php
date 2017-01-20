@@ -3,7 +3,7 @@
 	<div class="headers homehd" id="hometop">
 		<div class="homez">
 			<a href="<?php echo site_url('sex/home/category')?>" class="h_t h_fl"></a>
-			<form action="<?php echo site_url('sex/home/goodlist');?>" class="t_se home-search">
+			<form action="<?php echo site_url('sex/home/search');?>" class="t_se home-search">
 				<input type="search" class="t_sl" id="t_sl" name="keyword" placeholder="搜索商品" />
 				<input class="t_sr" type="submit" value=""/>
 			</form>

@@ -46,7 +46,6 @@
 				<a class="nbtn" href="javascript:;">查看全部</a>
 			</div>
 			<?php endforeach;?>
-			
 		</div>
 	</div>
 	<div class="clear"></div>

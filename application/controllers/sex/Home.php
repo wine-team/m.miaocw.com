@@ -42,6 +42,24 @@ class Home extends MW_Controller {
 		$this->load->view('sex/home/category',$data);
 	}
 	
+	/**
+	 * 热销排行
+	 */
+	public function hot() {
+	
+		$this->load->view('sex/home/hot',$data=array());
+	}
+	
+	 /**
+	 * 产品列表页
+	 */
+	public function search() {
+	
+		$result = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/search','','post'));
+		$data['ct'] = $result->messages->ct;
+		$data['goods'] = $result->messages->goods;
+		$this->load->view('sex/goods/list',$data);
+	}
 	
 	 /**
 	 * 新品体验
@@ -51,13 +69,7 @@ class Home extends MW_Controller {
 		$this->load->view('sex/home/new',$data=array());
 	}
 	
-	/**
-	 * 热销排行
-	 */
-	public function hot() {
-		
-		$this->load->view('sex/home/hot',$data=array());
-	}
+	
 	
 	 /**
 	 * 今日抢购
@@ -108,13 +120,7 @@ class Home extends MW_Controller {
 	
 	
 	
-	/**
-	 * 产品列表页
-	 */
-	public function goodlist() {
-		
-		$this->load->view('sex/home/list',$data=array());
-	}
+	
 	
 	 /**
 	 * 搜索无结果
