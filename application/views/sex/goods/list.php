@@ -63,7 +63,7 @@
 	</div>
 	<div class="gd load" id="glist">
 		<?php foreach ($goods as $item):?>
-		<a href="<?php echo site_url('sex/home/goods');?>" class="ga">
+		<a href="<?php echo site_url('sex/home/goods/'.$item->goods_id);?>" class="ga">
 			<div class="pm">
 				<img src="<?php echo $this->config->show_image_thumb_url('mall',strstr($item->goods_img,'|',true));?>" class="gm">
 				<h3 class="gt">

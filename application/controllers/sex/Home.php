@@ -62,6 +62,74 @@ class Home extends MW_Controller {
 	}
 	
 	 /**
+	 * 产品详情
+	 */
+	public function goods($goodsId=0) {
+	    
+		if (empty($goodsId)) {
+			show_404();
+		}
+		$result = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/detail',array('goods_id'=>$goodsId),'post'));
+		if (!$result->status) {
+			show_404();
+		}
+		$review = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/goodsReview',array('goods_id'=>$goodsId,'pg'=>1,'pgNum'=>20),'post'));
+		$data['goods'] = $result->messages->goods;
+		$data['more'] = $result->messages->more;
+		$data['review'] = $review->messages;
+		$this->load->view('sex/goods/goods',$data);
+	}
+	
+	 /**
+	 * 添加购物车
+	 */
+	public function addToCart() {
+		
+		$param = array(
+			'uid' => $this->uid,
+			'goods_id' => (int)$this->input->post('goods_id'),
+			'qty' => (int)$this->input->post('qty'),
+			'spec' => $this->input->post('spec')
+		);
+		$result = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/addCart',$param,'post'));
+	    if ($result->status) {
+	    	$this->jsonMessage('','加入购物车成功');
+	    }
+	    $this->jsonMessage($result->messages);
+	}
+	
+	 /**
+	  * 获取购物车信息
+	 */
+	public function getCartInfor() {
+		
+		$result = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/getCartInfor',array('uid'=>$this->uid),'post'));
+		echo json_encode(array(
+				'status' => $result->status,
+				'num' => $result->num,
+				'sum' => $result->sum
+		));exit;
+	}
+	
+	/**
+	 * 购物车
+	 */
+	public function cart() {
+	
+		
+		$this->load->view('sex/home/cart',$data=array());
+	}
+	
+	/**
+	 * 购物车的无购物
+	 */
+	public function cartNo() {
+	
+		$this->load->view('sex/home/cartno',$data=array());
+	}
+	
+	
+	 /**
 	 * 新品体验
 	 */
 	public function newgood() {
@@ -131,14 +199,6 @@ class Home extends MW_Controller {
 	}
 	
 	 /**
-	 * 产品详情
-	 */
-	public function goods(){
-		
-		$this->load->view('sex/home/goods',$data=array());
-	}
-	
-	 /**
 	 * 收藏的商品
 	 */
 	public function collect() {
@@ -146,21 +206,7 @@ class Home extends MW_Controller {
 		$this->load->view('sex/home/collect',$data=array());
 	}
 	
-	 /**
-	 * 购物车
-	 */
-	public function cart() {
-		
-		$this->load->view('sex/home/cart',$data=array());
-	}
 	
-	 /**
-	 * 购物车的无购物
-	 */
-	public function cartNo() {
-	
-		$this->load->view('sex/home/cartno',$data=array());
-	}
 	
 	 /**
 	 * 立即购买

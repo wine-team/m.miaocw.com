@@ -30,6 +30,5 @@
 <?php js('m', 'jquery.validate.min');?>
 <?php js('m', 'jquery.validate.messages_zh');?>
 <?php js('m', 'app',20161205);?>
-<?php js('m', 'car',20161205);?>
 </head>
 <body>

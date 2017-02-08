@@ -13,8 +13,8 @@
 			<a href="javascript:gotop();" class="na">回顶部</a>
 		</li>
 		<li>
-			<a href="tel:4006600606" class="fbtn">400-660-0606<p class="f12">点击电话订购</p></a>
-			<a href="sms:13883873375" class="fbtn">点击短信订购<p class="f12">姓名+货号+数量+地址</p></a>
+			<a href="tel:15988173721" class="fbtn">15988173721<p class="f12">点击电话订购</p></a>
+			<a href="sms:15988173721" class="fbtn">点击短信订购<p class="f12">姓名+货号+数量+地址</p></a>
 		</li>
 	</ul>
 	<div class="lh25 mt10">
