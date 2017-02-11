@@ -3,7 +3,7 @@
 	<div class="header">
 		<a href="javascript:goback();" class="b_l"></a>
 		<h2>新增收货地址</h2>
-		<a href="<?php echo site_url('qingqu/home/index');?>"  class="b_r">首页</a>
+		<a href="<?php echo site_url('sex/home/index');?>"  class="b_r">首页</a>
 	</div>
 </div>
 <div class="pageauto">

@@ -110,25 +110,7 @@ class Home extends MW_Controller {
 				'sum' => $result->sum
 		));exit;
 	}
-	
-	/**
-	 * 购物车
-	 */
-	public function cart() {
-	
-		
-		$this->load->view('sex/home/cart',$data=array());
-	}
-	
-	/**
-	 * 购物车的无购物
-	 */
-	public function cartNo() {
-	
-		$this->load->view('sex/home/cartno',$data=array());
-	}
-	
-	
+
 	 /**
 	 * 新品体验
 	 */
@@ -204,16 +186,6 @@ class Home extends MW_Controller {
 	public function collect() {
 		
 		$this->load->view('sex/home/collect',$data=array());
-	}
-	
-	
-	
-	 /**
-	 * 立即购买
-	 */
-	public function buy() {
-		
-		$this->load->view('sex/home/buy',$data=array());
 	}
 	
 	/**

@@ -7,7 +7,14 @@
 			<p class="ta"  data-id="1">看图文</p>
 			<p class="ta" data-id="2">评论</p>
 		</div>
-		<a href="<?php echo site_url('sex/home/cart');?>" class="b_r dcar"></a>
+		<a  
+			<?php if($this->uid):?>
+			href="<?php echo site_url('sex/cart/index');?>" 
+			<?php else:?>
+			href="<?php echo $this->config->passport_url.'m/login/index.html'?>" 
+			<?php endif;?>
+			class="b_r dcar">
+		</a>
 		<a href="javascript:gtns();" id="gdor" class="b_r dor"></a>
 	</div>
 </div>
@@ -72,7 +79,7 @@
 				<a href="javascript:;" class="z_p zp3">支持货到付款</a>
 			</li>
 		</ul>
-		<form action="<?php echo site_url('sex/home/cart');?>" id="buy" method="POST">
+		<form action="<?php echo site_url('sex/cart/index');?>" id="buy" method="POST">
 			<div class="pd10 lh30 gbgw">
 				<input type="hidden" name="goods_id" id="goods_id" value="<?php echo $goods->goods_id;?>" />
 				<input type="hidden" name="act" value="add" />
@@ -108,7 +115,7 @@
 			    <h3 class="f18 c3">加入购物车成功！</h3>
 			    <p>购物车现有<b id="rnum" class="red">0</b>件商品,共计<b id="rsum" class="red"></b></p>
 			    <a href="javascript:gclose();" class="lbtn left">继续购物</a>
-			    <a href="<?php echo site_url('sex/home/buy');?>" class="rbtn right">去结算</a>
+			    <a href="<?php echo site_url('sex/cart/buy');?>" class="rbtn right">去结算</a>
 			    <div class="clear"></div>
 			</div>
 			<div id="nok" class="lr10">
