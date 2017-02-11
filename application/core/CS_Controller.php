@@ -9,14 +9,16 @@ class CS_Controller extends MW_Controller
         }
     }
     
-    public function get_user_info()
-    {
-    	$param['uid'] = $this->uid;
-    	$res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/userInfor', $param, 'post'));
+     /**
+     * 获取用户信息
+     */
+    public function get_user_info() {
+    	
+    	$res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/userInfor',array('uid'=>$this->uid), 'post'));
     	if ($res->status) {
     		return $res->messages;
     	} else {
-    		$this->redirect($this->config->m_base_url);
+    		$this->redirect($this->config->m_base_url.'sex/home/index.html');
     	}
     }
 }
