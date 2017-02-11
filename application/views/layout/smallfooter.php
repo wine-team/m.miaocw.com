@@ -7,13 +7,13 @@
 			<a href="<?php echo site_url('qingqu/home/hot');?>"  class="na">热销</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('ucenter/Ucenter/index');?>"  class="na">个人中心</a>
+			<a href="<?php echo site_url('ucenter/ucenter/index');?>"  class="na">个人中心</a>
 			<?php if($this->uid):?>
 			<a href="<?php echo site_url('passport/Login/logout')?>" class="na">退出</a>
 			<?php else :?>
 			<a href="<?php echo site_url('passport/Login/index')?>" class="na">登录/注册</a>
 			<?php endif;?>
-			<a href="<?php echo site_url('ucenter/Order/grid');?>"  class="na">查订单</a>
+			<a href="<?php echo site_url('ucenter/order/grid');?>"  class="na">查订单</a>
 			<a href="javascript:gotop();" class="na">回顶部</a>
 		</li>
 		<li>

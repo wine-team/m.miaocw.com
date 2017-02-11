@@ -3,12 +3,16 @@
 		<li>
 			<a href="<?php echo site_url('sex/home/index');?>" class="na">首页</a>
 			<a href="<?php echo site_url('sex/home/category');?>" class="na">分类</a>
-			<a href="<?php echo site_url('sex/home/car')?>" class="na">购物车</a>
-			<a href="<?php echo site_url('sex/home/hot');?>"  class="na">热销</a>
+			<a href="<?php echo site_url('sex/cart/index')?>" class="na">购物车</a>
+			<a href="<?php echo site_url('sex/home/hot');?>" class="na">热销</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('sex/home/ucenter');?>"  class="na">个人中心</a>
-			<a href="<?php echo site_url('sex/passport/login')?>" class="na">登录/注册</a>
+			<a href="javascript:history.back();"  class="na">上一页</a>
+			<?php if($this->uid):?>
+			<a href="<?php echo $this->config->passport_url.'m/login/index.html';?>" class="na">登录/注册</a>
+			<?php else:?>
+			<a href="<?php echo $this->config->m_base_url.'ucenter/ucenter';?>" class="na">个人中心</a>
+			<?php endif;?>
 			<a href="<?php echo site_url('sex/home/query');?>"  class="na">查订单</a>
 			<a href="javascript:gotop();" class="na">回顶部</a>
 		</li>

@@ -11,11 +11,12 @@ class CS_Controller extends MW_Controller
     
     public function get_user_info()
     {
-    	$frontUserInfo = $this->user->findByid($this->uid)->row();
-    	$order_num = $this->mall_order_base->total($this->uid);
-    	$enshrine_num = $this->mall_enshrine->total(array('uid'=>$this->uid));
-    	$coupon_num = $this->user_coupon_get->total(array('uid'=>$this->uid));
-    	$frontUserInfo->num_list = array('order_num'=>$order_num, 'enshrine_num'=>$enshrine_num, 'coupon_num'=>$coupon_num);
-    	return $frontUserInfo;
+    	$param['uid'] = $this->uid;
+    	$res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/userInfor', $param, 'post'));
+    	if ($res->status) {
+    		return $res->messages;
+    	} else {
+    		$this->redirect($this->config->m_base_url);
+    	}
     }
 }
