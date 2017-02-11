@@ -1,4 +1,4 @@
-<?php $this->load->view('sex/layout/header');?>
+<?php $this->load->view('layout/header');?>
 <div id="top" class="home-top tophome">
 	<div class="headers homehd" id="hometop">
 		<div class="homez">
@@ -166,5 +166,5 @@
 	</div>
 </div>
 <?php js('m', 'index',20161205);?>
-<?php $this->load->view('sex/layout/smallfooter');?>
-<?php $this->load->view('sex/layout/footer');?>
+<?php $this->load->view('layout/smallfooter');?>
+<?php $this->load->view('layout/footer');?>
