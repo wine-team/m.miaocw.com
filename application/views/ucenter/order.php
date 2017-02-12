@@ -8,18 +8,18 @@
 </div>
 <div class="gtn" id="gtn">
 	<ul class="gt_a">
-		<li><a href="fenlei.html" class="gta">所有商品分类</a></li>
-		<li><a href="car.php" class="gta">购物车</a></li>
-		<li><a href="history.php" class="gta">浏览历史</a></li>
-		<li><a href="" class="gta">回首页</a></li>
-		<li><a href="chat.php" class="gta">在线客服咨询</a></li>
+		<li><a href="<?php echo site_url('sex/home/category')?>" class="gta">所有商品分类</a></li>
+		<li><a href="<?php echo site_url('sex/cart/index')?>" class="gta">购物车</a></li>
+		<li><a href="<?php echo site_url('ucenter/ucenter/get_history');?>" class="gta">浏览历史</a></li>
+		<li><a href="<?php echo site_url('sex/home/index')?>" class="gta">回首页</a></li>
+		<li><a href="tel:15988173721" class="gta">在线客服咨询</a></li>
 	</ul>
 </div>
 <div class="pageauto">
 	<ul class="uorder mt10">
 	    <?php foreach ($res as $r) :?>
 		<li>
-			<a href="<?php echo site_url('ucenter/Order/detail/'.$r->order_id);?>"  class="arr">
+			<a href="<?php echo site_url('ucenter/order/detail/'.$r->order_id);?>"  class="arr">
 				<?php $img_arr = array_filter(explode('|', $r->goods_img));?>
 				<img src="<?php echo $this->config->show_image_url('mall',$img_arr[0])?>" class="omg"/>
 				<p><em class="gray">订单号: </em><em class="red"><?php echo $r->pay_id;?></em></p>
@@ -28,7 +28,7 @@
 				<p><em class="gray">订单状态:</em><?php echo $status_arr[$r->order_status];?></p>
 			</a>
 			<p class="btline">
-				<a href="<?php echo site_url('ucenter/Order/detail/'.$r->order_id);?>" class="bun">详情</a>
+				<a href="<?php echo site_url('ucenter/order/detail/'.$r->order_id);?>" class="bun">详情</a>
 			</p>
 		</li>
 		<?php endforeach;?>

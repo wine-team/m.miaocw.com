@@ -1,4 +1,4 @@
-<?php $this->load->view('sex/layout/header');?>
+<?php $this->load->view('layout/header');?>
 <?php js('m', 'car',20161205);?>
 <div id="top">
 	<div class="header">
@@ -107,4 +107,4 @@
 		</div>
 	</form>
 </div>
-<?php $this->load->view('sex/layout/footer');?>
+<?php $this->load->view('layout/footer');?>

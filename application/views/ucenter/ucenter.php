@@ -43,29 +43,29 @@
 	</ul>
 	<ul class="bul mt10">
 		<li>
-			<a href="<?php echo site_url('ucenter/Enshrine/index')?>">
+			<a href="<?php echo site_url('ucenter/enshrine/index')?>">
 				<img src="m/images/u3.png" class="uiu">我的收藏(0)
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('ucenter/Ucenter/get_history')?>">
+			<a href="<?php echo site_url('ucenter/ucenter/get_history')?>">
 				<img src="m/images/u4.png" class="uiu">浏览历史
 			</a>
 		</li>
 	</ul>
 	<ul class="bul mt10">
 		<li>
-			<a href="<?php echo site_url('m/shophelp')?>">
+			<a href="<?php echo site_url('sex/home/shophelp')?>">
 				<img src="m/images/u5.png" class="uiu">购物帮助
 			</a>
 		</li>
 		<li>
-			<a href="javascript:;">
+			<a href="tel:15988173721">
 				<img src="m/images/u6.png" class="uiu">在线客服
 			</a>
 		</li>
 		<li>
-			<a href="<?php echo site_url('ucenter/Ucenter/load_app');?>">
+			<a href="<?php echo site_url('ucenter/ucenter/load_app');?>">
 				<img src="m/images/u7.png" class="uiu">APP下载(送好礼)
 			</a>
 		</li>

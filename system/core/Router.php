@@ -299,7 +299,11 @@ class CI_Router {
 		{
 			$method = 'index';
 		}
-
+		
+		if (!$this->directory) {
+			$this->directory = $this->routes['default_directory'].'/';
+		}
+		
 		if ( ! file_exists(APPPATH.'controllers/'.$this->directory.ucfirst($class).'.php'))
 		{
 			// This will trigger 404 later
@@ -314,7 +318,6 @@ class CI_Router {
 			1 => $class,
 			2 => $method
 		);
-
 		log_message('debug', 'No URI present. Default controller set.');
 	}
 

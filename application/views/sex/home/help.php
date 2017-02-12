@@ -1,9 +1,9 @@
-<?php $this->load->view('sex/layout/header');?>
+<?php $this->load->view('layout/header');?>
 <div id="top">
 	<div class="header">
 		<a href="javascript:goback();"class="b_l"></a>
-		<h2>趣网商城</h2>
-		<a href="index.php" class="b_r">首页</a>
+		<h2>妙处网</h2>
+		<a href="javascript:;" class="b_r">首页</a>
 	</div>
 </div>
 <div class="pageauto">
@@ -75,5 +75,5 @@
 		<input class="sr left" type="submit" value="" />
 	</form>
 </div>
-<?php $this->load->view('sex/layout/smallfooter');?>
-<?php $this->load->view('sex/layout/footer');?>
+<?php $this->load->view('layout/smallfooter');?>
+<?php $this->load->view('layout/footer');?>

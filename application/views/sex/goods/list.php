@@ -1,4 +1,4 @@
-<?php $this->load->view('sex/layout/header');?>
+<?php $this->load->view('layout/header');?>
 <div id="top">
 	<div class="header hfix" id="listpage">
 		<a href="javascript:goback();" class="b_l"></a>
@@ -109,5 +109,5 @@
 	<?php endif;?>
 </div>
 <?php js('m', 'list',20161205);?>
-<?php $this->load->view('sex/layout/smallfooter');?>
-<?php $this->load->view('sex/layout/footer');?>
+<?php $this->load->view('layout/smallfooter');?>
+<?php $this->load->view('layout/footer');?>

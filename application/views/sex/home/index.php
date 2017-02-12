@@ -14,15 +14,15 @@
 				<em class="left">热门搜索</em>
 				<a href="javascript:;" class="right">关闭</a>
 			</div>
-			<a href="<?php echo site_url('home/search').'?keyword=仿真阳具';?>" class="hw">
+			<a href="<?php echo site_url('sex/home/search').'?keyword=仿真阳具';?>" class="hw">
 				<em class="red">仿真阳具</em>
 			</a>
-			<a href="<?php echo site_url('home/search').'?keyword=延时';?>" class="hw">男用延时</a>
-			<a href="<?php echo site_url('home/search').'?keyword=飞机杯';?>" class="hw">飞机杯</a>
-			<a href="<?php echo site_url('home/search').'?keyword=双点刺激';?>" class="hw">双点刺激</a>
-			<a href="<?php echo site_url('home/search').'?keyword=跳蛋';?>" class="hw">跳蛋</a>
-			<a href="<?php echo site_url('home/search').'?keyword=倒模';?>" class="hw">真人倒模</a>
-			<a href="<?php echo site_url('home/search').'?keyword=增大';?>" class="hw">增大器</a>
+			<a href="<?php echo site_url('sex/home/search').'?keyword=延时';?>" class="hw">男用延时</a>
+			<a href="<?php echo site_url('sex/home/search').'?keyword=飞机杯';?>" class="hw">飞机杯</a>
+			<a href="<?php echo site_url('sex/home/search').'?keyword=双点刺激';?>" class="hw">双点刺激</a>
+			<a href="<?php echo site_url('sex/home/search').'?keyword=跳蛋';?>" class="hw">跳蛋</a>
+			<a href="<?php echo site_url('sex/home/search').'?keyword=倒模';?>" class="hw">真人倒模</a>
+			<a href="<?php echo site_url('sex/home/search').'?keyword=增大';?>" class="hw">增大器</a>
 		</div>
 	</div>
 </div>
@@ -91,7 +91,7 @@
 		<a href=<?php echo site_url('sex/home/today');?> class="left lotm">
 			<div class="hoot">
 				<p class="alL">玩爆潮品喵星人天使之杖av按摩棒</p>
-				<img src="m/images/amb.jpg" class="limg">
+				<img src="m/images/amb.jpg" class="limg" />
 			    <p>
 			    	<b class="xj">¥149.00</b>
 			    	<del class="pl10">¥249.00</del>
@@ -101,13 +101,13 @@
 	    </a>
 		<div class="dhr left">
 			<a href="<?php echo site_url('sex/home/hot');?>" class="lotm2 left">
-				<img src="m/images/thr2.png" width="100%">
+				<img src="m/images/thr2.png" width="100%" />
 			</a>
 			<a href="<?php echo site_url('sex/home/newgood');?>" class="lotm3 left">
-				<img src="m/images/thr31.png" width="100%">
+				<img src="m/images/thr31.png" width="100%" />
 			</a>
 			<a href="<?php echo site_url('sex/home/need');?>" class="lotm3 left">
-				<img src="m/images/thr5.png" width="100%">
+				<img src="m/images/thr5.png" width="100%" />
 			</a>
 		</div>
 	</div>
@@ -137,7 +137,7 @@
 
 		<div class="hmg" style="background-color:#0c0d0f;">
 			<a href="javascript:;">
-				<img src="m/images/sales.jpg">
+				<img src="m/images/sales.jpg" />
 			</a>
 		</div>
 		<?php if(!empty($hot)):?>
@@ -150,7 +150,8 @@
 			    <?php foreach ($hot as $item):?>
 				<a href="<?php echo site_url('home/goods/detail/'.$item->goods_id)?>" class="ga">
 					<div class="pm">
-						<img src="<?php echo $this->config->show_image_thumb_url('mall',strstr($item->goods_img, '|',true));?>" class="gm">
+						<img src="m/images/load.jpg" data-original="<?php echo $this->config->show_image_thumb_url('mall',strstr($item->goods_img, '|',true));?>" class="gm lazy" />
+						  
 						<h3 class="gt"><?php echo $item->goods_name;?></h3>
 						<p class="lp">
 							<em class="xj">¥<?php echo $item->shop_price;?></em>

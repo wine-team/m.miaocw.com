@@ -8,19 +8,19 @@
 </div>
 <div class="gtn" id="gtn">
 	<ul class="gt_a">
-		<li><a href="javascript:;" class="gta">所有商品分类</a></li>
-		<li><a href="javascript:;" class="gta">购物车</a></li>
-		<li><a href="javascript:;" class="gta">浏览历史</a></li>
-		<li><a href="javascript:;" class="gta">回首页</a></li>
-		<li><a href="javascript:;" class="gta">在线客服咨询</a></li>
+		<li><a href="<?php echo site_url('sex/home/category')?>" class="gta">所有商品分类</a></li>
+		<li><a href="<?php echo site_url('sex/cart/index')?>" class="gta">购物车</a></li>
+		<li><a href="<?php echo site_url('ucenter/ucenter/get_history');?>" class="gta">浏览历史</a></li>
+		<li><a href="<?php echo site_url('sex/home/index')?>" class="gta">回首页</a></li>
+		<li><a href="tel:15988173721" class="gta">在线客服咨询</a></li>
 	</ul>
 </div>
 <div class="pageauto">
 	<div style="min-height:400px;">
 		<ul class="bul mb10">
-			<li><a href="<?php echo site_url('ucenter/Address/grid');?>">收货地址</a></li>
-			<li><a href="<?php echo site_url('ucenter/Ucenter/profile');?>">个人资料</a></li>
-			<li><a href="<?php echo site_url('ucenter/Ucenter/password');?>">修改密码</a></li>
+			<li><a href="<?php echo site_url('ucenter/address/grid');?>">收货地址</a></li>
+			<li><a href="<?php echo site_url('ucenter/ucenter/profile');?>">个人资料</a></li>
+			<li><a href="<?php echo site_url('ucenter/ucenter/password');?>">修改密码</a></li>
 		</ul>
 	</div>
 </div>

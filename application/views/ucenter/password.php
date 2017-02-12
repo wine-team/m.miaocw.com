@@ -8,11 +8,11 @@
 </div>
 <div class="gtn" id="gtn">
 	<ul class="gt_a">
-		<li><a href="javascript:;" class="gta">所有商品分类</a></li>
-		<li><a href="javascript:;" class="gta">购物车</a></li>
-		<li><a href="javascript:;" class="gta">浏览历史</a></li>
-		<li><a href="javascript:;" class="gta">回首页</a></li>
-		<li><a href="javascript:;" class="gta">在线客服咨询</a></li>
+		<li><a href="<?php echo site_url('sex/home/category')?>" class="gta">所有商品分类</a></li>
+		<li><a href="<?php echo site_url('sex/cart/index')?>" class="gta">购物车</a></li>
+		<li><a href="<?php echo site_url('ucenter/ucenter/get_history');?>" class="gta">浏览历史</a></li>
+		<li><a href="<?php echo site_url('sex/home/index')?>" class="gta">回首页</a></li>
+		<li><a href="tel:15988173721" class="gta">在线客服咨询</a></li>
 	</ul>
 </div>
 <div class="pageauto">
@@ -41,28 +41,28 @@
 </div>
 <script>
 function chp(){
-var v1=$("#original").val();
-var v2=$("#password").val();
-var v3=$("#retype").val();	
-if(v1==''){
-	layer.msg("原始密码不能为空!");
-    $("#original").focus();
-    return false;
-}
-if(v2=='' || v2.length<6){
-	layer.msg("您的新密码过于简单（长度至少为6位）");
-    $("#password").focus();
-    return false;
-}
-if(v3=='' || v3.length<6){
-	layer.msg("确认密码不能为空!");
-    $("#retype").focus();
-    return false;
-}
-if(v2!=v3){
-	layer.msg("您输入的两次新密码不一致，请重新输入!");
-    return false;	
-}
+	var v1=$("#original").val();
+	var v2=$("#password").val();
+	var v3=$("#retype").val();	
+	if(v1==''){
+		layer.msg("原始密码不能为空!");
+	    $("#original").focus();
+	    return false;
+	}
+	if(v2=='' || v2.length<6){
+		layer.msg("您的新密码过于简单（长度至少为6位）");
+	    $("#password").focus();
+	    return false;
+	}
+	if(v3=='' || v3.length<6){
+		layer.msg("确认密码不能为空!");
+	    $("#retype").focus();
+	    return false;
+	}
+	if(v2!=v3){
+		layer.msg("您输入的两次新密码不一致，请重新输入!");
+	    return false;	
+	}
 }
 </script>
 <?php $this->load->view('layout/smallfooter');?>

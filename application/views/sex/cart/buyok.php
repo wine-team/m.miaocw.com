@@ -1,4 +1,4 @@
-<?php $this->load->view('sex/layout/header');?>
+<?php $this->load->view('layout/header');?>
 <div id="top">
 	<div class="header">
 		<a href="<?php echo site_url('sex/home/index');?>" class="b_l">
@@ -43,4 +43,4 @@
 		<p class="c9">温馨提示：请勿关闭本页面，如遇支付问题，请点击右上角的在线客服，我们将竭诚为您服务，感谢您的惠顾！</p>
 	</div>
 </div>
-<?php $this->load->view('sex/layout/footer');?>
+<?php $this->load->view('layout/footer');?>

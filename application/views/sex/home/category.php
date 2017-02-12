@@ -1,4 +1,4 @@
-<?php $this->load->view('sex/layout/header');?>
+<?php $this->load->view('layout/header');?>
 <div class="load page category">
 	<div id="top">
 		<div class="header">
@@ -95,4 +95,4 @@
 	    "cool": 1
 	});
 </script>
-<?php $this->load->view('sex/layout/footer');?>
+<?php $this->load->view('layout/footer');?>
