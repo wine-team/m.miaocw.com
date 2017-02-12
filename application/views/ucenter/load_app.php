@@ -2,9 +2,9 @@
 
 <div id="top">
 	<div class="header">
-		<a href="javascript:;" onClick="goback()" class="b_l"></a>
+		<a href="javascript:goback();" class="b_l"></a>
 		<h2>妙处网APP下载</h2>
-		<a href="index.php" class="b_r">首页</a>
+		<a href="<?php echo site_url('sex/home/index')?>" class="b_r">首页</a>
 	</div>
 </div>
 <div class="pageauto">
@@ -22,12 +22,6 @@
 			<img src="http://s.qw.cc/mobile/m/t_ipad.png" width="27" height="27">iPad版下载
 		</a>
 	</div>
-</div>
-<div class="bgw mt10 pd10">
-	<form action="search.php" class="search ov" onsubmit="return se(this)">
-		<input type="search" value="" class="sl left" name="keyword" id="word" placeholder="关键词..." />
-		<input class="sr left" type="submit" value="" />
-	</form>
 </div>
 <?php $this->load->view('layout/smallfooter');?>
 <?php $this->load->view('layout/footer');?>

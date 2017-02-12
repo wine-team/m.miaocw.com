@@ -3,7 +3,7 @@
 	<div class="header">
 		<a href="javascript:goback();" class="b_l"></a>
 		<h2>修改收货地址</h2>
-		<a href="<?php echo site_url('ucenter/Address/delete/'.$res->address_id);?>"  class="b_r">删除</a>
+		<a href="<?php echo site_url('ucenter/address/delete/'.$res->address_id);?>"  class="b_r">删除</a>
 	</div>
 </div>
 <div class="pageauto">
@@ -51,8 +51,8 @@
 </div>
 <script>
 
-
 function checkCon(frm) {
+	
     var n1 = $("#consignee").val();
     var n5 = $("#address").val();
     var n6 = $("#mobile").val();

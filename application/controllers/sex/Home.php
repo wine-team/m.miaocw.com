@@ -38,6 +38,14 @@ class Home extends MW_Controller {
 		$this->load->view('sex/home/category',$data);
 	}
 	
+	 /**
+	 * 物流查询提示
+	 */
+	public function wl() {
+		
+		$this->load->view('sex/home/wl',$data=array());
+	}
+	
 	/**
 	 * 热销排行
 	 */

@@ -35,13 +35,5 @@
 	</ul>
 	<div class="bgw ye pd10 alC"><p><?php echo count($res);?>条记录</p></div>
 </div>
-<script>
-function gtns(){
-	$("#gtn").toggle();
-}
-$("#gtn").bind("click",function(){
-	$(this).hide();
-});
-</script>
 <?php $this->load->view('layout/smallfooter');?>
 <?php $this->load->view('layout/footer');?>

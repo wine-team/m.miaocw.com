@@ -83,19 +83,5 @@
 		</div>
 	</div>
 </div>
-<div class="bgw pd10 mt10">
-	<form action="search.php" class="search ov" onsubmit="return se(this)">
-		<input type="search" value="" class="sl left" name="keyword" id="word" placeholder="关键词..." />
-		<input class="sr left" type="submit" value="" />
-	</form>
-</div>
-<script>
-function gtns(){
-	$("#gtn").toggle();
-}
-$("#gtn").bind("click",function(){
-	$(this).hide();
-});
-</script>
 <?php $this->load->view('layout/smallfooter');?>
 <?php $this->load->view('layout/footer');?>

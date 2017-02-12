@@ -7,7 +7,7 @@
 				<input type="search" class="t_sl" id="t_sl" name="keyword" placeholder="搜索商品" />
 				<input class="t_sr" type="submit" value=""/>
 			</form>
-			<a href="<?php echo site_url('sex/home/logistics');?>" class="h_t h_wl">物流</a>
+			<a href="<?php echo site_url('sex/home/wl');?>" class="h_t h_wl">物流</a>
 		</div>
 		<div class="sebg hid" id="sebg">
 			<div class="lr10 ov">
