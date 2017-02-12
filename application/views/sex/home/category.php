@@ -12,11 +12,11 @@
 	</div>
 	<div class="gtn" id="gtn">
 		<ul class="gt_a">
-			<li><a href="javascript:;" class="gta">热销排行</a></li>
-			<li><a href="javascript:;" class="gta">购物车</a></li>
-			<li><a href="javascript:;" class="gta">浏览历史</a></li>
-			<li><a href="javascript:;" class="gta">回首页</a></li>
-			<li><a href="javascript:;" class="gta">在线客服咨询</a></li>
+			<li><a href="<?php echo site_url('sex/home/category')?>" class="gta">所有商品分类</a></li>
+			<li><a href="<?php echo site_url('sex/cart/index')?>" class="gta">购物车</a></li>
+			<li><a href="<?php echo site_url('ucenter/ucenter/get_history');?>" class="gta">浏览历史</a></li>
+			<li><a href="<?php echo site_url('sex/home/index')?>" class="gta">回首页</a></li>
+			<li><a href="tel:15988173721" class="gta">在线客服咨询</a></li>
 		</ul>
 	</div>
 	<div class="c_l left" id="c_l">
@@ -34,7 +34,7 @@
 			<div class="cal">
 			   	<div class="fen_a" >
 			   		<a href="javascript:;">
-			   			<img src="<?php echo $this->config->show_image_url('mall',$item->cat_img);?>" class="fen_img">
+			   			<img src="<?php echo $this->config->show_image_url('mall',$item->cat_img);?>" class="fen_img lazy">
 			   		</a>
 			   	</div>
 			   	<?php foreach ($item->child as $i=>$val):?>
@@ -50,49 +50,5 @@
 	</div>
 	<div class="clear"></div>
 </div>
-<script type="text/javascript">
-	var chongzhi = false;
-	var c_l = $("#c_l");
-	var c_r = $("#c_r");
-	var cbox = $("#cbox");
-	var cr = cbox.children();
-	var clp = $("#c_lul").children();
-	
-	function inits() {
-	    var wh = $(window).height();
-	    var th = $("#top").height();
-	    c_l.css("height", wh - th);
-	    c_r.css("height", wh - th);
-	    $(".category").css("height", wh)
-	}
-	function gtns(){
-		$("#gtn").toggle();
-	}
-	clp.click(function (e) {
-	    var i = $(this).attr("data-id");
-	    $(this).addClass("on").siblings().removeClass("on");
-	    var m = cr.eq(i);
-	    var mg = m.find("img[src]");
-	    if (mg.length > 0) {
-	        mg.each(function (index, element) {
-	            var u = $(this).attr("src");
-	            $(this).attr("src", u).removeAttr("src2");
-	        });
-	    }
-	    chongzhi = true;
-	    m.show().siblings().hide();
-	    cbox[0].style.MozTransform = cbox[0].style.webkitTransform = "translate3d(0,0,0)";
-	    cbox[0].style.msTransform = cbox[0].style.OTransform = "translateY(0)";
-	    e.preventDefault();
-	    e.stopPropagation();
-	});
-	$(window).resize(function () {
-	    inits();
-	});
-	inits();
-	c_l.vganvswiper();
-	c_r.vganvswiper({
-	    "cool": 1
-	});
-</script>
+<?php js('m', 'index',20161205);?>
 <?php $this->load->view('layout/footer');?>

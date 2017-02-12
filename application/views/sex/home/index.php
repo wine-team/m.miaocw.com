@@ -148,10 +148,9 @@
 			</h2>
 			<div class="gd bigm">
 			    <?php foreach ($hot as $item):?>
-				<a href="<?php echo site_url('home/goods/detail/'.$item->goods_id)?>" class="ga">
+				<a href="<?php echo site_url('sex/home/goods/'.$item->goods_id)?>" class="ga lazy">
 					<div class="pm">
-						<img src="m/images/load.jpg" data-original="<?php echo $this->config->show_image_thumb_url('mall',strstr($item->goods_img, '|',true));?>" class="gm lazy" />
-						  
+						<img src="m/images/load.jpg" data-original="<?php echo (strpos($item->goods_img, 'http://') === FALSE) ? $this->config->show_image_thumb_url('mall',strstr($item->goods_img, '|',true)) : strstr($item->goods_img, '|',true);?>" class="gm lazy" />
 						<h3 class="gt"><?php echo $item->goods_name;?></h3>
 						<p class="lp">
 							<em class="xj">¥<?php echo $item->shop_price;?></em>
