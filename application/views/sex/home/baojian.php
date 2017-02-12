@@ -155,7 +155,6 @@
 </div>
 <script>
 $("#slider").vganswiper({bi:0.3125});
-lazyload({defObj:"#lazy"});
 function gtns(){
 	$("#gtn").toggle();
 }

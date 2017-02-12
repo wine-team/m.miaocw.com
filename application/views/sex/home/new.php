@@ -1,4 +1,4 @@
-<?php $this->load->view('sex/layout/header');?>
+<?php $this->load->view('layout/header');?>
 <div class="page home-new" id="lazy">
 	<div id="top">
 		<div class="header">
@@ -339,5 +339,5 @@ lazyload({
     defObj: "#lazy"
 });
 </script>
-<?php $this->load->view('sex/layout/smallfooter');?>
-<?php $this->load->view('sex/layout/footer');?>
+<?php $this->load->view('layout/smallfooter');?>
+<?php $this->load->view('layout/footer');?>

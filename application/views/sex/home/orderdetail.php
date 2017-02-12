@@ -1,4 +1,4 @@
-<?php $this->load->view('sex/layout/header');?>
+<?php $this->load->view('layout/header');?>
 <div id="top">
 	<div class="header hfix">
 		<a href="javascript:goback();" class="b_l"></a>
@@ -57,7 +57,7 @@
 			<input type="hidden" name="_input_charset" value="utf-8"/>
 			<input type="hidden" name="format" value="xml"/>
 			<input type="hidden" name="partner" value="2088211707337241"/>
-			<input type="hidden" name="req_data" value="<auth_and_execute_req><request_token>201605075aa94ca47e935777c9520cdf9fe5a17f</request_token></auth_and_execute_req>" />
+			<input type="hidden" name="req_data" value="<auth_and_execute_req><request_token>201605075aa94ca47e935777c9520cdf9fe5a17f</request_token></auth_and_execute_req>"/>
 			<input type="hidden" name="req_id" value="1462579025"/>
 			<input type="hidden" name="sec_id" value="MD5"/>
 			<input type="hidden" name="service" value="alipay.wap.auth.authAndExecute"/>
@@ -75,5 +75,5 @@ $("#gtn").bind("click",function(){
 	$(this).hide();
 });
 </script>
-<?php $this->load->view('sex/layout/smallfooter');?>
-<?php $this->load->view('sex/layout/footer');?>
+<?php $this->load->view('layout/smallfooter');?>
+<?php $this->load->view('layout/footer');?>

@@ -17,7 +17,7 @@
 </div>
 <div class="pageauto">
 	<div class="pd10">
-		<form action="<?php echo site_url('ucenter/Ucenter/reset_pwd');?>" method="POST" id="car" onSubmit="return chp()">
+		<form action="<?php echo site_url('ucenter/ucenter/reset_pwd');?>" method="POST" id="car" onSubmit="return chp()">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ftable">
 				<tbody>
 					  <tr>
