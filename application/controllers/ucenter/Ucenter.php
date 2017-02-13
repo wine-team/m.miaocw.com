@@ -51,10 +51,10 @@ class Ucenter extends CS_Controller {
 	    if (isset($postData['alias_name'])) $param['alias_name'] = $postData['alias_name'];
 	    if (isset($imageData['file_name'])) $param['photo'] = $imageData['file_name'];
 	    if (isset($postData['sex'])) $param['sex'] = $postData['sex'];
-	    if (isset($postData['email']) && !$this->is_exist['email']) {
+	    if (isset($postData['email']) && !$this->is_exist($postData['email'])) {
 	        $param['email'] = $postData['email'];
 	    }
-	    if (isset($postData['phone']) && !$this->is_exist['phone']) {
+	    if (isset($postData['phone']) && !$this->is_exist($postData['phone'])) {
 	        if ($postData['code']) {
 	            $param['phone'] = $postData['phone'];
 	        }
@@ -85,7 +85,7 @@ class Ucenter extends CS_Controller {
 	public function sendYzm() {
 	    
 	    $param['mobile'] = $this->input->get('mobile');
-	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/updateUserInfor', $param, 'post'));
+	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/sendYzm', $param, 'post')); 
 	    if ($res->status) {
 	        $this->jsonMessage('', 'ucenter/Ucenter/index');
 	    } else {

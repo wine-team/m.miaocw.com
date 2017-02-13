@@ -112,7 +112,7 @@ class Address extends CS_Controller {
 	/**
 	 * @删除地址
 	 */
-	public function delete($address_id) {
+	public function delete($address_id = 0) {
 	    
 	    $param['uid'] = $this->uid;
 	    $param['address_id'] = $address_id;
