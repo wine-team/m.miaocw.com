@@ -239,8 +239,8 @@ dx.bind("click", function () {
     }
     var phone = $("#mobile_phone").val();
     if (phone == o_mobile) {
-//     	layer.msg("请输入新手机号码");
-//         return false;
+    	layer.msg("请输入新手机号码");
+        return false;
     }
     if (!il) {
         $(this).prop("disabled", "true");

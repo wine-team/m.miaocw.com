@@ -84,8 +84,8 @@ class Ucenter extends CS_Controller {
 	 * */
 	public function sendYzm() {
 	    
-	    $param['mobile'] = $this->input->get('mobile');
-	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/sendYzm', $param, 'post')); 
+	    $param['phone'] = $this->input->get('mobile');
+	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/sendYzm', $param, 'post'));  
 	    if ($res->status) {
 	        $this->jsonMessage('', 'ucenter/Ucenter/index');
 	    } else {
