@@ -264,7 +264,6 @@ class Home extends MW_Controller {
 		$this->load->view('sex/home/profile',$data=array());
 	}
 	
-	
 	/**
 	 * 购物帮助
 	 */
@@ -272,15 +271,7 @@ class Home extends MW_Controller {
 		
 		$this->load->view('sex/home/shophelp',$data=array());
 	}
-	
-	 /**
-	 * 收藏历史
-	 */
-	public function history() {
 
-		$this->load->view('sex/home/history',$data=array());
-	}
-	
 	/**
 	 * 优惠劵
 	 */
@@ -288,45 +279,9 @@ class Home extends MW_Controller {
 		
 		$this->load->view('sex/home/yhj',$data=array());
 	}
-	
-	 /**
-	 * 订单列表业
-	 */
-	public function order() {
-		
-		$this->load->view('sex/home/order',$data=array());
-	}
-	
-	 /**
-	  * 订单列表业
-	 */
-	public function orderdetail() {
-	
-		$this->load->view('sex/home/orderdetail',$data=array());
-	}
-	
-	
-	/** 帮助中心*/
-	/** 关于我们*/
-	public function about() {
-		
-		$this->load->view('sex/home/about',$data=array());
-	}
-	
-	/**帮助中心 */
-	public function help() {
-	
-		$this->load->view('sex/home/help',$data=array());
-	}
-	
-	/** 反馈 */
-	public function message() {
-		
-		$this->load->view('sex/home/message',$data=array());
-	}
-	
-	 /**
-	 * 产品需求
+
+	/**
+	  * 产品需求
 	 */
 	public function need() {
 		

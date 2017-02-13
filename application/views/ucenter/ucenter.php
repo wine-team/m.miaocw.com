@@ -6,15 +6,7 @@
 		<a href="javascript:gtns();" id="gdor" class="b_r">导航</a>
 	</div>
 </div>
-<div class="gtn" id="gtn">
-	<ul class="gt_a">
-		<li><a href=<?php echo site_url('m/category');?> class="gta">所有商品分类</a></li>
-		<li><a href="<?php echo site_url('m/cart');?>" class="gta">购物车</a></li>
-		<li><a href="<?php echo site_url('m/history');?>" class="gta">浏览历史</a></li>
-		<li><a href="<?php echo site_url('m/index');?>" class="gta">回首页</a></li>
-		<li><a href="chat.php" class="gta">在线客服咨询</a></li>
-	</ul>
-</div>
+<?php $this->load->view('layout/gtn');?>
 <div class="pageauto">
 	<div class="g_tss alC" style="display:none;">
 		<a href="profile.php?step=bangding" class="pl10" title="点击这里认证">点击认证送积分</a>

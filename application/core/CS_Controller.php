@@ -5,7 +5,7 @@ class CS_Controller extends MW_Controller
     {
     	parent::__construct();
         if (empty($this->uid)) {
-        	$this->redirect($this->config->m_base_url.'sex/home/index.html');
+        	$this->redirect($this->config->passport_url.'m/login/index.html');
         }
     }
     
@@ -18,7 +18,7 @@ class CS_Controller extends MW_Controller
     	if ($res->status) {
     		return $res->messages;
     	} else {
-    		$this->redirect($this->config->m_base_url.'sex/home/index.html');
+    		$this->redirect($this->config->passport_url.'m/login/index.html');
     	}
     }
 }
