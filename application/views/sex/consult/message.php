@@ -6,15 +6,7 @@
 		<a href="javascript:gtns();"  id="gdor" class="b_r">导航</a>
 	</div>
 </div>
-<div class="gtn" id="gtn">
-	<ul class="gt_a">
-		<li><a href="<?php echo site_url('sex/home/category')?>" class="gta">所有商品分类</a></li>
-		<li><a href="<?php echo site_url('sex/cart/index')?>" class="gta">购物车</a></li>
-		<li><a href="<?php echo site_url('ucenter/ucenter/get_history');?>" class="gta">浏览历史</a></li>
-		<li><a href="<?php echo site_url('sex/home/index')?>" class="gta">回首页</a></li>
-		<li><a href="tel:15988173721" class="gta">在线客服咨询</a></li>
-	</ul>
-</div>
+<?php $this->load->view('layout/gtn');?>
 <div class="pageauto">
 	<div class="g_tss">
 		<p class="lh16" style="padding:10px;">
@@ -22,42 +14,94 @@
 		</p>
 	</div>
 	<div class="lr10 bgw mt10">
-		<form action="faq.php" method="post" onSubmit="return faq(this)" id="car">
+		<form method="post"  >
 			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ftable">
 				  <tr>
 				    <td width="20%" valign="top">您的意见</td>
 				    <td valign="top">
-				    	<textarea maxlength="800" name="msg" placeholder="您的意见对我们很重要" style="height:100px;" class="pt" ></textarea>
+				    	<textarea maxlength="100" name="content" placeholder="您的意见对我们很重要" style="height:100px;" class="pt" ></textarea>
 				    </td>
 				  </tr>
 				  <tr>
 				    <td>电话号码</td>
-				    <td><input type="text" name="mobile" id="mobile" value=""  placeholder="手机/座机" maxlength="15" class="pt" /></td>
+				    <td>
+				    	<input type="text" name="tel" id="mobile" value=""  placeholder="手机号码" maxlength="15" class="pt" />
+				    </td>
 				  </tr>
-				  <tr>
+				  <tr class="message">
 				    <td>验证码</td>
-				    <td><input name="captcha" id="captcha" type="text" maxlength="4" size="5" class="pt" style="width:60px;" onclick="this.value='';"/>  <img src="captcha.php?get_password=1" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?get_password=1&'+Math.random()" />看不清点我</td>
+				    <td>
+				    	<input name="captcha" id="captcha" type="text" maxlength="4" size="5" class="pt" style="width:60px;"/>  
+				        <a href="javascript:;" class="ajaxJsonCaptcha" ><?php echo $captcha['image']; ?></a>
+				    </td>
 				  </tr>
 				  <tr>
-				  	<td colspan="2"><p class="lh18">&nbsp;</p><input type="hidden" name="act" value="msg"/><input type="submit" value="提交" class="bbt" /></td>
+				  	<td colspan="2">
+				  		<p class="lh18">&nbsp;</p>
+					  	<input type="submit" value="提交" class="bbt" />
+				    </td>
 				  </tr>
 			</table>
 		</form>
 	</div>
 </div>
-<script>
-function faq(obj){
-	var msg=obj.msg.value;
-	var mob=obj.mobile.value;
-	if(msg.length<10||msg.length>800){
-		alert("亲，留言内容10-800之间哟~");
-		return false;
-	}
-	if(!Validator.isMobile(mob)){
-		alert("请填写正确的手机号码");
-		return false;
-	}
-}
+<script type="text/javascript">
+	$('.message').on('click', '.ajaxJsonCaptcha', function(event){
+	    $.ajax({
+	        type: 'get',
+	        async: false,
+	        dataType : 'json',
+	        url: location.origin+'/sex/consult/ajaxJsonCaptcha',
+	        success: function(json) {
+	            $('.ajaxJsonCaptcha').html(json.image);
+	        }
+	    });
+	    event.preventDefault();
+	});
+
+		
+    $('form').submit(function(event){
+
+        
+    	var msg = $('textarea[name="content"]').val();
+		var tel = $('input[name="tel"]').val();
+		var captcha = $('input[name="captcha"]').val();
+		if (msg.length<6 || msg.length>100) {
+			layer.msg("亲，留言内容6-100之间哟");
+			return false;
+		}
+		if (!Validator.isMobile(tel)) {
+			layer.msg("请填写正确的手机号码");
+			return false;
+		}
+		if (captcha.length !=4) {
+			layer.msg("请填写验证码");
+			return false;
+		}
+		$.ajax({
+            type:'post',
+            data:$('form').serialize(),
+            dataType:'json',
+            async: false,
+            url:hostUrl()+'/sex/consult/feedback',
+            beforeSend:function() {
+               $('input[type="submit"]').val('提交中').attr('disabled',true);
+            },
+            success:function(data) {
+				if(data.status) {
+					layer.msg('提交成功');
+					msg.val('');
+					tel.val('');
+					captcha.val('');
+					$('input[type="submit"]').val('提交成功');
+				} else {
+					layer.msg(data.messages);
+					$('input[type="submit"]').val('提交').attr('disabled',false);
+				}
+            }
+		})
+		event.preventDefault();
+    })
 </script>
 <?php $this->load->view('layout/smallfooter');?>
 <?php $this->load->view('layout/footer');?>
