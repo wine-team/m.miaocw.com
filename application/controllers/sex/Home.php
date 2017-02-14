@@ -59,6 +59,7 @@ class Home extends MW_Controller {
 	 */
 	public function search() {
 	
+		
 		$result = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/search','','post'));
 		$data['ct'] = $result->messages->ct;
 		$data['goods'] = $result->messages->goods;
