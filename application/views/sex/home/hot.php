@@ -7,15 +7,7 @@
 			<a href="javascript:gtns();"  id="gdor" class="b_r">导航</a>
 		</div>
 	</div>
-	<div class="gtn" id="gtn">
-		<ul class="gt_a">
-			<li><a href="fenlei.html" class="gta">所有商品分类</a></li>
-			<li><a href="car.php" class="gta">购物车</a></li>
-			<li><a href="history.php" class="gta">浏览历史</a></li>
-			<li><a href="" class="gta">回首页</a></li>
-			<li><a href="chat.php" class="gta">在线客服咨询</a></li>
-		</ul>
-	</div>
+	<?php $this->load->view('layout/gtn');?>
 	<div class="slider" id="slider">
 		<ul class="lsul">
 			<li style="background-color:#0d0119"><a href="topic.php?topic_id=927"><img src="http://s.qw.cc/data/afficheimg/1480927967745377125.jpg" /></a></li>
@@ -198,58 +190,20 @@
 			</a>
 		</div>
 	</div>
-	<div class="bgw mt10">
-		<h2 class="t"><a href="fenlei.html" class="brl">热门关注</a><p class="huany right" onClick="huany()">换一换</p></h2>
-		<div class="lrb10 ov" id="word_lk">
-			<ul class="word_l">
-				<li><a href="goods-2242.html">各位大哥哥晚上好，妹妹的新校服好看吗</a></li>
-				<li><a href="goods-606.html">禁欲一个月后与主人的一次激情调教</a></li>
-				<li><a href="goods-9321.html">用完它以后，老婆夜夜求我干她</a></li>
-				<li><a href="goods-10201.html">男人啪啪啪多长时间才算正常？</a></li>
-				<li><a href="topic.php?topic_id=562">想找G点却演变成了潮吹，第一次好激动</a></li>
-				<li><a href="goods-7172.html">做足前戏，男人啪啪更带劲</a></li>
-			</ul>
-			<ul class="word_l hid">
-				<li><a href="goods-9601.html">女友嫌我无法满足她，怎么办？</a></li>
-				<li><a href="goods-9506.html">跟女神学习让男人欲罢不能的床上技术</a></li>
-				<li><a href="topic.php?topic_id=39">让丁丁变得稍微长一点的方法</a></li>
-				<li><a href="topic.php?topic_id=1586?ztt_id=1626">花式撸管教学，让你体验前所未有的快感</a></li>
-				<li><a href="topic.php?topic_id=1506">没有高潮过想知道高潮什么感觉</a></li>
-				<li><a href="topic.php?topic_id=1486?ztt_id=1626">是不是中年女人更在乎丁丁的大小</a></li>
-			</ul>
-			<ul class="word_l hid">
-				<li><a href="goods-6007.html">生完孩子以后变得性冷淡怎么办？</a></li>
-				<li><a href="topic.php?topic_id=562">如何让女人高潮的房中秘术</a></li>
-				<li><a href="goods-7207.html">老婆干得像沙漠，用这个却很容易湿</a></li>
-				<li><a href="topic.php?topic_id=1741">怎样自慰最舒服</a></li>
-				<li><a href="topic.php?topic_id=1696?ztt_id=1626">除了前戏，这些方法也能提升情欲</a></li>
-				<li><a href="topic.php?topic_id=425">单身大学生需求大，有什么解决办法</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="bgw mt10">
-		<h2 class="t"><a href="fenlei.html" class="brl">热门推荐</a><a href="topiclist.php" class="more right"></a></h2>
-		<div class="lrb10 ov" id="ftpc">
-			<a href="topic.php?topic_id=687" class="ftpc"><img src="http://s.qw.cc/data/afficheimg/1434012066742721219.jpg" width="100%"/></a>
-			<a href="topic.php?topic_id=475" class="ftpc"><img src="http://s.qw.cc/data/afficheimg/1452162000535644974.jpg" width="100%"/></a>
-			<a href="topic.php?topic_id=628" class="ftpc"><img src="http://s.qw.cc/data/afficheimg/1452162012311575591.jpg" width="100%"/></a>
-			<a href="topic.php?topic_id=502" class="ftpc"><img src="http://s.qw.cc/data/afficheimg/1434012215380153561.jpg" width="100%"/></a>
-		</div>
-	</div>
+
 </div>
 <?php js('m', 'HSlide',20161205);?>
-<script>
-var isf=0;
-var $bx=$("#boxx").children();
-var hbar=$("#nav-scr");
-var dian=[0,1,1,1,1,1];
-var vtop=hbar.offset().top;
+<script type="text/javascript">
 
-var huan_index=0,huan_len=2;
-var word_lk=$("#word_lk").children();
+var isf = 0;
+var $bx = $("#boxx").children();
+var hbar = $("#nav-scr");
+var dian = [0,1,1,1,1,1];
+var vtop = hbar.offset().top;
+var hslider= SlideVganChou();
 
 $("#slider").vganswiper({bi:0.39});
-var hslider= SlideVganChou();
+
 hslider.init({
         startIndex:0,
         autoScroll:false,
@@ -258,51 +212,40 @@ hslider.init({
 			cgnav(f.index);
         }
 });
+
 function cgnav(id){
+	
 	var im=$bx.eq(id);
 	im.show().siblings().hide();
 	if(dian[id]==1){
-	lazynav(id);
-	window.scrollTo(0,vtop);
-	dian[id]=0;
+		lazynav(id);
+		window.scrollTo(0,vtop);
+		dian[id]=0;
 	}
 }
+
 function lazynav(id){
 	var imgs=$bx.eq(id).find("img");
-	console.log(imgs);
 	imgs.each(function(){
-	var a=$(this).attr("src3");
-	$(this).attr("src",a).removeAttr("src3");	
+		var a=$(this).attr("src3");
+		$(this).attr("src",a).removeAttr("src3");	
 	});
 }
 window.onscroll=function(){
+	
 	var sTop=document.documentElement.scrollTop+document.body.scrollTop;
 	if(sTop>=vtop){
-	if(isf==0){
-	hbar.addClass("fix");
-	isf=1;
+		if (isf==0) {
+			hbar.addClass("fix");
+			isf=1;
 		}
 	}else{
 		if(isf==1){
-	hbar.removeClass("fix");	
-		isf=0;
+			hbar.removeClass("fix");	
+			isf=0;
 		}
 	}
 }
-function gtns(){
-	$("#gtn").toggle();
-}
-$("#gtn").bind("click",function(){
-	$(this).hide();
-});
-function huany(){
-	huan_index++;
-	if(huan_index>=huan_len){
-	huan_index=0;	
-	}
-	word_lk.eq(huan_index).show().siblings().hide();
-}
-lazyload({defObj:"#lazy"});
 </script>
 <?php $this->load->view('layout/smallfooter');?>
 <?php $this->load->view('layout/footer');?>

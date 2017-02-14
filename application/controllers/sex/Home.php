@@ -43,7 +43,15 @@ class Home extends MW_Controller {
 	 */
 	public function wl() {
 		
-		$this->load->view('sex/home/wl',$data=array());
+		$this->load->view('sex/home/wl');
+	}
+	
+	 /**
+	 * 今日抢购
+	 */
+	public function today() {
+	
+		$this->load->view('sex/home/today',$data=array());
 	}
 	
 	/**
@@ -124,15 +132,6 @@ class Home extends MW_Controller {
 		$this->load->view('sex/home/new',$data=array());
 	}
 	
-	
-	
-	 /**
-	 * 今日抢购
-	 */
-	public function today(){
-		
-		$this->load->view('sex/home/today',$data=array());
-	}
 	 /**
 	 * 移动端男性
 	 */
