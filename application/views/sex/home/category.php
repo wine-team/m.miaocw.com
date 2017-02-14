@@ -10,15 +10,7 @@
 			<a href="javascript:gtns();" id="gdor" class="b_r">导航</a>
 		</div>
 	</div>
-	<div class="gtn" id="gtn">
-		<ul class="gt_a">
-			<li><a href="<?php echo site_url('sex/home/category')?>" class="gta">所有商品分类</a></li>
-			<li><a href="<?php echo site_url('sex/cart/index')?>" class="gta">购物车</a></li>
-			<li><a href="<?php echo site_url('ucenter/ucenter/get_history');?>" class="gta">浏览历史</a></li>
-			<li><a href="<?php echo site_url('sex/home/index')?>" class="gta">回首页</a></li>
-			<li><a href="tel:15988173721" class="gta">在线客服咨询</a></li>
-		</ul>
-	</div>
+	<?php $this->load->view('layout/gtn');?>
 	<div class="c_l left" id="c_l">
 		<ul class="c_lul" id="c_lul">
 		    <?php foreach ($category as $key=>$item):?>
@@ -31,19 +23,18 @@
 	<div id="c_r" class="c_r right">
 		<div class="cbox" id="cbox">
 		    <?php foreach ($category as $key=>$item):?>
-			<div class="cal">
+			<div class="cal <?php if($key>0):?>hid<?php endif;?>">
 			   	<div class="fen_a" >
-			   		<a href="javascript:;">
-			   			<img src="<?php echo $this->config->show_image_url('mall',$item->cat_img);?>" class="fen_img lazy">
+			   		<a href="<?php echo site_url('sex/home/search?cateid='.$item->cat_id);?>">
+			   			<img src="<?php echo $this->config->show_image_url('mall',$item->cat_img);?>" class="fen_img lazy" />
 			   		</a>
 			   	</div>
 			   	<?php foreach ($item->child as $i=>$val):?>
-				<a href="javascript:;" class="cla">
+				<a href="<?php echo site_url('sex/home/search?cateid='.$val->cat_id);?>" class="cla">
 					<img src="<?php echo $this->config->show_image_url('mall',$val->cat_img);?>" width="70" height="70" class="c_img">
 					<p><?php echo $val->cat_name;?></p>
 				</a>
 				<?php endforeach;?>
-				<a class="nbtn" href="javascript:;">查看全部</a>
 			</div>
 			<?php endforeach;?>
 		</div>
