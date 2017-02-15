@@ -26,6 +26,16 @@ class Consult extends MW_Controller {
 		$this->load->view('sex/consult/message',$data);
 	}
 	
+	 /**
+	 * 产品需求
+	 */
+	public function need() {
+	
+		$data['captcha'] = $this->getCaptcha();
+		$this->load->view('sex/consult/need',$data);
+	}
+	
+	
 	/**
 	 * 验证码
 	 */
@@ -34,6 +44,8 @@ class Consult extends MW_Controller {
 		$captcha = $this->getCaptcha(18, 130, 36, 4);
 		echo json_encode($captcha);exit;
 	}
+	
+	
 	
 	/**
 	 * 反馈

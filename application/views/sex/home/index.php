@@ -106,7 +106,7 @@
 			<a href="<?php echo site_url('sex/home/newgood');?>" class="lotm3 left">
 				<img src="m/images/thr31.png" width="100%" />
 			</a>
-			<a href="<?php echo site_url('sex/home/need');?>" class="lotm3 left">
+			<a href="<?php echo site_url('sex/consult/need');?>" class="lotm3 left">
 				<img src="m/images/thr5.png" width="100%" />
 			</a>
 		</div>

@@ -280,14 +280,6 @@ class Home extends MW_Controller {
 		$this->load->view('sex/home/yhj',$data=array());
 	}
 
-	/**
-	  * 产品需求
-	 */
-	public function need() {
-		
-		$this->load->view('sex/home/need',$data=array());
-	}
-	
 	 /**
 	 * app下载
 	 */
