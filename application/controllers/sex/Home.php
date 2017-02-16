@@ -72,11 +72,10 @@ class Home extends MW_Controller {
 	}
 	
 	 /**
-	 * 产品列表页
+	  * 产品列表页
 	 */
 	public function search() {
 	
-		
 		$result = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/search','','post'));
 		$data['ct'] = $result->messages->ct;
 		$data['goods'] = $result->messages->goods;
