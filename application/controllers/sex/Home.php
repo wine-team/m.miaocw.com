@@ -50,16 +50,25 @@ class Home extends MW_Controller {
 	 * 今日抢购
 	 */
 	public function today() {
-	
-		$this->load->view('sex/home/today',$data=array());
+	    
+		$result = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/getSale',array('sales_id'=>8),'post'));
+		$data['cate'] = $result->messages->cate;
+		$data['goods'] = $result->messages->goods;
+		$this->load->view('sex/home/today',$data);
 	}
 	
-	/**
+	
+	 /**
 	 * 热销排行
 	 */
-	public function hot() {
-	
-		$this->load->view('sex/home/hot',$data=array());
+	public function hot($sales_id=9) {
+	    
+		$salesId = empty($sales_id) ?　9 : $sales_id;
+		$result = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/getSale',array('sales_id'=>$salesId),'post'));
+		$data['sales'] = $result->messages->sales[0];
+		$data['cate'] = $result->messages->cate;
+		$data['goods'] = $result->messages->goods;
+		$this->load->view('sex/home/hot',$data);
 	}
 	
 	 /**
@@ -123,14 +132,6 @@ class Home extends MW_Controller {
 				'sum' => $result->sum
 		));exit;
 	}
-
-	 /**
-	 * 新品体验
-	 */
-	public function newgood() {
-		
-		$this->load->view('sex/home/new',$data=array());
-	}
 	
 	 /**
 	 * 移动端男性
@@ -171,10 +172,6 @@ class Home extends MW_Controller {
 	
 		$this->load->view('sex/home/xingai',$data=array());
 	}
-	
-	
-	
-	
 	
 	 /**
 	 * 搜索无结果

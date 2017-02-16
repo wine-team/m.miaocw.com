@@ -9,103 +9,28 @@
 <?php $this->load->view('layout/gtn');?>
 <div class="pageauto load home-today" id="lazy">
 	<ul class="tw_tab" id="hbar">
-		<li class="on">本周抢购<p class="l_sbn">抢购中</p></li>
-		<li>惊喜专区<p class="l_sbn">每日不同</p></li>
+	    <?php foreach ($cate as $key=>$val):?>
+	    <?php foreach ($val as $l=>$c):?>
+		<li <?php if($l==0):?>class="on"<?php endif;?> cate-id="<?php echo $c->category_id;?>"><?php echo $c->title?><p class="l_sbn"><?php echo $c->note;?></p></li>
+		<?php endforeach;?>
+		<?php endforeach;?>
 	</ul>
 	<div class="mt10" id="goods_content">
-		<div class="lgoods ov">
-			<a href="javascript:;" class="loota">
+	    <?php $i=0; foreach($goods as $d=>$g):?>
+		<div class="lgoods ov <?php if($i==1):?>hid<?php endif;?>">
+		    <?php foreach ($g as $b):?>
+			<a href="<?php echo site_url('sex/home/goods/'.$b->goods_id)?>" class="loota">
 				<div class="pm">
-					<img src="http://s.qw.cc/t/300x300/images/201511/goods_img/5772_P_1446630318786.jpg" class="loimg">
-					<h3 class="f14 c3">香港简爱大海之恋恒温震动棒</h3>
-					<p><del>原价:¥388.70</del> | <em class="red">6.9折</em></p>
-					<p class="l_bq"><em class="tg_key">香港简爱</em><em class="tg_key">香港</em></p>
-					<p class="ov"><b class="xj">¥269.00</b><b class="masq"></b></p>
+					<img src="<?php echo (strpos($b->goods_img, 'http://') === FALSE) ? $this->config->show_image_thumb_url('mall',strstr($b->goods_img, '|',true)) : strstr($b->goods_img, '|',true);?>" class="loimg">
+					<h3 class="f14 c3"><?php echo $b->goods_name;?></h3>
+					<p><del>原价:¥<?php echo $b->shop_price;?></del> | <em class="red"><?php echo bcmul(bcdiv($b->shop_price,$b->market_price,2),10,1);?>折</em></p>
+					<p class="l_bq"></p>
+					<p class="ov"><b class="xj">¥<?php echo $b->market_price;?></b><b class="masq"></b></p>
 				</div>
 			</a>
-		    <a href="javascript:;" class="loota">
-				<div class="pm">
-					<img src="http://s.qw.cc/t/300x300/images/201511/goods_img/5772_P_1446630318786.jpg" class="loimg">
-					<h3 class="f14 c3">香港简爱大海之恋恒温震动棒</h3>
-					<p><del>原价:¥388.70</del> | <em class="red">6.9折</em></p>
-					<p class="l_bq"><em class="tg_key">香港简爱</em><em class="tg_key">香港</em></p>
-					<p class="ov"><b class="xj">¥269.00</b><b class="masq"></b></p>
-				</div>
-			</a>
-			<a href="javascript:;" class="loota">
-				<div class="pm">
-					<img src="http://s.qw.cc/t/300x300/images/201511/goods_img/5772_P_1446630318786.jpg" class="loimg">
-					<h3 class="f14 c3">香港简爱大海之恋恒温震动棒</h3>
-					<p><del>原价:¥388.70</del> | <em class="red">6.9折</em></p>
-					<p class="l_bq"><em class="tg_key">香港简爱</em><em class="tg_key">香港</em></p>
-					<p class="ov"><b class="xj">¥269.00</b><b class="masq"></b></p>
-				</div>
-			</a>
+			<?php endforeach;?>		   
 		</div>
-		<div class="lgoods ov hid">
-			<div class="gd bigm">
-				<a href="javascript:;" class="ga">
-					<div class="pm">
-						<img src="http://s.qw.cc/t/300x300/images/201608/goods_img/9321_P_1471485016113.jpg" class="gm">
-						<h3 class="gt">NO17 植物抑菌延时喷剂 持久不麻木 15ml</h3>
-						<p class="lp">
-							<em class="xj">¥399.00</em>
-							<em class="s_s">月销: 9674</em>
-						</p>
-					</div>
-				</a>
-				<a href="javascript:;" class="ga">
-					<div class="pm">
-						<img src="http://s.qw.cc/t/300x300/images/201608/goods_img/9321_P_1471485016113.jpg" class="gm">
-						<h3 class="gt">NO17 植物抑菌延时喷剂 持久不麻木 15ml</h3>
-						<p class="lp">
-							<em class="xj">¥399.00</em>
-							<em class="s_s">月销: 9674</em>
-						</p>
-					</div>
-				</a>
-				<a href="javascript:;" class="ga">
-					<div class="pm">
-						<img src="http://s.qw.cc/t/300x300/images/201608/goods_img/9321_P_1471485016113.jpg" class="gm">
-						<h3 class="gt">NO17 植物抑菌延时喷剂 持久不麻木 15ml</h3>
-						<p class="lp">
-							<em class="xj">¥399.00</em>
-							<em class="s_s">月销: 9674</em>
-						</p>
-					</div>
-				</a>
-				<a href="javascript:;" class="ga">
-					<div class="pm">
-						<img src="http://s.qw.cc/t/300x300/images/201608/goods_img/9321_P_1471485016113.jpg" class="gm">
-						<h3 class="gt">NO17 植物抑菌延时喷剂 持久不麻木 15ml</h3>
-						<p class="lp">
-							<em class="xj">¥399.00</em>
-							<em class="s_s">月销: 9674</em>
-						</p>
-					</div>
-				</a>
-				<a href="javascript:;" class="ga">
-					<div class="pm">
-						<img src="http://s.qw.cc/t/300x300/images/201608/goods_img/9321_P_1471485016113.jpg" class="gm">
-						<h3 class="gt">NO17 植物抑菌延时喷剂 持久不麻木 15ml</h3>
-						<p class="lp">
-							<em class="xj">¥399.00</em>
-							<em class="s_s">月销: 9674</em>
-						</p>
-					</div>
-				</a>
-				<a href="javascript:;" class="ga">
-					<div class="pm">
-						<img src="http://s.qw.cc/t/300x300/images/201608/goods_img/9321_P_1471485016113.jpg" class="gm">
-						<h3 class="gt">NO17 植物抑菌延时喷剂 持久不麻木 15ml</h3>
-						<p class="lp">
-							<em class="xj">¥399.00</em>
-							<em class="s_s">月销: 9674</em>
-						</p>
-					</div>
-				</a>
-			</div>
-		</div>
+		<?php $i++; endforeach;?>
 	</div>
 </div>
 <script type="text/javascript">
@@ -118,14 +43,6 @@ $("#hbar").delegate("li", "click", function () {
 	var index = $(this).index();
 	var im = cot.eq(index);
 	im.show().siblings().hide();
-	var mg = im.find("img[src3]");
-	var ml = mg.length;
-	if (ml > 0) {
-	    mg.each(function (index, element) {
-	        var lv = $(this).attr("src3");
-	        $(this).attr("src", lv).removeAttr("src3");
-	    });
-	}
 });
 
 </script>
