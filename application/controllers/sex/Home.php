@@ -77,9 +77,21 @@ class Home extends MW_Controller {
 	public function search() {
 	
 		$result = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/search','','post'));
+		$data['infor'] = $result->messages->infor;
 		$data['ct'] = $result->messages->ct;
 		$data['goods'] = $result->messages->goods;
 		$this->load->view('sex/goods/list',$data);
+	}
+	
+	 /**
+	 * ajax 的seach
+	 */
+	public function ajaxSeach() {
+		
+		$pg = $this->input->get('pg') ? (int)$this->input->get('pg') : 2;
+		$result = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/search',array('pg'=>$pg),'post'));
+		$data['goods'] = $result->messages->goods;
+		echo $this->load->view('sex/goods/ajaxList',$data,true);exit;
 	}
 	
 	 /**

@@ -42,39 +42,39 @@
 		<?php endif;?>
 	</div>
 	<div class="hmnv">
-		<a href="<?php echo site_url('sex/home/man');?>" class="da">
+		<a href="<?php echo site_url('sex/home/search?cateid=1');?>" class="da">
 			<img src="m/images/b1.png" class="dam"/>
 			<p>男用</p>
 		</a>
-		<a href="<?php echo site_url('sex/home/woman');?>" class="da">
+		<a href="<?php echo site_url('sex/home/search?cateid=2');?>" class="da">
 			<img src="m/images/b2.png" class="dam"/>
 			<p>女用</p>
 		</a>
-		<a href="<?php echo site_url('sex/home/baojian');?>" class="da">
+		<a href="<?php echo site_url('sex/home/search?cateid=21');?>" class="da">
 			<img src="m/images/b3.png" class="dam"/>
 			<p>延时</p>
 		</a>
-		<a href="<?php echo site_url('sex/home/neiyi');?>" class="da">
+		<a href="<?php echo site_url('sex/home/search?cateid=22');?>" class="da">
 			<img src="m/images/b4.png" class="dam"/>
 			<p>情趣内衣</p>
 		</a>
-		<a href="<?php echo site_url('sex/home/goodlist');?>" class="da">
+		<a href="<?php echo site_url('sex/home/search?cateid=14');?>" class="da">
 			<img src="m/images/b5.png" class="dam"/>
 			<p>仿真阳具</p>
 		</a>
-		<a href="<?php echo site_url('sex/home/goodlist');?>" class="da xx">
+		<a href="<?php echo site_url('sex/home/search?cateid=3');?>" class="da xx">
 			<img src="m/images/b6.png" class="dam"/>
 			<p>飞机杯</p>
 		</a>
-		<a href="<?php echo site_url('sex/home/xingai');?>" class="da xx">
+		<a href="<?php echo site_url('sex/home/search?cateid=23');?>" class="da xx">
 			<img src="m/images/b7.png" class="dam"/>
 			<p>SM情趣</p>
 		</a>
-		<a href="javascript:;" class="da">
+		<a href="<?php echo site_url('sex/home/search?cateid=11');?>" class="da">
 			<img src="m/images/b8.png" class="dam"/>
 			<p>土豪玩具</p>
 		</a>
-		<a href="<?php echo site_url('sex/home/cart')?>" class="da">
+		<a href="<?php echo site_url('sex/cart/index')?>" class="da">
 			<img src="m/images/b9.png" class="dam"/>
 			<p>购物车</p>
 		</a>
