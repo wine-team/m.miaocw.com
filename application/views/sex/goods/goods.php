@@ -18,31 +18,8 @@
 		<a href="javascript:gtns();" id="gdor" class="b_r dor"></a>
 	</div>
 </div>
-<div class="gtn goods-gtn" id="gtn">
-	<ul class="gt_a">
-		<li>
-			<a href="tel:15988173721" class="gta">订购热线：15988173721</a>
-		</li>
-		<li>
-			<a href="sms:15988173721" class="gta">点击短信订购</a>
-		</li>
-		<li>
-			<a 
-			    <?php if($this->uid):?>
-				href="javascript:;" 
-				<?php else:?>
-				href="<?php echo $this->config->passport_url.'m/login/index.html'?>" 
-				<?php endif;?>
-			class="gta" id="fav">
-				<em id="scx">收藏商品</em>
-			</a>
-		</li>
-		<li><a href="<?php echo site_url('ucenter/ucenter/get_history')?>" class="gta">浏览历史</a></li>
-		<li><a href="<?php echo site_url('sex/home/category');?>" class="gta">所有商品分类</a></li>
-		<li><a href="<?php echo site_url('sex/home/index');?>" class="gta">返回首页</a></li>
-	</ul>
-</div>
-<div class="pageauto home-goods" id="pagebox">
+<?php $this->load->view('layout/gtn');?>
+<div class="pageauto home-goods" id="pagebox" style="padding-top:4.5rem;">
 	<div class="content" id="goods">
 		<div id="gslider" class="alC">
 		    <?php $img = explode('|',rtrim($goods->goods_img,'|'));?>
@@ -59,7 +36,9 @@
 			<h1 class="gh1"><?php echo $goods->goods_name;?></h1>
 			<b class="f14 c3 pl5">[货号:<i id="sku"><?php echo $goods->goods_sku;?></i>]</b>
 			<em class="i_hot">热销</em>
+			<?php if($goods->freight_id==0 && $goods->freight_cost==0):?>
 			<b class="i_new">包邮</b>
+			<?php endif;?>
 			<div class="ov lh30">
 				<em class="red">¥</em>
 				<b id="gprice" class="mj"><?php echo $goods->shop_price;?></b> 
@@ -76,13 +55,11 @@
 			<li>
 				<a href="javascript:;" class="z_p">正品保证</a>
 				<a href="javascript:;" class="z_p zp2">私密送达</a>
-				<a href="javascript:;" class="z_p zp3">支持货到付款</a>
 			</li>
 		</ul>
 		<form action="<?php echo site_url('sex/cart/index');?>" id="buy" method="POST">
 			<div class="pd10 lh30 gbgw">
 				<input type="hidden" name="goods_id" id="goods_id" value="<?php echo $goods->goods_id;?>" />
-				<input type="hidden" name="act" value="add" />
 				<?php $spec = json_decode($goods->attr_spec, true);?>
 				<?php if (!empty($spec)):?>
 				<div id="sx" class="sx">
