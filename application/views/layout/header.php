@@ -24,11 +24,11 @@
 <?php css('m', 'style', 20161205);?>
 
 <?php js('m', 'jquery-1.10.2');?>
-<?php js('m', 'vganswips',20161205);?>
 <?php js('m', 'layer/layer');?>
 <?php js('m', 'jquery.lazyload.min');?>
 <?php js('m', 'jquery.validate.min');?>
 <?php js('m', 'jquery.validate.messages_zh');?>
 <?php js('m', 'app',20161205);?>
+<?php js('m', 'vganswips',20161205);?>
 </head>
 <body>
