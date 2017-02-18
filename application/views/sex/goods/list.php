@@ -19,7 +19,7 @@
 <div id="c_v" class="hid">
 	<div class="bgw">
 		<p class="lr10">当前位置：
-			<a href="javascript:;">首页</a>
+			<a href="<?php echo site_url('sex/home/index');?>">首页</a>
 			<code class="lr3">></code>
 			<a href="javascript:;">
 				<?php echo $ct->self->cat_name;?>
@@ -71,7 +71,7 @@
 	</div>
 	<?php if(!empty($ct)):?>
 	<div class="pd10 bgw mt10">
-		当前位置：<a href="javascript:;">首页</a>
+		当前位置：<a href="<?php echo site_url('sex/home/index');?>">首页</a>
 		<code class="lr3">></code>
 		<a href="javascript:;"><?php echo $ct->self->cat_name;?></a>
 	</div>
