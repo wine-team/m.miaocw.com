@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
 <meta name="renderer" content="webkit">
 <meta name="title"  content="<?php echo isset($headTittle) ? $headTittle.',妙处网,妙处,妙,处,成人用品玩具-男根增大延迟性保健品-夫妻情趣用品' : '妙处网,妙处,妙,处,成人用品玩具-男根增大延迟性保健品-夫妻情趣用品';?>" />
 <meta name="keywords" content="<?php echo isset($headTittle) ? $headTittle.',妙处网,妙处,妙,处,成人用品,情趣用品,成人用具,性用品,性保健品,性生活用品,性爱用品,成人保健,夫妻保健品' : '妙处网,妙处,妙,处,成人用品,情趣用品,成人用具,性用品,性保健品,性生活用品,性爱用品,成人保健,夫妻保健品';?>" />

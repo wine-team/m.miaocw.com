@@ -16,48 +16,37 @@
 		<p class="lh25">&nbsp;</p>
 		<a href="<?php echo site_url('sex/home/index');?>" class="gbtn" style="width:70%;">去选购</a>
 	</div>
+	<?php if(!empty($hot)):?>
 	<div class="pd10">
 		<h2 class="alC hx_line">
 			<b>热销推荐</b>
 			<p class="hx_fline"></p>
 		</h2>
 		<div class="heng">
-			<a href="javascript:;" class="henga">
-				<img src="http://s.qw.cc/t/300x300/images/201611/goods_img/5503_P_1479440451889.jpg" width="130" height="130">
-				<p>琦莎 口阴互换舌震免提HAPPY飞机杯</p>
-				<p><b class="red">¥199.00</b></p>
+			<?php foreach ($hot as $item):?>
+			<a href="<?php echo site_url('sex/home/goods/'.$item->goods_id)?>" class="henga">
+				<img src="<?php echo (strpos($item->goods_img, 'http://') === FALSE) ? $this->config->show_image_thumb_url('mall',strstr($item->goods_img, '|',true)) : strstr($item->goods_img, '|',true);?>" width="130" height="130">
+				<p><?php echo $item->goods_name;?></p>
+				<p><b class="red">¥<?php echo $item->shop_price;?></b></p>
 			</a>
-			<a href="javascript:;" class="henga">
-				<img src="http://s.qw.cc/t/300x300/images/201611/goods_img/5503_P_1479440451889.jpg" width="130" height="130">
-				<p>琦莎 口阴互换舌震免提HAPPY飞机杯</p>
-				<p><b class="red">¥199.00</b></p>
-			</a>
-			<a href="javascript:;" class="henga">
-				<img src="http://s.qw.cc/t/300x300/images/201611/goods_img/5503_P_1479440451889.jpg" width="130" height="130">
-				<p>琦莎 口阴互换舌震免提HAPPY飞机杯</p>
-				<p><b class="red">¥199.00</b></p>
-			</a>
-			<a href="javascript:;" class="henga">
-				<img src="http://s.qw.cc/t/300x300/images/201611/goods_img/5503_P_1479440451889.jpg" width="130" height="130">
-				<p>琦莎 口阴互换舌震免提HAPPY飞机杯</p>
-				<p><b class="red">¥199.00</b></p>
-			</a>
+			<?php endforeach;?>
 		</div>
 	</div>
+	<?php endif;?>
 	<div class="pd10 ov">
-		<a href="javascript:;" class="da">
+		<a href="<?php echo site_url('sex/home/index');?>" class="da">
 			<img src="m/images/g1.png" class="dam"><p>首页</p>
 		</a>
-		<a href="javascript:;" class="da">
+		<a href="<?php echo site_url('sex/home/today');?>" class="da">
 			<img src="m/images/g2.png" class="dam"><p>抢购</p>
 		</a>
-		<a href="javascript:;" class="da">
+		<a href="<?php echo site_url('sex/home/hot');?>" class="da">
 			<img src="m/images/g3.png" class="dam"><p>热销</p>
 		</a>
-		<a href="javascript:;" class="da">
+		<a href="<?php echo site_url('sex/home/hot');?>" class="da">
 			<img src="m/images/g4.png" class="dam"><p>新品</p
 		></a>
-		<a href="javascript:;" class="da">
+		<a href="<?php echo site_url('sex/home/category');?>" class="da">
 			<img src="m/images/g5.png" class="dam"><p>商品分类</p>
 		</a>
 	</div>

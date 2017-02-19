@@ -12,7 +12,9 @@ class Cart extends CS_Controller {
 		$result = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/getCart',array('uid'=>$this->uid),'post'));
 		$cart = $result->messages;
 		if (empty($cart)) {
-			$this->load->view('sex/cart/cartno',$data=array());
+			$hot = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/homeHot','','post'));
+			$data['hot'] = $hot->messages;
+			$this->load->view('sex/cart/cartno',$data);
 		} else {
 			$data['cart'] = $cart;
 			$this->load->view('sex/cart/cart',$data);
@@ -26,7 +28,9 @@ class Cart extends CS_Controller {
 	    		
 		$result = json_decode($this->fn_get_contents($this->config->main_base_url.'m/payment/buy',array('uid'=>$this->uid),'post'));
 		if (empty($result->messages->cart)) {
-			$this->load->view('sex/cart/cartno',$data=array());
+			$hot = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/homeHot','','post'));
+			$data['hot'] = $hot->messages;
+			$this->load->view('sex/cart/cartno',$data);
 		} else {
 			$userRes = json_decode($this->fn_get_contents($this->config->main_base_url.'m/payment/address',array('uid'=>$this->uid),'post'));
 			$address = $userRes->messages->address;
