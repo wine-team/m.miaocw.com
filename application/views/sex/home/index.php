@@ -90,12 +90,8 @@
 	<div class="bgw mt10">
 		<a href=<?php echo site_url('sex/home/today');?> class="left lotm">
 			<div class="hoot">
-				<p class="alL">玩爆潮品喵星人天使之杖av按摩棒</p>
-				<img src="m/images/amb.jpg" class="limg" />
-			    <p>
-			    	<b class="xj">¥149.00</b>
-			    	<del class="pl10">¥249.00</del>
-			    </p>
+				<p class="alL">限时限量 精选爆款</p>
+				<img src="m/images/today.jpg" class="mt10" width="90%"/>
 			 </div>
 			 <img src="m/images/thr1.png" width="100%" />
 	    </a>
