@@ -158,7 +158,7 @@
 			</div>
 		</div>
 		<?php endif;?>
-		<?php $this->load->view('layout/category');?>
+		<?php //$this->load->view('layout/category');?>
 	</div>
 </div>
 <?php js('m', 'index',20161205);?>
