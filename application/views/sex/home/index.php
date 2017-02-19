@@ -114,7 +114,7 @@
 		<div class="bgw mt10">
 			<h2 class="t">
 				<a href="<?php echo $image->url;?>" class="brl"><?php echo $jtem->sales_name;?></a>
-				<a href="<?php echo $image->url;?>" class="more right"></a>
+				<a href="<?php echo $jtem->link_url;?>" class="more right"></a>
 			</h2>
 			<div class="hpre ov">
 				<a href="<?php echo $image->url;?>" class="w100 left">
