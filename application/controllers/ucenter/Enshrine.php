@@ -47,7 +47,7 @@ class Enshrine extends CS_Controller {
 	    $param['enshrine_id'] = $enshrine_id; 
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/deleteMallEnshrine', $param, 'post'));
 	    if ($res->status) {
-	        $this->redirect('ucenter/address/index');
+	        $this->redirect('ucenter/enshrine/index');
 	    } else {
 	        $this->redirect('ucenter/address/show404');
 	    }

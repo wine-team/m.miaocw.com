@@ -19,7 +19,7 @@
 			    <td>
 			    	<p><?php echo $r->coupon_name;?></p><p>有效期：<?php echo $r->start_time;?> 至 <?php echo $r->end_time;?></p>
 			    	<p>
-			        	<a href="<?php echo site_url('sex/home/goods');?>" class="bun">立即使用</a>
+			        	<a href="<?php echo site_url('sex/home/index');?>" class="bun">立即使用</a>
 			    	</p>
 			    </td>
 			  </tr>
