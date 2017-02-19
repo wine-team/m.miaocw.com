@@ -23,7 +23,7 @@ class Order extends CS_Controller {
         }
     }
     
-    /**
+     /**
      * @订单详情
      */
     public function detail($order_id = 0) {
@@ -36,7 +36,7 @@ class Order extends CS_Controller {
             $data->status_arr = array('1'=>'取消订单', '2'=>'未付款', '3'=>'已付款', '4'=>'已发货', '5'=>'已收货', '6'=>'已评价');
             $this->load->view('ucenter/detail', $data);
         } else {
-            $this->redirect('ucenter/Address/show404');
+            $this->redirect('ucenter/address/show404');
         }
     }
     
@@ -49,9 +49,9 @@ class Order extends CS_Controller {
         $param['order_id'] = $order_id; 
         $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/cancelOrder', $param, 'post'));
         if ($res->status) {
-            $this->redirect('ucenter/Order/detail/'.$order_id);
+            $this->redirect('ucenter/order/detail/'.$order_id);
         } else {
-            $this->redirect('ucenter/Address/show404');
+            $this->redirect('ucenter/address/show404');
         }
     }
     
@@ -68,9 +68,9 @@ class Order extends CS_Controller {
         $param['score'] = $postData['score'];
         $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/orderReview', $param, 'post'));
         if ($res->status) {
-            $this->redirect('ucenter/Order/grid');
+            $this->redirect('ucenter/order/grid');
         } else {
-            $this->redirect('ucenter/Address/show404');
+            $this->redirect('ucenter/address/show404');
         }
     }
     
@@ -87,13 +87,9 @@ class Order extends CS_Controller {
         $param['refund_content'] = $postData['refund_content'];
         $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/orderRefund', $param, 'post'));
         if ($res->status) {
-            $this->redirect('ucenter/Order/grid');
+            $this->redirect('ucenter/order/grid');
         } else {
-            $this->redirect('ucenter/Address/show404');
+            $this->redirect('ucenter/address/show404');
         }
     }
-    
-    
-    
-	
 }

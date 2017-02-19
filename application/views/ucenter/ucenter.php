@@ -49,7 +49,7 @@
 	</ul>
 	<ul class="bul mt10">
 		<li>
-			<a href="<?php echo site_url('sex/home/shophelp')?>">
+			<a href="<?php echo site_url('sex/consult/help')?>">
 				<img src="m/images/u5.png" class="uiu"/>购物帮助
 			</a>
 		</li>

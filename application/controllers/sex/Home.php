@@ -116,6 +116,7 @@ class Home extends MW_Controller {
 		if (!$result->status) {
 			show_404();
 		}
+		$this->seeHistory($goodsId);
 		$review = json_decode($this->fn_get_contents($this->config->main_base_url.'m/home/goodsReview',array('goods_id'=>$goodsId,'pg'=>1,'pgNum'=>20),'post'));
 		$data['goods'] = $result->messages->goods;
 		$data['more'] = $result->messages->more;
@@ -154,44 +155,26 @@ class Home extends MW_Controller {
 		));exit;
 	}
 	
-	 /**
-	 * 移动端男性
-	 */
-	public function man() {
-	
-		$this->load->view('sex/home/man',$data=array());
-	}
-	
 	/**
-	 * 女性 
-	*/
-	public function woman() { 
-		
-		$this->load->view('sex/home/woman',$data=array());
-	}
-	
-	 /**
-	 * 保健
+	 * 浏览记录
+	 * @param unknown $tourismGoods
 	 */
-	public function baojian() {
-	
-		$this->load->view('sex/home/baojian',$data=array());
-	}
-	
-	/**
-	 * 内衣
-	 */
-	public function neiyi() {
-	
-		$this->load->view('sex/home/neiyi',$data=array());
-	}
-	
-	 /**
-	 * 性感
-	 */
-	public function xingai() {
-	
-		$this->load->view('sex/home/xingai',$data=array());
+	public function seeHistory($goods_id)
+	{
+		$historyPram = array();
+		$historyCookie = get_cookie('historyPram');
+		if (!empty($historyCookie)) {
+			$historyPram = unserialize(base64_decode($historyCookie));
+			if (!in_array($goods_id, $historyPram)) {
+				array_unshift($historyPram, $goods_id);
+			}
+			if (count($historyPram) > 6) {
+				array_pop($historyPram);
+			}
+		} else {
+			$historyPram[] = $goods_id;
+		}
+		set_cookie('historyPram', base64_encode(serialize($historyPram)), 14400);
 	}
 	
 	 /**
@@ -199,110 +182,6 @@ class Home extends MW_Controller {
 	 */
 	public function noresult() {
 		
-		$this->load->view('sex/home/noresult',$data=array());
-	}
-	
-	 /**
-	 * 收藏的商品
-	 */
-	public function collect() {
-		
-		$this->load->view('sex/home/collect',$data=array());
-	}
-	
-	/**
-	 * 生成订单成功
-	 */
-	public function buyok() {
-		
-		$this->load->view('sex/home/buyok',$data=array());
-	}
-	
-	/**
-	 * 支付成功
-	 */
-	public function pay() {
-		
-		$this->load->view('home/pay',$data=array());
-	}
-	
-	/**
-	 * 404
-	 */
-	public function show404() {
-	
-		$this->load->view('sex/home/show404',$data=array());
-	}
-	
-	 /**
-	 * 注册成功
-	 */
-	public function ucenter() {
-	
-		$this->load->view('sex/home/ucenter',$data=array());
-	}
-	
-	/**
-	 * 设置
-	 */
-	public function setting() {
-		
-		$this->load->view('sex/home/setting',$data=array());
-	}
-	
-	/**
-	 * 个人资料
-	 */
-	public function address() {
-	
-		$this->load->view('sex/home/address',$data=array());
-	}
-	
-	/**
-	 * 个人资料
-	 */
-	public function add_address() {
-	
-		$this->load->view('sex/home/add_address',$data=array());
-	}
-	
-	/**
-	 * 修改密码
-	 */
-	public function password() {
-		
-		$this->load->view('sex/home/password',$data=array());
-	}
-	
-	/**
-	 * 个人资料
-	 */
-	public function profile() {
-	
-		$this->load->view('sex/home/profile',$data=array());
-	}
-	
-	/**
-	 * 购物帮助
-	 */
-	public function shophelp() {
-		
-		$this->load->view('sex/home/shophelp',$data=array());
-	}
-
-	/**
-	 * 优惠劵
-	 */
-	public function yhj() {
-		
-		$this->load->view('sex/home/yhj',$data=array());
-	}
-
-	 /**
-	 * app下载
-	 */
-	public function app(){
-		
-		$this->load->view('sex/home/app',$data=array());
+		$this->load->view('sex/home/noresult');
 	}
 }

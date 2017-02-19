@@ -27,25 +27,6 @@
 			</table>
 		</div>
 	</div>
-	<div class="lh25 gbgw">
-		<div class="lr10">
-			<h2 class="t"><em class="brl">添加优惠券</em></h2>
-			<p class="line"></p>
-			<p class="lh18">&nbsp;</p>
-			<form onSubmit="return addBonus()" method="post" action="<?php echo site_url('ucenter/Coupon/addPost')?>" name="addBouns">
-				<table width="100%" border="0">
-				  <tr>
-				    <td width="90">优惠券序列号:</td></tr>
-				    <tr>
-				    <td><input type="text" class="pt" size="30" name="userCoupnNumber"/></td>
-				  </tr>
-				</table>
-				<p class="lh18">&nbsp;</p>
-				<input type="submit" value="添加优惠券" class="bbt"/>
-				<p class="lh18">&nbsp;</p>
-			</form>
-		</div>
-	</div>
 	<p class="lh20">&nbsp;</p>
 	<div class="pd10 gbgw">
 		<div class="lh25">
@@ -59,23 +40,5 @@
 		</div>
 	</div>
 </div>
-<script>
-function addBonus(){
-  var frm= document.forms['addBouns'];
-  var bonus_sn =frm.elements['bonus_sn'].value;
-  if(bonus_sn.length == 0){
-    alert('请输入的你的优惠券序列号！');
-    return false;
-  }
-  else{
-    var reg = /^[0-9]{10}$/;
-    if ( ! reg.test(bonus_sn)){
-      alert('你输入的优惠券格式不正确！');
-      return false;
-    }
-  }
-  return true;
-}
-</script>
 <?php $this->load->view('layout/smallfooter');?>
 <?php $this->load->view('layout/footer');?>

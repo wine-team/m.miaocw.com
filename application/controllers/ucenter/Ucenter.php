@@ -21,7 +21,7 @@ class Ucenter extends CS_Controller {
 	 */
 	public function setting() {
 	
-	    $this->load->view('ucenter/setting',$data=array());
+	    $this->load->view('ucenter/setting');
 	}
 	
 	/**
@@ -122,13 +122,13 @@ class Ucenter extends CS_Controller {
 	 * */
 	public function get_history()
 	{
-	    $param = array();
+	    $param['uid'] = $this->uid;
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/getHistory', $param, 'post'));
 	    $data['res'] = $res->messages;
 	    if ($res->status) {
 	        $this->load->view('ucenter/history', $data);
 	    } else {
-	        $this->redirect('ucenter/Address/show404');
+	        $this->redirect('ucenter/address/show404');
 	    }
 	}
 	

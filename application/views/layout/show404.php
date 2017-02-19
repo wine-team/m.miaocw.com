@@ -1,11 +1,11 @@
 <?php $this->load->view('layout/header');?>
 <div id="top">
 	<div class="header">
-		<a href="javascript:;" class="b_l">
+		<a href="<?php echo site_url('sex/home/index');?>" class="b_l">
 			<em class="pl8">回首页</em>
 		</a>
 		<h2>信息提示</h2>
-		<a href="javascript:;" class="b_r">在线客服</a>
+		<a href="tel:15988173721" class="b_r">在线客服</a>
 	</div>
 </div>
 <div class="pageauto show-404">
@@ -16,38 +16,38 @@
 	<div class="cuo_info">
 		<p>错误代码：404</p>
 		<p>原因：访问页面未找到</p>
-		<a href="<?php echo site_url('ucenter/home/index')?>" class="gbtn">返回首页</a>
+		<a href="<?php echo site_url('sex/home/index');?>" class="gbtn">返回首页</a>
 	</div>
 </div>
 <div class="hmnv">
-	<a href="javascript:;" class="da">
+	<a href="<?php echo site_url('sex/home/search?cateid=1');?>" class="da">
 		<img src="m/images/b1.png" class="dam"><p>男用</p>
 	</a>
-	<a href="javascript:;" class="da">
+	<a href="<?php echo site_url('sex/home/search?cateid=2');?>" class="da">
 		<img src="m/images/b2.png" class="dam"><p>女用</p>
 	</a>
-	<a href="javascript:;" class="da">
+	<a href="<?php echo site_url('sex/home/search?cateid=21');?>" class="da">
 		<img src="m/images/b3.png" class="dam"><p>延时</p>
 	</a>
-	<a href="javascript:;" class="da">
+	<a href="<?php echo site_url('sex/home/search?cateid=22');?>" class="da">
 		<img src="m/images/b4.png" class="dam"><p>情趣内衣</p>
 	</a>
-	<a href="javascript:;" class="da">
+	<a href="<?php echo site_url('sex/home/search?cateid=14');?>" class="da">
 		<img src="m/images/b5.png" class="dam"><p>仿真阳具</p>
 	</a>
-	<a href="javascript:;" class="da">
+	<a href="<?php echo site_url('sex/home/search?cateid=3');?>" class="da">
 		<img src="m/images/b6.png" class="dam"><p>飞机杯</p>
 	</a>
-	<a href="javascript:;" class="da">
+	<a href="<?php echo site_url('sex/home/search?cateid=23');?>" class="da">
 		<img src="m/images/b7.png" class="dam"><p>SM情趣</p>
 	</a>
-	<a href="javascript:;" class="da">
+	<a href="<?php echo site_url('sex/home/search?cateid=11');?>" class="da">
 		<img src="m/images/b8.png" class="dam"><p>土豪玩具</p>
 	</a>
-	<a href="javascript:;" class="da">
+	<a href="<?php echo site_url('sex/cart/index')?>" class="da">
 		<img src="m/images/b9.png" class="dam"><p>购物车</p>
 	</a>
-	<a href="javascript:;" class="da">
+	<a href="<?php echo site_url('sex/home/category');?>" class="da">
 		<img src="m/images/b10.png" class="dam"><p>全部分类</p>
 	</a>
 	<div class="clear"></div>

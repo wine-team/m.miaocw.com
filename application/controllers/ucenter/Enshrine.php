@@ -18,7 +18,7 @@ class Enshrine extends CS_Controller {
 	    if ($res->status) {
 	        $this->load->view('ucenter/enshrine', $data);
 	    } else {
-	        $this->redirect('ucenter/Address/show404');
+	        $this->redirect('ucenter/address/show404');
 	    }
 	}
 	
@@ -32,9 +32,9 @@ class Enshrine extends CS_Controller {
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/insertMallEnshrine', $param, 'post'));
 	    
 	    if ($res->status) {
-	        $this->jsonMessage('', 'ucenter/Enshrine/index');
+	        $this->jsonMessage('', 'ucenter/enshrine/index');
 	    } else {
-	        $this->jsonMessage('操作失败', 'ucenter/Enshrine/index');
+	        $this->jsonMessage('操作失败', 'ucenter/enshrine/index');
 	    }
 	}
 	
@@ -46,15 +46,10 @@ class Enshrine extends CS_Controller {
 	    $param['uid'] = $this->uid;
 	    $param['enshrine_id'] = $enshrine_id; 
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/deleteMallEnshrine', $param, 'post'));
-	  
 	    if ($res->status) {
-	        $this->redirect('ucenter/Address/index');
+	        $this->redirect('ucenter/address/index');
 	    } else {
-	        $this->redirect('ucenter/Address/show404');
+	        $this->redirect('ucenter/address/show404');
 	    }
 	}
-	
-	
-	
-	
 }

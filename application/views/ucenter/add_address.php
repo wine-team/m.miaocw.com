@@ -26,7 +26,7 @@
 		             </td>
 		        </tr>
 		        <tr>
-			          <td><b class="red pr5">*</b>街道地址：</td>
+			          <td><b class="red pr5">*</b>街道：</td>
 			          <td><input type="text" value="" id="address" class="pt" size="80" name="detailed"/></td>
 		        </tr>
 		        <tr>
@@ -56,29 +56,29 @@ function checkCon(frm) {
     var n5 = $("#address").val();
     var n6 = $("#mobile").val();
     if (n1.length < 2) {
-        alert("收货人姓名不得少于2个字");
+        layer.msg("收货人姓名不得少于2个字");
         return false;
     }
     if (frm.elements['province'] && frm.elements['province'].value == 0 && frm.elements['province'].length > 1) {
-        alert("请选择省份");
+    	layer.msg("请选择省份");
         return false;
     }
     if (frm.elements['city'] && frm.elements['city'].value == 0 && frm.elements['city'].length > 1) {
-        alert("请选择城市");
+    	layer.msg("请选择城市");
         return false;
     }
     if (frm.elements['district'] && frm.elements['district'].length > 1) {
         if (frm.elements['district'].value == 0) {
-            alert("请选择区域");
+        	layer.msg("请选择区域");
             return false;
         }
     }
     if (n5.length < 4 || n5.length > 60) {
-        alert("请填写收货地址4-60个字");
+    	layer.msg("请填写收货地址4-60个字");
         return false;
     }
-    if (!Validator.isMobile(n6)) {console.log(Validator.isMobile(n6));
-        alert("请填写正确的手机号码！");
+    if (!Validator.isMobile(n6)) {;
+    	layer.msg("请填写正确的手机号码！");
         return false;
     }
 }

@@ -18,7 +18,7 @@ class Coupon extends CS_Controller {
 	    if ($res->status) {
 	        $this->load->view('ucenter/coupon', $data);
 	    } else {
-	        $this->redirect('ucenter/Address/show404');
+	        $this->redirect('ucenter/address/show404');
 	    }
 	}
 	
@@ -32,9 +32,9 @@ class Coupon extends CS_Controller {
 	    $param['userCoupnNumber'] = $postData['userCoupnNumber'];
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/userCoupn', $param, 'post'));
 	    if ($res->status) {
-	        $this->redirect('ucenter/Coupon/index');
+	        $this->redirect('ucenter/coupon/index');
 	    } else {
-	        $this->redirect('ucenter/Address/show404');
+	        $this->redirect('ucenter/address/show404');
 	    }
 	}
 	

@@ -3,7 +3,7 @@
 	<div class="header">
 		<a href="javascript:goback();" class="b_l"></a>
 		<h2>设置</h2>
-		<a href="<?php echo site_url('ucenter/Address/add');?>"  class="b_r">添加地址</a>
+		<a href="<?php echo site_url('ucenter/address/add');?>"  class="b_r">添加地址</a>
 	</div>
 </div>
 <div class="pageauto">
@@ -11,7 +11,7 @@
 		<ul class="s_h">
 		    <?php foreach ($res as $r) :?>
 			<li>
-				<a href="<?php echo site_url('ucenter/Address/edit/'.$r->address_id);?>">
+				<a href="<?php echo site_url('ucenter/address/edit/'.$r->address_id);?>">
 					<h3>
 						<?php if ($r->is_default==2) :?><b class="red pr5">默认</b><?php endif;?>
 						<b><?php echo $r->receiver_name;?></b> 

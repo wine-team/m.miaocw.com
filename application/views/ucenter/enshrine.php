@@ -13,12 +13,11 @@
 		    <?php foreach ($res as $r) :?>
 			<li>
 				<a href="<?php echo $r->goods_id;?>">
-				    <?php $img_arr = array_filter(explode('|', $r->goods_img));?>
-					<img src="<?php echo $this->config->show_image_url('mall',$img_arr[0])?>"  width="80" height="80"/>
+					<img src="<?php echo $this->config->show_image_url('mall',strstr($r->goods_img,'|',true));?>"  width="80" height="80"/>
 					<h3><?php echo $r->goods_name;?></h3>
 					<p><span class="xj">¥<?php echo $r->shop_price;?></span></p>
 				</a>
-				<p onClick="layer.confirm('是否确认删除？',function(){location.href='<?php echo site_url('ucenter/Enshrine/delete/'.$r->enshrine_id);?>';})" class="c_del">删除</p>
+				<p onClick="layer.confirm('是否确认删除？',function(){location.href='<?php echo site_url('ucenter/enshrine/delete/'.$r->enshrine_id);?>';})" class="c_del">删除</p>
 			</li>
 			<?php endforeach;?>
 		</ul>

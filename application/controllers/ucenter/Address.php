@@ -15,12 +15,11 @@ class Address extends CS_Controller {
 	    
 	    $param['uid'] = $this->uid;
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/getAddress', $param, 'post')); 
-		
 	    if ($res->status) {
 	        $data['res'] = $res->messages;
 	        $this->load->view('ucenter/address', $data);
 	    } else {
-	        $this->redirect('ucenter/Address/show404');
+	        $this->redirect('ucenter/address/show404');
 	    }
 	}
 	
@@ -29,7 +28,7 @@ class Address extends CS_Controller {
 	 */
 	public function add() {
 	
-		$this->load->view('ucenter/add_address',$data=array());
+		$this->load->view('ucenter/add_address');
 	}
 	
 	/**
@@ -58,9 +57,9 @@ class Address extends CS_Controller {
 	    }
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/insertAddress', $param, 'post')); 
 	    if ($res->status) {
-	        $this->redirect('ucenter/Address/grid');
+	        $this->redirect('ucenter/address/grid');
 	    } else {
-	        $this->redirect('ucenter/Address/show404');
+	        $this->redirect('ucenter/address/show404');
 	    }
 	}
 	
@@ -74,7 +73,7 @@ class Address extends CS_Controller {
 	        $data['district_id'] = $address->row()->district_id;
 	        $this->load->view('ucenter/edit_address', $data);
 	    } else {
-	        $this->redirect('ucenter/Address/show404');
+	        $this->redirect('ucenter/address/show404');
 	    }
 	    
 	}
@@ -103,9 +102,9 @@ class Address extends CS_Controller {
         }
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/editAddress', $param, 'post'));
 	    if ($res->status) {
-	        $this->redirect('ucenter/Address/grid');
+	        $this->redirect('ucenter/address/grid');
 	    } else {
-	        $this->redirect('ucenter/Address/show404');
+	        $this->redirect('ucenter/address/show404');
 	    }
 	}
 	
@@ -118,9 +117,9 @@ class Address extends CS_Controller {
 	    $param['address_id'] = $address_id;
 	    $res = json_decode($this->fn_get_contents($this->config->main_base_url.'m/ucenter/deleteAddress', $param, 'post'));
 	    if ($res->status) {
-	        $this->redirect('ucenter/Address/grid');
+	        $this->redirect('ucenter/address/grid');
 	    } else {
-	        $this->redirect('ucenter/Address/show404');
+	        $this->redirect('ucenter/address/show404');
 	    }
 	}
 	
@@ -129,7 +128,7 @@ class Address extends CS_Controller {
 	 */
 	public function show404() {
 	
-	    $this->load->view('layout/show404',$data=array());
+	    $this->load->view('layout/show404');
 	}
 	
 	
